@@ -2,7 +2,7 @@
 
 **Baaaes** is a **very opinionated** boilerplate for APIs using `async`/`await`, [Express](http://expressjs.com) and [Sequelize](http://sequelizejs.com).
 
-The basic boilerplate was built with [`express-generator`](https://expressjs.com/en/starter/generator.html) plus the following changes:
+The basic code was created with [`express-generator`](https://expressjs.com/en/starter/generator.html), then the following changes were added:
 
 * The code was completely converted to native Node ES6 syntax (i.e. you **won't** need Babel, thankfully!)
 * HTTPS support is included, and you can generate self-signed certificates for development by running `npm run makecert`. Note that you **will** see warning messages; use [Let's encrypt](https://letsencrypt.org/) and a real domain name to avoid this.
@@ -10,8 +10,8 @@ The basic boilerplate was built with [`express-generator`](https://expressjs.com
 * Differentiated environments (`development`, `test` and `production`) defined by setting the `APP_ENV` environment variable.
 * [Handlebars](http://handlebarsjs.com/) is used as the template engine for HTML views.
 * [Sequelize](http://sequelizejs.com) is included by default as an ORM, along with an example model implementation making extensive use of the `async`/`await` pattern to minimize frustration.
-* Example API routes _with fully working RESTful CRUD endpoints_ are included.
-* [Mocha](http://mochajs.org/) integration tests for the example API are _also included_.
+* Example API routes _with fully working RESTful CRUD endpoints_ included!
+* [Mocha](http://mochajs.org/) integration tests for the example API are _also included!_
 
 **Baaaes** gives you a fully fleshed-out boilerplate with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
 
