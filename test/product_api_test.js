@@ -27,11 +27,13 @@ describe('Product API', function() {
     await models.syncAll()
   })
 
+
   describe('With an empty products table', function() {
 
     beforeEach(async function() {
       await models.Product.sync({force: true})
     })
+
 
     it('GET /products should return an empty result', async function() {
       const req = {
@@ -39,10 +41,12 @@ describe('Product API', function() {
         resolveWithFullResponse: true,
         json: true
       }
+
       const response = await request.get(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data').with.lengthOf(0)
     })
+
 
     it('GET /products/1 should return error 404', async function() {
       const req = {
@@ -51,10 +55,12 @@ describe('Product API', function() {
         simple: false,
         json: true
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(404)
       expect(response.body).to.have.property('errors').with.lengthOf(1)
     })
+
 
     it('DELETE /products/1 should return error 404', async function() {
       const req = {
@@ -64,10 +70,12 @@ describe('Product API', function() {
         simple: false,
         json: true
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(404)
       expect(response.body).to.have.property('errors').with.lengthOf(1)
     })
+
 
     it('POST /products with VALID product should create and return product', async function() {
       const newProduct = {
@@ -83,15 +91,18 @@ describe('Product API', function() {
         json: true,
         body: newProduct
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(201)
       expect(response.body).to.have.property('data')
       expect(response.body.data).to.have.property('id')
+
       const added = await models.Product.findOne()
       expect(added.name).to.eql(newProduct.name)
       expect(added.price).to.eql(newProduct.price)
       expect(added.quantity).to.eql(newProduct.quantity)
     })
+
 
     it('POST /products with INVALID product should return error 400', async function() {
       const newProduct = {
@@ -107,6 +118,7 @@ describe('Product API', function() {
         json: true,
         body: newProduct
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(400)
       expect(response.body).to.have.property('errors').with.lengthOf(1)
@@ -126,16 +138,19 @@ describe('Product API', function() {
       await models.Product.bulkCreate(productData)
     })
 
+
     it('GET /products should return three products', async function() {
       const req = {
         uri: `${BASEURL}/products`,
         resolveWithFullResponse: true,
         json: true
       }
+
       const response = await request.get(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data').with.lengthOf(3)
     })
+
 
     it('GET /products/2 should return a single matching product', async function() {
       const req = {
@@ -143,6 +158,7 @@ describe('Product API', function() {
         resolveWithFullResponse: true,
         json: true
       }
+
       const response = await request.get(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data')
@@ -152,6 +168,7 @@ describe('Product API', function() {
       expect(response.body.data.quantity).to.eql(10)
     })
 
+
     it('DELETE /products/1 should remove and return product', async function() {
       const req = {
         method: 'DELETE',
@@ -160,6 +177,7 @@ describe('Product API', function() {
         simple: false,
         json: true
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data')
@@ -167,9 +185,11 @@ describe('Product API', function() {
       expect(response.body.data.name).to.eql("Awesome product")
       expect(response.body.data.price).to.eql(1.99)
       expect(response.body.data.quantity).to.eql(100)
+
       const deleted = await models.Product.findById(1)
       expect(deleted).to.be.a('null')
     })
+
 
     it('PUT /products/2 with VALID data should update and return product', async function() {
       const newProduct = {
@@ -185,6 +205,7 @@ describe('Product API', function() {
         json: true,
         body: newProduct
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data')
@@ -192,11 +213,13 @@ describe('Product API', function() {
       expect(response.body.data).to.have.property('name')
       expect(response.body.data).to.have.property('price')
       expect(response.body.data).to.have.property('quantity')
+
       const updated = await models.Product.findById(2)
       expect(updated.name).to.eql(newProduct.name)
       expect(updated.price).to.eql(newProduct.price)
       expect(updated.quantity).to.eql(newProduct.quantity)
     })
+
 
     it('PUT /products/2 with INVALID data should return error 400', async function() {
       const newProduct = {
@@ -212,11 +235,11 @@ describe('Product API', function() {
         json: true,
         body: newProduct
       }
+
       const response = await request(req)
       expect(response.statusCode).to.equal(400)
       expect(response.body).to.have.property('errors').with.lengthOf(1)
     })
-
   })
 
 })
