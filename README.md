@@ -4,12 +4,12 @@
 
 The basic code was created with [`express-generator`](https://expressjs.com/en/starter/generator.html), then the following changes were added:
 
-* The code was completely converted to native Node ES6 syntax (i.e. you **won't** need Babel, thankfully!)
-* HTTPS support is included, and you can generate self-signed certificates for development by running `npm run makecert`. Note that you **will** see warning messages; use [Let's encrypt](https://letsencrypt.org/) and a real domain name to avoid this.
+* Complete conversion to native ES6 syntax (i.e. you **won't** need Babel, thankfully!)
+* HTTPS support included, and you can generate self-signed certificates for development by running `npm run makecert`. Note that you **will** see warning messages; use [Let's encrypt](https://letsencrypt.org/) and a real domain name to avoid this.
 * [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) support baked in with configuration examples.
-* Differentiated environments (`development`, `test` and `production`) defined by setting the `APP_ENV` environment variable.
-* [Handlebars](http://handlebarsjs.com/) is used as the template engine for HTML views.
-* [Sequelize](http://sequelizejs.com) is included by default as an ORM, along with an example model implementation making extensive use of the `async`/`await` pattern to minimize frustration.
+* Differentiated environments (`development`, `test` and `production`) defined by the `APP_ENV` environment variable.
+* [Handlebars](http://handlebarsjs.com/) templates for HTML views.
+* [Sequelize](http://sequelizejs.com) as default ORM, along with an example model implementation making extensive use of the `async`/`await` pattern to minimize frustration.
 * Example API routes _with fully working RESTful CRUD endpoints_ included!
 * [Mocha](http://mochajs.org/) integration tests for the example API are _also included!_
 
