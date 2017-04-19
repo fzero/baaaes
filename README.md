@@ -37,14 +37,13 @@ So instead of writing an API route like this...
 // GET /products
 // Returns a JSON array containing all available product objects
 router.get('/', (req, res) => {
-    models.Product.findAll()
-    .then((result) => {
-      res.json(result)
-    })
-    .catch((error) => {
-      res.status(400).json(error)
-    })
-  }
+  models.Product.findAll()
+  .then((result) => {
+    res.json(result)
+  })
+  .catch((error) => {
+    res.status(400).json(error)
+  })
 })
 ```
 
