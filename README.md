@@ -1,40 +1,38 @@
 # Baaaes 💓
 
-**Baaaes** is a **very opinionated** boilerplate for APIs using `async`/`await`, [Express](http://expressjs.com) and [Sequelize](http://sequelizejs.com).
+**Baaaes** is an opininated, fully fleshed-out API server boilerplate based on [ExpressJS](http://expressjs.com) and [Sequelize](http://sequelizejs.com) with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
 
-The basic code was created with [`express-generator`](https://expressjs.com/en/starter/generator.html), then the following changes were added:
-
-* Complete conversion to native ES6 syntax (i.e. you **won't** need Babel, thankfully!)
-* HTTPS support included, and you can generate self-signed certificates for development by running `npm run makecert`. Note that you **will** see warning messages; use [Let's encrypt](https://letsencrypt.org/) and a real domain name to avoid this.
-* [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) support baked in with configuration examples.
-* Differentiated environments (`development`, `test` and `production`) defined by the `APP_ENV` environment variable.
-* [Handlebars](http://handlebarsjs.com/) templates for HTML views.
-* [Sequelize](http://sequelizejs.com) as default ORM, along with an example model implementation making extensive use of the `async`/`await` pattern to minimize frustration.
-* Example API routes _with fully working RESTful CRUD endpoints_ included!
-* [Mocha](http://mochajs.org/) integration tests for the example API are _also included!_
-
-**Baaaes** gives you a fully fleshed-out boilerplate with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
-
-## External dependencies
-
-**Baaaes** expects a Postgres database up and running, but you can modify the code to use any other database supported by Sequelize. You'll have to install the corresponding `npm` packages and modify the `.env` file. [Relevant documentation here.](http://docs.sequelizejs.com/en/v3/docs/getting-started/)
-
-Out of the box, **Baaaes** uses URI-style configuration for database connections, but you can use as many environment variables as you want (e.g. `DB_USER`, `DB_PASS`, `DB_HOST` and so on). **Make sure to keep you test database separated though, as all data is destroyed on every test run!**
 
 ## TL;DR HOWTO
 
-1. Download the [zip package](https://github.com/fzero/baaaes/archive/master.zip) and unzip it somewhere
+1. Download the [zip package](https://github.com/fzero/baaaes/archive/master.zip) and unzip it somewhere (cloning is **not** recommended for normal use)
 2. Run `npm install`
 3. Copy `.env.example` to `.env` and add your Postgres DB configuration
 4. If you need HTTPS support, run `npm run makecert`
 
 Your should be ready to go now! Start the server with `npm start` and run tests with `npm test`.
 
+
+## How & why?
+
+The basic code was created with [`express-generator`](https://expressjs.com/en/starter/generator.html), then the following changes were made:
+
+* Complete conversion to native Node ES6 syntax.
+* HTTPS support included, and you can generate self-signed certificates for development by running `npm run makecert`. Note that you **will** see warning messages; use [Let's encrypt](https://letsencrypt.org/) and a real domain name to avoid this.
+* [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) support baked in with configuration examples.
+* Differentiated environments (`development`, `test` and `production`) defined by the `APP_ENV` environment variable.
+* [Handlebars](http://handlebarsjs.com/) templates for HTML views.
+* [Sequelize](http://sequelizejs.com) as ORM, along with an example model implementation making extensive use of the `async`/`await` pattern to minimize frustration.
+* Example API routes _with fully working RESTful CRUD endpoints_, also using `async`/`await`!
+* [Mocha](http://mochajs.org/) integration tests for the example API. And guess what? We're using `async`/`await` for that too!
+
+
 ## Making Express great again with `async`/`await`
 
-Let's face it, working with databases in Node was always annoying (to say the least) before the introduction of `async`/`await` in Node 7. The good news is **if your code uses promises, you can use `async`/`await` right now**.
+Let's face it, working with databases in Node has always been frustrating (to say the least). Node 7 introduces native support for `async`/`await`, which is nothing more than syntatic sugar on top of the Promise pattern. This means that **if your code uses promises, you can use `async`/`await` right now!**
 
-So instead of writing an API endpoint like this...
+So instead of writing an API route like this...
+
 ```js
 // GET /products
 // Returns a JSON array containing all available product objects
@@ -49,7 +47,9 @@ router.get('/', (req, res) => {
   }
 })
 ```
+
 ...you can write this instead!
+
 ```js
 router.get('/', async (req, res) => {
   try {
@@ -63,6 +63,14 @@ router.get('/', async (req, res) => {
 
 Note how you can use `try`/`catch` for async error handling - and YES, IT WORKS! 💓
 
+
+## External dependencies
+
+**Baaaes** expects a Postgres database up and running, but you can modify the code to use any other database supported by Sequelize. You'll have to install the corresponding `npm` packages and modify the `.env` file. [Relevant documentation here.](http://docs.sequelizejs.com/en/v3/docs/getting-started/)
+
+Out of the box, **Baaaes** uses URI-style configuration for database connections, but you can use as many environment variables as you want (e.g. `DB_USER`, `DB_PASS`, `DB_HOST` and so on). **Just make sure to keep you test database separated; all data is destroyed every time the test suite runs!**
+
+
 ## To do
 
 * Authentication middleware example
@@ -71,6 +79,7 @@ Note how you can use `try`/`catch` for async error handling - and YES, IT WORKS!
 * Example NGINX configuration
 * Clustering
 * HTTP/2
+
 
 ## MIT License
 
