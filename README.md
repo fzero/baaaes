@@ -48,6 +48,15 @@ router.get('/', async (req, res) => {
 
 Note how you can use `try`/`catch` for async error handling - and YES, IT WORKS! 💓
 
+## To do
+
+* Authentication middleware example
+* [JWT](https://jwt.io/) example
+* Bake in Let's Encrypt
+* Example NGINX configuration
+* Clustering
+* HTTP/2
+
 ## MIT License
 
 Copyright (c) 2017 Fabio Neves
