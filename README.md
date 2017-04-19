@@ -10,7 +10,7 @@
 3. Copy `.env.example` to `.env` and add your Postgres DB configuration
 4. If you need HTTPS support, run `npm run makecert`
 
-Your should be ready to go now! Start the server with `npm start` and run tests with `npm test`.
+You should be ready to go now! Start the server with `npm start` and run tests with `npm test`.
 
 
 ## How & why?
