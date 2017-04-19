@@ -32,8 +32,8 @@ already look like this, so we're good on validation errors!).
 I've decided NOT to implement everything on the spec to keep this example as
 lightweight as possible.
 
-Additional status information is provided by HTTP status codes, as the The
-Internet Gods intended.
+Additional status information is provided by HTTP status codes, as The Internet
+Gods intended.
 */
 
 // models is an object containing all loaded Sequelize models
