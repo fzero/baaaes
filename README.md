@@ -1,6 +1,6 @@
 # Baaaes 💓
 
-**Baaaes** is an opininated, fully fleshed-out API server boilerplate based on [ExpressJS](http://expressjs.com) and [Sequelize](http://sequelizejs.com) with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
+**Baaaes** is an opinionated, fully fleshed-out API server boilerplate based on [ExpressJS](http://expressjs.com) and [Sequelize](http://sequelizejs.com) with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
 
 
 ## TL;DR HOWTO
