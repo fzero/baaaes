@@ -1,4 +1,4 @@
-# Baaaaes 💓
+# Baaaes 💓
 
 **Baaaes** is a **very opinionated** boilerplate for APIs using `async`/`await`, [Express](http://expressjs.com) and [Sequelize](http://sequelizejs.com).
 
