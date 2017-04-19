@@ -15,6 +15,21 @@ The basic code was created with [`express-generator`](https://expressjs.com/en/s
 
 **Baaaes** gives you a fully fleshed-out boilerplate with woking examples and tests - you just have to jump in and modify it to your needs. I've tried to make the code as legible as possible with plenty of comments where necessary.
 
+## TL;DR HOWTO
+
+1. Download the [zip package](https://github.com/fzero/baaaes/archive/master.zip) and unzip it somewhere
+2. Run `npm install`
+3. Copy `.env.example` to `.env` and add your Postgres DB configuration
+4. If you need HTTPS support, run `npm run makecert`
+
+Your should be ready to go now! Start the server with `npm start` and run tests with `npm test`.
+
+## External dependencies
+
+**Baaaes** expects a Postgres database up and running, but you can modify the code to use any other database supported by Sequelize. You'll have to install the corresponding `npm` packages and modify the `.env` file. [You can find the relevant documentation here.](http://docs.sequelizejs.com/en/v3/docs/getting-started/)
+
+Out of the box, **Baaaes** uses URI-style configuraion for database connections, but you can (and should!) add as many environment variables as you want.
+
 ## Making Express great again with `async`/`await`
 
 Let's face it, working with databases in Node was always annoying (to say the least) before the introduction of `async`/`await` in Node 7. The good news is **if your code uses promises, you can use `async`/`await` right now**.
