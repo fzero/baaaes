@@ -1,5 +1,5 @@
 // Global model loader
-// Receives a connected Sequelize instace
+// Receives a connected Sequelize instance
 module.exports = (sequelize) => {
 
   let models = {
