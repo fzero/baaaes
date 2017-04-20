@@ -6,7 +6,7 @@ const expect = require('chai').expect
 // Require main app
 const app = require('../app')
 
-// Prepare database
+// Connect to test database and load models
 const sequelize = new Sequelize(process.env.TEST_DB_URL, {logging: false})
 const models = require('../models')(sequelize)
 
@@ -23,6 +23,7 @@ HTTPserver.listen(PORT)
 
 describe('Product API', function() {
 
+  // Make sure all necessary tables are present
   before(async function() {
     await models.syncAll()
   })
@@ -30,6 +31,7 @@ describe('Product API', function() {
 
   describe('With an empty products table', function() {
 
+    // Empty products table before each test
     beforeEach(async function() {
       await models.Product.sync({force: true})
     })
@@ -37,12 +39,13 @@ describe('Product API', function() {
 
     it('GET /products should return an empty result', async function() {
       const req = {
+        method: 'GET',
         uri: `${BASEURL}/products`,
         resolveWithFullResponse: true,
         json: true
       }
 
-      const response = await request.get(req)
+      const response = await request(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data').with.lengthOf(0)
     })
@@ -50,6 +53,7 @@ describe('Product API', function() {
 
     it('GET /products/1 should return error 404', async function() {
       const req = {
+        method: 'GET',
         uri: `${BASEURL}/products/1`,
         resolveWithFullResponse: true,
         simple: false,
@@ -141,12 +145,13 @@ describe('Product API', function() {
 
     it('GET /products should return three products', async function() {
       const req = {
+        method: 'GET',
         uri: `${BASEURL}/products`,
         resolveWithFullResponse: true,
         json: true
       }
 
-      const response = await request.get(req)
+      const response = await request(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data').with.lengthOf(3)
     })
@@ -154,12 +159,13 @@ describe('Product API', function() {
 
     it('GET /products/2 should return a single matching product', async function() {
       const req = {
+        method: 'GET',
         uri: `${BASEURL}/products/2`,
         resolveWithFullResponse: true,
         json: true
       }
 
-      const response = await request.get(req)
+      const response = await request(req)
       expect(response.statusCode).to.equal(200)
       expect(response.body).to.have.property('data')
       expect(response.body.data.id).to.eql(2)
