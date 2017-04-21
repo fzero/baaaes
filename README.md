@@ -69,6 +69,17 @@ Note how you can use `try`/`catch` for async error handling - and YES, IT WORKS!
 Out of the box, **Baaaes** uses URI-style configuration for database connections, but you can use as many environment variables as you want (e.g. `DB_USER`, `DB_PASS`, `DB_HOST` and so on). **Just make sure to keep you test database separated; all data is destroyed every time the test suite runs!**
 
 
+## Note about boilerplates in general
+
+The objective of Baaaes is **not** to prescribe how you should organize your project, but showing **one** particular way to do it (hence _opinionated_).
+
+ If you already know what you're doing, you can configure Express, Sequelize, Knex, Mongo and whatever else you're using however you want. Still, it can be useful to take a peek at some of this code to inform your decisions.
+
+This is one of the reasons I've decided against making Baaaes into a code generation package (such as `express-generator`). The other reason is it would be too much like creating yet another Javascript framework, and **NOBODY** wants that.
+
+**NOBODY.**
+
+
 ## To do
 
 * Authentication middleware example
@@ -77,6 +88,7 @@ Out of the box, **Baaaes** uses URI-style configuration for database connections
 * Example NGINX configuration
 * Clustering
 * HTTP/2
+* Koa version
 
 
 ## MIT License
