@@ -1,14 +1,14 @@
-const Sequelize = require('sequelize')
+const Sequelize = require('sequelize');
 
-module.exports = (sequelize) => {
-
-  const Product = sequelize.define('products',
+module.exports = sequelize => {
+  const User = sequelize.define(
+    'users',
     {
       name: {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
-          notEmpty: true,
+          notEmpty: true
         }
       },
       price: {
@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
     {
       freezeTableName: true
     }
-  )
+  );
 
-  return Product
-}
+  return User;
+};
