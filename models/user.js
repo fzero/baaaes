@@ -33,6 +33,7 @@ module.exports = sequelize => {
       freezeTableName: true
     }
   );
+  User.hasMany(Transactions)
 
   return User;
 };
