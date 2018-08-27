@@ -1,32 +1,25 @@
 const Sequelize = require('sequelize');
 
 module.exports = sequelize => {
-  const User = sequelize.define(
-    'users',
+  const Blockchain = sequelize.define(
+    'blockchain',
     {
-      username: {
+      address: {
         type: Sequelize.STRING,
         allowNull: false,
         validate: {
           notEmpty: true
         }
       },
-      password: {
-        type: Sequelize.STRING,
+      parent: {
+        type: Sequelize.STRING
+      },
+      amount: {
+        type: Sequelize.FLOAT,
         allowNull: false,
         validate: {
           notEmpty: true
         }
-      },
-      email: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        validate: {
-          notEmpty: true
-        }
-      },
-      Balance: {
-        type: Sequelize.FLOAT
       }
     },
     {
@@ -34,5 +27,5 @@ module.exports = sequelize => {
     }
   );
 
-  return User;
+  return Blockchain;
 };

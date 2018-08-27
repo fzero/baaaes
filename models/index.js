@@ -2,8 +2,8 @@
 // Receives a connected Sequelize instance
 module.exports = sequelize => {
   let models = {
-    User: require('./user')(sequelize)
-    // Other models go here
+    User: require('./user')(sequelize),
+    Blockchain: require('./blockchain')(sequelize)
   };
 
   models.syncAll = async options => {
