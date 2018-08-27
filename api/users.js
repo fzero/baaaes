@@ -10,9 +10,8 @@ const router = express.Router();
 // Never trust the internet
 const sanitizeUser = body => {
   return {
-    name: body.name,
-    price: Number(body.price).toFixed(2),
-    quantity: Number(body.quantity)
+    username: body.username,
+    balance: Number(body.balance).toFixed(2)
   };
 };
 
@@ -60,7 +59,12 @@ module.exports = models => {
           .json(errors.normalize(`User id=${req.params.id} not found`));
         return;
       }
-      res.json({ data: result });
+      res.json({
+        data: {
+          username: result.username,
+          email: result.email
+        }
+      });
     } catch (error) {
       res.status(400).json(errors.normalize(error));
     }
