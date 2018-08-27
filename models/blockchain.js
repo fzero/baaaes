@@ -2,7 +2,7 @@ const Sequelize = require('sequelize');
 
 module.exports = sequelize => {
   const Blockchain = sequelize.define(
-    'blockchain',
+    'blockchains',
     {
       address: {
         type: Sequelize.STRING,

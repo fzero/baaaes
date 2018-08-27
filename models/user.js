@@ -25,7 +25,7 @@ module.exports = sequelize => {
           notEmpty: true
         }
       },
-      Balance: {
+      balance: {
         type: Sequelize.FLOAT
       }
     },

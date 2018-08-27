@@ -53,7 +53,7 @@ app.options('*', cors(corsOptions));
 
 // View engine setup (HTML views)
 app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
+app.set('view engine', 'ejs');
 
 // HTTP Request logging (disabled in test mode)
 if (app.settings.env !== 'test') {
