@@ -4,7 +4,8 @@ module.exports = sequelize => {
   let models = {
     User: require('./user')(sequelize),
     Blockchain: require('./blockchain')(sequelize),
-    Transaction: require('./transaction')(sequelize)
+    Transaction: require('./transaction')(sequelize),
+    Key: require('./key')(sequelize)
   };
 
   models.syncAll = async options => {
