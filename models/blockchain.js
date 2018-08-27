@@ -26,6 +26,7 @@ module.exports = sequelize => {
       freezeTableName: true
     }
   );
+  blockchain.hasMany(transactions)
 
   return Blockchain;
 };

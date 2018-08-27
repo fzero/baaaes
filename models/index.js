@@ -6,8 +6,6 @@ module.exports = sequelize => {
     Blockchain: require('./blockchain')(sequelize),
     Transaction: require('./transaction')(sequelize)
   };
-  models.Transaction.belongsTo(models.User, {foreignKey: 'user_id', targetKey: 'id'})
-  models.Transaction.belongsTo(models.Blockchain, {foreignKey: 'blockchain_id', targetKey: 'id'})
 
   models.syncAll = async options => {
     for (let key in models) {
