@@ -7,8 +7,8 @@ module.exports = sequelize => {
       freezeTableName: true
     }
   );
-  Transaction.belongsTo(User)
-  Transaction.belongsTo(Blockchain)
+  Transaction.belongsTo(User, {foreignKey: 'user_id'})
+  Transaction.belongsTo(Blockchain, {foreignKey: 'blockchain_id'})
 
   return Transaction;
 };
