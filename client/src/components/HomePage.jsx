@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class Homepage extends Component {
   // constructor(props) {
@@ -16,7 +17,7 @@ class Homepage extends Component {
           voluptas repellat.
         </p>
         <button>Existing User</button>
-        <button>Get Started</button>
+        <button><Link to={'/register'}>Get Started</Link></button>
       </div>
     );
   }

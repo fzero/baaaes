@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class CompletedTutorial extends Component {
+class TutorialCompletion extends Component {
   render() {
     return(
       <section>
@@ -13,3 +13,5 @@ class CompletedTutorial extends Component {
     )
   }
 }
+
+export default TutorialCompletion

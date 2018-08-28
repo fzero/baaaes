@@ -29,3 +29,5 @@ class BlockchainExplorer extends Component {
     )
   }
 }
+
+export default BlockchainExplorer
