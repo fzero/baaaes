@@ -16,7 +16,7 @@ class Homepage extends Component {
         <button>Existing User</button>
         <button>Get Started</button>
       </div> 
-      )
+    )
   }
 }
 

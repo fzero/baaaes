@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Register from './Register.jsx';
 import Homepage from './homePage.jsx'
 
-
 class Container extends Component {
   constructor(props) {
     super(props);
