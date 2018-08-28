@@ -11,7 +11,14 @@ const Container = props => (
       <Route path="/" exact component={Homepage} />
       <Route path="/samplesell" component={SampleSell} />
       <Route path="/createmneumonic" component={CreateMneumonic} />
-      <Route path="/register" component={Register} />
+      <Route path="/coininfo" component={Register} />
+      <Route path="/samplebuy" component={Register} />
+      <Route path="/blockchainexplorer" component={Register} />
+      <Route path="/confirmmneumonic" component={Register} />
+      <Route path="/createdwallet" component={Register} />
+      <Route path="/privatekey" component={Register} />
+      <Route path="/publickey" component={Register} />
+      <Route path="/tutorialcomplete" component={Register} />
     </Switch>
   </div>
 );
