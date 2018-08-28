@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Register from './Register.jsx';
 import SampleSell from './SampleSell.jsx';
 import Homepage from './homePage.jsx';
 
