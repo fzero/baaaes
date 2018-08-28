@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import Register from './Register.jsx';
-import Homepage from './homePage.jsx'
-
+import SampleSell from './SampleSell.jsx';
+import Homepage from './homePage.jsx';
 
 class Container extends Component {
   constructor(props) {
@@ -12,10 +11,12 @@ class Container extends Component {
   render() {
     return (
       <div className="container">
-        <Register />
-        <div><Homepage /></div>
+        <SampleSell />
+        <div>
+          <Homepage />
+        </div>
       </div>
-    )
+    );
   }
 }
 
