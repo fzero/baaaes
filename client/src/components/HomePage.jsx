@@ -8,7 +8,7 @@ class Homepage extends Component {
 
   render() {
     return (
-      <div>
+      <section className="component">
         <h1>Cryptorial</h1>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
@@ -18,7 +18,7 @@ class Homepage extends Component {
         </p>
         <button>Existing User</button>
         <button><Link to={'/register'}>Get Started</Link></button>
-      </div>
+      </section>
     );
   }
 }

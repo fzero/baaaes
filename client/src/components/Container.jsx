@@ -9,13 +9,18 @@ import PublicKey from './PublicKey.jsx';
 import PrivateKey from './PrivateKey.jsx';
 import CreateWallet from './CreateWallet.jsx';
 import CoinInfo from './CoinInfo.jsx';
-import SampleSell from './SampleSell.jsx';
 import SampleBuy from './SampleBuy.jsx';
+import SampleSell from './SampleSell.jsx';
 import BlockchainExplorer from './BlockchainExplorer.jsx';
 import TutorialCompletion from './TutorialCompletion.jsx';
 
+// Description
+import Description from './Description.jsx'
+
 const Container = props => (
   <div className="container">
+    <Description />
+
     <Switch>
       <Route path="/" exact component={Homepage} />
       <Route path="/register" component={Register} />
@@ -25,8 +30,8 @@ const Container = props => (
       <Route path="/privatekey" component={PrivateKey} />
       <Route path="/createwallet" component={CreateWallet} />
       <Route path="/coininfo" component={CoinInfo} />
-      <Route path="/samplesell" component={SampleSell} />
       <Route path="/samplebuy" component={SampleBuy} />
+      <Route path="/samplesell" component={SampleSell} />
       <Route path="/blockchainexplorer" component={BlockchainExplorer} />
       <Route path="/tutorialcomplete" component={TutorialCompletion} />
     </Switch>

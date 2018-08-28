@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class CoinInfo extends Component {
   constructor(props) {
@@ -8,7 +9,7 @@ class CoinInfo extends Component {
 
   render() {
     return (
-      <div classname="create-mneumonic">
+      <section className="component">
         <h3>Some Popular Digital Assets</h3>
         <p>
           Here are some of the most popular digital assets on the market today!
@@ -29,8 +30,9 @@ class CoinInfo extends Component {
           <h3>Dogecoin</h3>
           <p>desc.</p>
         </div>
-        <button>Next</button>
-      </div>
+        <button><Link to={'/createwallet'}>Previous</Link></button>
+        <button><Link to={'/samplebuy'}>Next</Link></button>
+      </section>
     );
   }
 }

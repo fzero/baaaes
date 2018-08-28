@@ -7,7 +7,7 @@ class Description extends Component {
   }
 
   render() {
-    return <div />;
+    return <div className="description"/>;
   }
 }
 
