@@ -9,7 +9,7 @@ class Container extends Component {
   render() {
     return (
       <div className="container">
-        <p>our app goes here</p>
+        <p>our app goes here!</p>
       </div>
     );
   }
