@@ -1,12 +1,10 @@
 .App {
   text-align: center;
-  width: 100%;
-  margin: 1px
 }
 
 .App-header {
   background-color: #222;
-  height: 150px;
+  height: 20vh;
   padding: 20px;
   color: white;
 }
@@ -19,8 +17,3 @@
   font-size: large;
 }
 
-/* Logo Spin
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-} */
