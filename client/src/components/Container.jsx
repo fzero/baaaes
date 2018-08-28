@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Register from './Register.jsx';
 
 class Container extends Component {
   constructor(props) {
@@ -9,7 +10,7 @@ class Container extends Component {
   render() {
     return (
       <div className="container">
-        <p>our app goes here!</p>
+        <Register />
       </div>
     );
   }
