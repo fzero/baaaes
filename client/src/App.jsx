@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 // import container
 import Container from './components/Container.jsx';
-import Register from './components/Register.jsx';
 
 class App extends Component {
   render() {
