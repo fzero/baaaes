@@ -13,6 +13,7 @@ import SampleSell from './SampleSell.jsx';
 import SampleBuy from './SampleBuy.jsx';
 import BlockchainExplorer from './BlockchainExplorer.jsx';
 import TutorialCompletion from './TutorialCompletion.jsx';
+import Market from './Market.jsx';
 
 const Container = props => (
   <div className="container">
@@ -29,6 +30,7 @@ const Container = props => (
       <Route path="/samplebuy" component={SampleBuy} />
       <Route path="/blockchainexplorer" component={BlockchainExplorer} />
       <Route path="/tutorialcomplete" component={TutorialCompletion} />
+      <Route path="/Market" component={Market} />
     </Switch>
   </div>
 );
