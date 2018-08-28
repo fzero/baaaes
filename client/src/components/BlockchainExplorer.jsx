@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 class BlockchainExplorer extends Component {
   render() {
-    return(
+    return (
       <section>
         <h3>Blockchain Transactions</h3>
         <div>
@@ -26,7 +26,7 @@ class BlockchainExplorer extends Component {
         </div>
         <button>Finish</button>
       </section>
-    )
+    );
   }
 }
 
