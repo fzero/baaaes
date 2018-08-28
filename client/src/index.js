@@ -15,9 +15,9 @@ import './styles/Container.css';
 
 // ReactDOM Render App
 ReactDOM.render(
-  <browserRouter>
+  <BrowserRouter>
     <App />
-  </browserRouter>,
+  </BrowserRouter>,
   document.getElementById('root')
 );
 registerServiceWorker();
