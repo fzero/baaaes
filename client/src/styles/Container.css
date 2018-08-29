@@ -1,0 +1,17 @@
+.container {
+  border: 4px solid #222;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.description {
+  border-right: 2px solid #222;
+  width: 50%;
+}
+
+.component {
+  border-left: 2px solid #222;
+  width: 50%;
+}
