@@ -14,6 +14,7 @@ import SampleSell from './SampleSell.jsx';
 import BlockchainExplorer from './BlockchainExplorer.jsx';
 import TutorialCompletion from './TutorialCompletion.jsx';
 import Market from './Market.jsx';
+import Wallets from './Wallets.jsx';
 
 // Description
 import Description from './Description.jsx';
@@ -24,7 +25,7 @@ const Container = props => (
 
     <Switch>
       {/* Home Page */}
-      <Route path="/" exact component={Homepage} />
+      <Route path="/home" exact component={Homepage} />
       {/* Registration Page */}
       <Route path="/register" component={Register} />
       {/* Create Mneumonic/Recovery */}
@@ -49,6 +50,8 @@ const Container = props => (
       <Route path="/tutorialcomplete" component={TutorialCompletion} />
       {/* Market Page */}
       <Route path="/market" component={Market} />
+      {/* Wallets Page */}
+      <Route path="/wallets" component={Wallets} />
     </Switch>
   </div>
 );

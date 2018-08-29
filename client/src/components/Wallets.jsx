@@ -1,28 +1,46 @@
 import React, { Component } from 'react';
 import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 
-class Mneumonic extends Component {
+class Wallets extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   render() {
     return (
       <Row className="mneumonic">
-       <col xs={12}></col>
-          <h3>Mneumonic Recovery Phrase</h3>
-          <ul>
-            Copy This
-            <div>
-              Apple John Place Cat Rat Fungus Went Happy Socks Engineer
-              Galapagos Day Sally
-            </div>
-            Re-Enter
-            <div>
-              <textarea placeholder="Re-Enter your Mneumonic Phrase Here after you've copied it down somewhere safe!" />
-            </div>
-            <input type="submit" />
-          </ul>
-        </form>
+        <Col xs={12}>
+          <PageHeader>Wallets</PageHeader>
+          <Table>
+            <thead>
+              <tr>
+                <th>Coin</th>
+                <th>Wallet-Name</th>
+                <th>Address</th>
+                <th>Balance</th>
+                <th>History</th>
+              </tr>
+            </thead>
+            <tbody>
+              {/* {this.state.products.map((product, index) => ( */} {/* ))} */}
+              <tr>
+                <td>Bitcoin</td>
+                <td>
+                  {/* <Link> is a react-router component that works pretty much like <a href> */}
+                  My Wallet
+                </td>
+                <td>0x12309sfj0asd908098</td>
+                <td>20.12313</td>
+                <td>See Transactions</td>
+              </tr>
+            </tbody>
+          </Table>
+        </Col>
       </Row>
     );
   }
 }
 
-export default Mneumonic;
+export default Wallets;
