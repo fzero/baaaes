@@ -1,8 +1,24 @@
 import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class ConfirmMneumonic extends Component {
   render() {
+<<<<<<< HEAD
+    return (
+      <section className="component">
+        <div>
+          <h3>Enter Mneumonic Phrase</h3>
+          <textarea placeholder="Please re-enter your Mneumonic Phrase here..." />
+          <button>
+            <Link to={'/createmneumonic'}>Previous</Link>
+          </button>
+          <button>
+            <Link to={'/publickey'}>Next</Link>
+          </button>
+        </div>
+      </section>
+    );
+=======
     return(
       <main className="componentContainer">
         <section className="description">
@@ -43,7 +59,8 @@ class ConfirmMneumonic extends Component {
         </section>
       </main>
     )
+>>>>>>> master
   }
 }
 
-export default ConfirmMneumonic
+export default ConfirmMneumonic;
