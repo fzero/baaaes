@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
+import { Table, Row, Col, PageHeader } from 'react-bootstrap';
 
 class Wallets extends Component {
   constructor(props) {
@@ -10,7 +10,7 @@ class Wallets extends Component {
 
   render() {
     return (
-      <Row className="mneumonic">
+      <Row className="mnemonic">
         <Col xs={12}>
           <PageHeader>Wallets</PageHeader>
           <Table>
