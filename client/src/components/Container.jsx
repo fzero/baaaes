@@ -28,25 +28,25 @@ const Container = props => (
       {/* Registration Page */}
       <Route path="/register" component={Register} />
       {/* Create Mneumonic/Recovery */}
-      <Route path="/createmneumonic" component={CreateMneumonic} />{' '}
+      <Route path="/createmneumonic" component={CreateMneumonic} />
       {/* Confirm Recovery */}
-      <Route path="/confirmmneumonic" component={ConfirmMneumonic} />{' '}
+      <Route path="/confirmmneumonic" component={ConfirmMneumonic} />
       {/* What is a Public Key? */}
-      <Route path="/publickey" component={PublicKey} />{' '}
+      <Route path="/publickey" component={PublicKey} />
       {/* What is a Private Key? */}
-      <Route path="/privatekey" component={PrivateKey} />{' '}
+      <Route path="/privatekey" component={PrivateKey} />
       {/* Create Test Wallet */}
-      <Route path="/createwallet" component={CreateWallet} />{' '}
+      <Route path="/createwallet" component={CreateWallet} />
       {/* Descriptions of Top Coins */}
-      <Route path="/coininfo" component={CoinInfo} />{' '}
+      <Route path="/coininfo" component={CoinInfo} />
       {/* Sample Buy Transaction */}
-      <Route path="/samplebuy" component={SampleBuy} />{' '}
+      <Route path="/samplebuy" component={SampleBuy} />
       {/* Sample Sell Transaction */}
-      <Route path="/samplesell" component={SampleSell} />{' '}
+      <Route path="/samplesell" component={SampleSell} />
       {/* Example Blockchain Explorer */}
-      <Route path="/blockchainexplorer" component={BlockchainExplorer} />{' '}
+      <Route path="/blockchainexplorer" component={BlockchainExplorer} />
       {/* Tutorial Completed Messsage */}
-      <Route path="/tutorialcomplete" component={TutorialCompletion} />{' '}
+      <Route path="/tutorialcomplete" component={TutorialCompletion} />
       {/* Market Page */}
       <Route path="/market" component={Market} />
     </Switch>
