@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "ajv": "^6.5.3",
+    "bip32": "^1.0.2",
     "bip39": "^2.5.0",
     "bitcoinjs-lib": "^4.0.1",
     "enzyme": "^3.5.0",
