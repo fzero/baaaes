@@ -1,14 +1,11 @@
 const bip39 = require('bip39');
-const bitcoin = require('bitcoinjs-lib');
+const HDKey = require('hdkey');
 
 var mnemonic = bip39.generateMnemonic();
 console.log(mnemonic);
 
-const hash = bitcoin.crypto.sha256(Buffer.from(mnemonic));
-
-const keyPair = bitcoin.ECPair.fromPrivateKey(hash);
-const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
-
-// Generating addresses from SHA256 hashes is not secure if the input to the hash function is predictable
-// Do not use with predictable inputs
-console.log({ address });
+const seed = bip39.mnemonicToSeedHex(mnemonic);
+console.log(`seed = ${seed}`);
+const hdkey = HDKey.fromMasterSeed(new Buffer(seed, 'hex'));
+console.log(`PRIVATE: ${hdkey.privateExtendedKey}`);
+console.log(`PUBLIC: ${hdkey.publicExtendedKey}`);
