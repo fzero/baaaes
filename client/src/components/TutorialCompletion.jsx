@@ -17,4 +17,6 @@ class TutorialCompletion extends Component {
   }
 }
 
-export default TutorialCompletion
+
+export default TutorialCompletion;
+
