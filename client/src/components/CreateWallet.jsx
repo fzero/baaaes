@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class CreateWallet extends Component {
   render() {
     return (
-      <section>
+      <section className="component">
         <h3>You have successfully created your very own Test Wallet</h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
@@ -14,8 +15,8 @@ class CreateWallet extends Component {
           perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
           dolorem voluptas repellat.
         </p>
-        <button>Return to Start</button>
-        <button>Sample Transaction</button>
+        <button><Link to={'/privatekey'}>Private Key</Link></button>
+        <button><Link to={'/coininfo'}>Coin Information</Link></button>
       </section>
     );
   }

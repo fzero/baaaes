@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class CreateMneumonic extends Component {
   constructor(props) {
@@ -8,16 +9,15 @@ class CreateMneumonic extends Component {
 
   render() {
     return (
-      <div classname="create-mneumonic">
+      <section className="component">
         <h3>Mneumonic Phrase</h3>
-        <textarea name="mneumonic-phrase-box">
-          your mneumonic phrase will appear here
-        </textarea>
+        <textarea name="mneumonic-phrase-box" placeholder=""/>
         <label for="mneumonic-phrase-box">
           *Do not copy, please write it down
         </label>
-        <button>Next -></button>
-      </div>
+        <button><Link to={'/register'}>Previous</Link></button>
+        <button><Link to={'/confirmmneumonic'}>Next</Link></button>
+      </section>
     );
   }
 }

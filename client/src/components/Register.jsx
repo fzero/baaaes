@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom'
 
 class Register extends Component {
   constructor(props) {
@@ -8,28 +9,21 @@ class Register extends Component {
 
   render() {
     return (
-      <form className="register">
-        <h2>Register a new account!</h2>
-        <ul>
-          <div>
-            Email:
-            <input type="text" />
-          </div>
-          <div>
-            Username:
-            <input type="text" />
-          </div>
-          <div>
-            Password:
-            <input type="password" />
-          </div>
-          <div>
-            Confirm Password:
-            <input type="password" />
-          </div>
-          <input type="submit" />
-        </ul>
-      </form>
+      <section className="component">
+        <h3>Register a new account!</h3>
+        <form className="register">
+          Email:<br/>
+          <input type="email" /><br/>
+          Username:<br/>
+          <input type="text" /><br/>
+          Password:<br/>
+          <input type="password" /><br/>
+          Confirm Password:<br/>
+          <input type="password" /><br/>
+          <button><Link to={'/'}>Return</Link></button>
+          <button><Link to={'/createmneumonic'}>Submit</Link></button>
+        </form>
+      </section>
     );
   }
 }
