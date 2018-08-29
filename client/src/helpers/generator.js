@@ -1,6 +1,7 @@
 const bip39 = require('bip39');
 const HDKey = require('hdkey');
 const bip32 = require('bip32');
+var bitcoin = require('bitcoinjs-lib');
 
 var mnemonic = bip39.generateMnemonic();
 console.log(mnemonic);
@@ -10,10 +11,8 @@ console.log(`seed = ${seed}`);
 const hdkey = HDKey.fromMasterSeed(new Buffer(seed, 'hex'));
 // Need to convert xpriv to private key
 // Testing various pieces of the object below.
-const node = bip32.fromBase58(hdkey.privateExtendedKey);
-let child = node.derivePath('m/0/0');
-console.log(node);
-console.log(hdkey);
-console.log(`PRIVATE: ${hdkey.privateExtendedKey}`);
+const private = bitcoin.ECPair.fromPrivateKey(hdkey.privateKey);
+console.log(`PRIVATE: ${hdkey.privateExtendedKey},
+short private: ${JSON.stringify(private)}`);
+
 console.log(`PUBLIC: ${hdkey.publicExtendedKey}`);
-console.log(`CHILD ${JSON.stringify(child)}`);
