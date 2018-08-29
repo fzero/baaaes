@@ -8,6 +8,8 @@ console.log(mnemonic);
 const seed = bip39.mnemonicToSeedHex(mnemonic);
 console.log(`seed = ${seed}`);
 const hdkey = HDKey.fromMasterSeed(new Buffer(seed, 'hex'));
+// Need to convert xpriv to private key
+// Testing various pieces of the object below.
 const node = bip32.fromBase58(hdkey.privateExtendedKey);
 let child = node.derivePath('m/0/0');
 console.log(node);
