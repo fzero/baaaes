@@ -14,15 +14,10 @@ import SampleSell from './SampleSell.jsx';
 import BlockchainExplorer from './BlockchainExplorer.jsx';
 import TutorialCompletion from './TutorialCompletion.jsx';
 
-// Description
-import Description from './Description.jsx'
-
 const Container = props => (
   <div className="container">
-    <Description />
-
     <Switch>
-      <Route path="/" exact component={Homepage} />
+      <Route path="/" exact component={Homepage}/>
       <Route path="/register" component={Register} />
       <Route path="/createmneumonic" component={CreateMneumonic} />
       <Route path="/confirmmneumonic" component={ConfirmMneumonic} />
