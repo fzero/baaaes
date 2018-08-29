@@ -30,7 +30,7 @@ const Container = props => (
       <Route path="/samplebuy" component={SampleBuy} />
       <Route path="/blockchainexplorer" component={BlockchainExplorer} />
       <Route path="/tutorialcomplete" component={TutorialCompletion} />
-      <Route path="/Market" component={Market} />
+      <Route path="/market" component={Market} />
     </Switch>
   </div>
 );

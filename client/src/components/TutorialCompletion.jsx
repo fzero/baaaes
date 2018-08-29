@@ -15,9 +15,5 @@ class TutorialCompletion extends Component {
     );
   }
 }
-<<<<<<< HEAD
 
-export default TutorialCompletion
-=======
 export default TutorialCompletion;
->>>>>>> ae2257aea1e3db0ed26e71d8757831fd1b512b62
