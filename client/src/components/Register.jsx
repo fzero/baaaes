@@ -11,14 +11,10 @@ class Register extends Component {
     return (
       <main className="componentContainer">
         <section className="description">
+          <h3>Registering a Wallet</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-            error dolor consequuntur, natus eum itaque harum fugit perspiciatis
-            nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Beatae, error dolor consequuntur, natus eum itaque harum fugit
-            perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
-            dolorem voluptas repellat.
+            Before the actual creation of your test cryptocurrency wallet, you will 
+            need to register an account. 
           </p>
         </section>
 
