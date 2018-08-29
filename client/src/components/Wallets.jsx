@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
+// import { Grid, Row, Col, PageHeader } from 'react-bootstrap';
 
 class Wallets extends Component {
   constructor(props) {
@@ -9,8 +9,12 @@ class Wallets extends Component {
   }
 
   render() {
-    return (
-      <Row className="mneumonic">
+    return (<div>Hello World</div>)
+  }
+}
+
+export default Wallets;
+{/*<Row className="mneumonic">
         <Col xs={12}>
           <PageHeader>Wallets</PageHeader>
           <Table>
@@ -24,11 +28,11 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
-              {/* {this.state.products.map((product, index) => ( */} {/* ))} */}
+               {this.state.products.map((product, index) => (  ))} 
               <tr>
                 <td>Bitcoin</td>
                 <td>
-                  {/* <Link> is a react-router component that works pretty much like <a href> */}
+                  <Link> is a react-router component that works pretty much like <a href>
                   My Wallet
                 </td>
                 <td>0x12309sfj0asd908098</td>
@@ -38,9 +42,4 @@ class Wallets extends Component {
             </tbody>
           </Table>
         </Col>
-      </Row>
-    );
-  }
-}
-
-export default Wallets;
+      </Row>*/}
