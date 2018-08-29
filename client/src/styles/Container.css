@@ -1,9 +1,17 @@
 .container {
   border: 4px solid #222;
   border-radius: 10px;
+  margin: 10px;
+}
+
+.homepage {
+  width: 100%;
+}
+
+.componentContainer {
+  width: 100%;
   display: flex;
   flex-direction: row;
-  margin: 10px;
 }
 
 .description {
