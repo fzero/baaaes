@@ -29,7 +29,7 @@ class Register extends Component {
             <input type="password" /><br/>
             Confirm Password:<br/>
             <input type="password" /><br/>
-            <button><Link to={'/'}>Return</Link></button>
+            <button><Link to={'/home'}>Return</Link></button>
             <button><Link to={'/createmneumonic'}>Submit</Link></button>
           </form>
         </section>
