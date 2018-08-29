@@ -16,25 +16,38 @@ import TutorialCompletion from './TutorialCompletion.jsx';
 import Market from './Market.jsx';
 
 // Description
-import Description from './Description.jsx'
+import Description from './Description.jsx';
 
 const Container = props => (
   <div className="container">
     <Description />
 
     <Switch>
+      {/* Home Page */}
       <Route path="/" exact component={Homepage} />
+      {/* Registration Page */}
       <Route path="/register" component={Register} />
-      <Route path="/createmneumonic" component={CreateMneumonic} />
-      <Route path="/confirmmneumonic" component={ConfirmMneumonic} />
-      <Route path="/publickey" component={PublicKey} />
-      <Route path="/privatekey" component={PrivateKey} />
-      <Route path="/createwallet" component={CreateWallet} />
-      <Route path="/coininfo" component={CoinInfo} />
-      <Route path="/samplebuy" component={SampleBuy} />
-      <Route path="/samplesell" component={SampleSell} />
-      <Route path="/blockchainexplorer" component={BlockchainExplorer} />
-      <Route path="/tutorialcomplete" component={TutorialCompletion} />
+      {/* Create Mneumonic/Recovery */}
+      <Route path="/createmneumonic" component={CreateMneumonic} />{' '}
+      {/* Confirm Recovery */}
+      <Route path="/confirmmneumonic" component={ConfirmMneumonic} />{' '}
+      {/* What is a Public Key? */}
+      <Route path="/publickey" component={PublicKey} />{' '}
+      {/* What is a Private Key? */}
+      <Route path="/privatekey" component={PrivateKey} />{' '}
+      {/* Create Test Wallet */}
+      <Route path="/createwallet" component={CreateWallet} />{' '}
+      {/* Descriptions of Top Coins */}
+      <Route path="/coininfo" component={CoinInfo} />{' '}
+      {/* Sample Buy Transaction */}
+      <Route path="/samplebuy" component={SampleBuy} />{' '}
+      {/* Sample Sell Transaction */}
+      <Route path="/samplesell" component={SampleSell} />{' '}
+      {/* Example Blockchain Explorer */}
+      <Route path="/blockchainexplorer" component={BlockchainExplorer} />{' '}
+      {/* Tutorial Completed Messsage */}
+      <Route path="/tutorialcomplete" component={TutorialCompletion} />{' '}
+      {/* Market Page */}
       <Route path="/market" component={Market} />
     </Switch>
   </div>
