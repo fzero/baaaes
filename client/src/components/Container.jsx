@@ -16,17 +16,22 @@ import TutorialCompletion from './TutorialCompletion.jsx';
 import Market from './Market.jsx';
 import Wallets from './Wallets.jsx';
 
+<<<<<<< HEAD
 // Description
 import Description from './Description.jsx';
 
+=======
+>>>>>>> master
 const Container = props => (
   <div className="container">
-    <Description />
-
     <Switch>
+<<<<<<< HEAD
       {/* Home Page */}
       <Route path="/home" exact component={Homepage} />
       {/* Registration Page */}
+=======
+      <Route path="/" exact component={Homepage}/>
+>>>>>>> master
       <Route path="/register" component={Register} />
       {/* Create Mneumonic/Recovery */}
       <Route path="/createmneumonic" component={CreateMneumonic} />
