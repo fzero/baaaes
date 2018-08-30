@@ -3,8 +3,38 @@ import {Link} from 'react-router-dom'
 
 class Register extends Component {
   constructor(props) {
-    super(props);
-    this.state = {};
+    super(props)
+    this.state = {
+      email: '', 
+      username: '', 
+      password: '', 
+      passwordConfirmation: ''
+    }
+  }
+
+  // Event handler for user info
+  handleSubmit = ev => {
+    ev.preventDefault()
+    console.log(this.state)
+    
+    // submit form
+    this.props.history.push('/createmneumonic')
+  }
+
+  setEmail = ev => {
+    this.setState({email: ev.target.value})
+  }
+
+  setUsername = ev => {
+    this.setState({username: ev.target.value})
+  }
+
+  setPassword = ev => {
+    this.setState({password: ev.target.value})
+  }
+
+  setPasswordConfirm = ev => {
+    this.setState({passwordConfirmation: ev.target.value})
   }
 
   render() {
@@ -22,18 +52,27 @@ class Register extends Component {
 
         <section className="component">
           <h3>Register a new account!</h3>
-          <form className="register">
-            Email:<br/>
-            <input type="email" /><br/>
-            Username:<br/>
-            <input type="text" /><br/>
-            Password:<br/>
-            <input type="password" /><br/>
-            Confirm Password:<br/>
-            <input type="password" /><br/>
-            <button><Link to={'/home'}>Return</Link></button>
-            <button><Link to={'/createmneumonic'}>Submit</Link></button>
+          <form className="register" onSubmit={this.handleSubmit}>
+            <label>
+              Email:<br/>
+              <input type="email" onChange={this.setEmail} value={this.state.email} /><br/>
+            </label>
+            <label>
+              Username:<br/>
+              <input type="text" onChange={this.setUsername} value={this.state.username}/><br/>
+            </label>
+            <label>
+              Password:<br/>
+              <input type="password" onChange={this.setPassword} value={this.state.password}/><br/>
+            </label>
+            <label>
+              Confirm Password:<br/>
+              <input type="password" onChange={this.setPasswordConfirm} value={this.state.passwordConfirmation}/><br/>
+            </label>
+            <button type="submit">Submit</button>
           </form>
+          <br/>
+          <Link to={'/home'}>Return</Link>
         </section>
       </main>
     );
