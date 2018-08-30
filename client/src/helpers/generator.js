@@ -16,7 +16,15 @@ const keyPair = bitcoin.ECPair.fromWIF(wif);
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
 
 module.exports = {
-  address,
   mnemonic,
+  address,
   wif
 };
+console.log(mnemonic);
+console.log(`--------------------`);
+
+console.log(address);
+console.log(`--------------------`);
+
+console.log(wif);
+console.log(`--------------------`);

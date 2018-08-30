@@ -31,5 +31,4 @@ class MakeWallet extends Component {
     );
   }
 }
-console.log(generator);
 export default MakeWallet;
