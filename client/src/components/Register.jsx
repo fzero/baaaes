@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
+// Client-Side Model
+import Resource from '../models/resource'
+// const UserStore = Resource('users')
+
 class Register extends Component {
   constructor(props) {
     super(props)
@@ -16,7 +20,16 @@ class Register extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     console.log(this.state)
-    
+
+    fetch('http://localhost:8080/users', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state),
+    })
+    .catch(e => console.log(e))
+
     // submit form
     this.props.history.push('/createmneumonic')
   }

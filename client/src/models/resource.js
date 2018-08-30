@@ -32,7 +32,7 @@ const Resource = (endpoint) => {
   }
 
   function create(data) {
-    return api.post(`/${endpoint}`, data)
+    return api.post(`/users`, data)
   }
 
   function update(id, data) {
