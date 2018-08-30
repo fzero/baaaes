@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
-class TutorialCompletion extends Component {
+class BlockchainExplorer extends Component {
   render() {
     return (
       <main className="componentContainer">
@@ -18,19 +18,32 @@ class TutorialCompletion extends Component {
         </section>
 
         <section className="component">
-          <h3>You Have Completed the Tutorial!</h3>
-          <p>
-            Congratulations on completing the blockchain tutorial. You now know enough 
-            to send and recieve cryptocurrency for real!
-          </p>
-          <button><Link to={'/'}>Restart Tutorial</Link></button>
-          <button>Finish Tutorial</button>
+          <h3>Blockchain Transactions</h3>
+          <div>
+            <h5>Bought</h5>
+            <div>
+              <p>Cost:</p>
+              <p>Spent:</p>
+              <p>Sender Address</p>
+              <p>Recieving Address</p>
+            </div>
+          </div>
+
+          <div>
+            <h5>Sold</h5>
+            <div>
+              <p>Cost:</p>
+              <p>Spent:</p>
+              <p>Sender Address</p>
+              <p>Recieving Address</p>
+            </div>
+          </div>
+          <Link to={'/samplesell'}>Previous</Link>
+          <Link to={'/tutorialcomplete'}>Next</Link>
         </section>
       </main>
     );
   }
 }
 
-
-export default TutorialCompletion;
-
+export default BlockchainExplorer

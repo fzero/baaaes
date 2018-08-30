@@ -42,8 +42,8 @@ class SampleSell extends Component {
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
             <div>
-              <button><Link to={'/samplebuy'}>Previous</Link></button>
-              <button><Link to={'/blockchainexplorer'}>Next</Link></button>
+              <Link to={'/samplebuy'}>Previous</Link>
+              <Link to={'/blockchainexplorer'}>Next</Link>
             </div>
           </form>
         </section>
