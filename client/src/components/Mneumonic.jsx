@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-class Mneumonic extends Component {
+class Mnemonic extends Component {
   render() {
     return (
-      <div className="mneumonic">
+      <div className="mnemonic">
         <form>
-          <h3>Mneumonic Recovery Phrase</h3>
+          <h3>Mnemonic Recovery Phrase</h3>
           <ul>
             Copy This
             <div>
@@ -14,7 +14,7 @@ class Mneumonic extends Component {
             </div>
             Re-Enter
             <div>
-              <textarea placeholder="Re-Enter your Mneumonic Phrase Here after you've copied it down somewhere safe!" />
+              <textarea placeholder="Re-Enter your Mnemonic Phrase Here after you've copied it down somewhere safe!" />
             </div>
             <input type="submit" />
           </ul>
@@ -24,4 +24,4 @@ class Mneumonic extends Component {
   }
 }
 
-export default Mneumonic;
+export default Mnemonic;

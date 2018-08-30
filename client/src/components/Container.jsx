@@ -23,7 +23,7 @@ const Container = props => (
       <Route path="/home" exact component={Homepage} />
       {/* Registration Page */}
       <Route path="/register" component={Register} />
-      {/* Create Mneumonic/Recovery */}
+      {/* Create Mnemonic/Recovery */}
       <Route path="/createmneumonic" component={CreateMneumonic} />
       {/* Confirm Recovery */}
       <Route path="/confirmmneumonic" component={ConfirmMneumonic} />
