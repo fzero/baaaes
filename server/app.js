@@ -63,7 +63,7 @@ if (app.settings.env !== 'test') {
 
 // Parser middleware: cookies, forms and JSON
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+// app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
 // Favicon: Uncomment after placing your favicon in /public
