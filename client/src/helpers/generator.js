@@ -1,21 +1,22 @@
 const bip39 = require('bip39');
-const HDKey = require('hdkey');
 const bip32 = require('bip32');
 const bitcoin = require('bitcoinjs-lib');
 
 // GENERATES MNEMONIC
 const mnemonic = bip39.generateMnemonic();
-
-console.log(
-  `MNEMONIC = ${mnemonic} \n\n----------------------------------------`
-);
-
+// CONVERT TO SEED
 const seed = bip39.mnemonicToSeed(mnemonic);
+// CONVERT SEED TO BIP32 to get keys
 const node = bip32.fromSeed(seed);
+// Get PrivateKey as Wallet Import Format
 const wif = node.toWIF();
-console.log(`WIF = ${wif}`);
-
+// Get keypair to get public address
 const keyPair = bitcoin.ECPair.fromWIF(wif);
+// Get PublicKey
 const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
 
-console.log(`PUBLIC KEY = ${address}`);
+module.exports = {
+  address,
+  mnemonic,
+  wif
+};

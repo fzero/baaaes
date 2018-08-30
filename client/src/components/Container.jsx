@@ -15,6 +15,7 @@ import BlockchainExplorer from './BlockchainExplorer.jsx';
 import TutorialCompletion from './TutorialCompletion.jsx';
 import Market from './Market.jsx';
 import Wallets from './Wallets.jsx';
+import MakeWallet from './MakeWallet.jsx';
 
 const Container = props => (
   <div className="container">
@@ -45,6 +46,8 @@ const Container = props => (
       <Route path="/tutorialcomplete" component={TutorialCompletion} />
       {/* Market Page */}
       <Route path="/market" component={Market} />
+      {/* Make new Wallet */}
+      <Route path="/makewallet" component={MakeWallet} />
       {/* Wallets Page */}
       <Route path="/wallets" component={Wallets} />
     </Switch>
