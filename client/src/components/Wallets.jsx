@@ -25,13 +25,11 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
+
                {/*{this.state.products.map((product, index) => (  ))}*/} 
               <tr>
                 <td>Bitcoin</td>
-                <td>
-                  <Link> is a react-router component that works pretty much like</Link>
-                  My Wallet
-                </td>
+                <td>My Wallet</td>
                 <td>0x12309sfj0asd908098</td>
                 <td>20.12313</td>
                 <td>See Transactions</td>
@@ -40,8 +38,10 @@ class Wallets extends Component {
           </Table>
         </Col>
       </Row>
+
     ) 
   }
 }
 
 export default Wallets
+

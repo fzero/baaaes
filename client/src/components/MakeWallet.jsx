@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
+import generator from '../helpers/generator';
 
 class MakeWallet extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      privateKey: generator.wif,
+      publicKey: generator.address
+    };
+  }
+
   render() {
     return (
       <div className="make-wallet">
@@ -8,9 +18,9 @@ class MakeWallet extends Component {
           <h3>Create New {/*Type of Wallet Here*/} Wallet</h3>
           <ul>
             <div>Private Key (Spend Funds)</div>
-            <div>324[89u[esiodfjas[d8fu[8us[aduf</div>
+            {this.state.privateKey}
             <div>Public Key (View/Recieve Funds)</div>
-            <div>sad98fusad89pfusadfusadfus89adfu</div>
+            <input value={this.state.publicKey} />
             <div>
               <button>Print Paper Wallet</button>
               <button>Done</button>
@@ -21,5 +31,5 @@ class MakeWallet extends Component {
     );
   }
 }
-
+console.log(generator);
 export default MakeWallet;
