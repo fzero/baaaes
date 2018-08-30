@@ -11,32 +11,11 @@ console.log(
 );
 
 const seed = bip39.mnemonicToSeed(mnemonic);
-console.log(`SEED = ${seed}\n------------------------`);
 const node = bip32.fromSeed(seed);
-console.log(`WIF = ${node.toWIF()}`);
-console.log(`PUBLIC KEY= ${node.derive}`);
-// const string = node.toBase58();
-// console.log(string);
-// const restored = bip32.fromBase58(string);
-// console.log(restored);
+const wif = node.toWIF();
+console.log(`WIF = ${wif}`);
 
-// // console.log(mnemonic);
+const keyPair = bitcoin.ECPair.fromWIF(wif);
+const { address } = bitcoin.payments.p2pkh({ pubkey: keyPair.publicKey });
 
-// const seed = bip39.mnemonicToSeedHex(mnemonic);
-// // console.log(`seed = ${seed}`);
-// const hdkey = HDKey.fromMasterSeed(new Buffer(seed, 'hex'));
-
-// key.compressed = false;
-// console.log(key.privateWif); // => 5Hx15HFGyep2CfPxsJKe2fXJsCVn5DEiyoeGGF6JZjGbTRnqfiD
-// // Need to convert xpriv to private key
-// // Testing various pieces of the object below.
-// const node = bip32.fromBase58(
-//   hdkey.privateExtendedKey,
-//   bitcoin.networks.mainnet
-// );
-// // console.log(`PRIVATE: ${hdkey.privateExtendedKey},
-// // short private: ${JSON.stringify(private)}`);
-
-// // console.log(`PUBLIC: ${hdkey.publicExtendedKey}`);
-// console.log(`PRIVATE: ${key.privateExtendedKey}`);
-// console.log(node.toWIF());
+console.log(`PUBLIC KEY = ${address}`);
