@@ -11,7 +11,8 @@ const router = express.Router();
 const sanitizeUser = body => {
   return {
     username: body.username,
-    balance: Number(body.balance).toFixed(2)
+    email: body.email,
+    password: body.password
   };
 };
 
@@ -74,6 +75,7 @@ module.exports = models => {
   // Inserts a new user from a JSON object
   // Returns the inserted user JSON object
   router.post('/', async (req, res) => {
+    console.log("line 77", req.body)
     try {
       let result = await models.User.create(sanitizeUser(req.body));
       res.status(201).json({ data: result.get({ plain: true }) });

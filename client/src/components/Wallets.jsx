@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Table, Row, Col, PageHeader } from 'react-bootstrap';
 
 class Wallets extends Component {
@@ -10,7 +11,7 @@ class Wallets extends Component {
 
   render() {
     return (
-      <Row className="mnemonic">
+      <Row className="wallets">
         <Col xs={12}>
           <PageHeader>Wallets</PageHeader>
           <Table>
@@ -24,7 +25,8 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
-              {/* {this.state.products.map((product, index) => (  ))}  */}
+
+               {/*{this.state.products.map((product, index) => (  ))}*/} 
               <tr>
                 <td>Bitcoin</td>
                 <td>My Wallet</td>
@@ -36,7 +38,10 @@ class Wallets extends Component {
           </Table>
         </Col>
       </Row>
-    );
+
+    ) 
   }
 }
-export default Wallets;
+
+export default Wallets
+

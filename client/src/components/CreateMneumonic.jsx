@@ -45,7 +45,7 @@ class CreateMneumonic extends Component {
         <section className="component">
           <h3>Mnemonic Phrase</h3>
           <textarea name="mnemonic-phrase-box" placeholder="" />
-          <label for="mnemonic-phrase-box">
+          <label>
             *Do not copy, please write it down
           </label>
           <button>
