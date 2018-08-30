@@ -14,7 +14,9 @@ class Register extends Component {
           <h3>Registering a Wallet</h3>
           <p>
             Before the actual creation of your test cryptocurrency wallet, you will 
-            need to register an account. 
+            need to register an account. Your email, username, password and your 
+            public key, which will be discussed later, will be what you use to 
+            access your account and wallet in the future.
           </p>
         </section>
 
