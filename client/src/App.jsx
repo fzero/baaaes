@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
-// import container
-import Container from './components/Container.jsx';
+// import Tutoral
+import Tutorial from './components/Tutorial.jsx';
 
 class App extends Component {
   render() {
@@ -10,7 +10,7 @@ class App extends Component {
         <header className="App-header">
           <h1 className="App-title">Wallet-Cryptorial</h1>
         </header>
-        <Container />
+        <Tutorial />
       </div>
     );
   }

@@ -1,23 +1,23 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 // Components
-import Homepage from './HomePage.jsx';
-import Register from './Register.jsx';
-import CreateMneumonic from './CreateMneumonic.jsx';
-import ConfirmMneumonic from './ConfirmMneumonic.jsx';
-import PublicKey from './PublicKey.jsx';
-import PrivateKey from './PrivateKey.jsx';
-import CreateWallet from './CreateWallet.jsx';
-import CoinInfo from './CoinInfo.jsx';
-import SampleBuy from './SampleBuy.jsx';
-import SampleSell from './SampleSell.jsx';
-import BlockchainExplorer from './BlockchainExplorer.jsx';
-import TutorialCompletion from './TutorialCompletion.jsx';
-import Market from './Market.jsx';
-import Wallets from './Wallets.jsx';
+import Homepage from './HomePage';
+import Register from './Register';
+import CreateMneumonic from './CreateMneumonic';
+import ConfirmMneumonic from './ConfirmMneumonic';
+import PublicKey from './PublicKey';
+import PrivateKey from './PrivateKey';
+import CreateWallet from './CreateWallet';
+import CoinInfo from './CoinInfo';
+import SampleBuy from './SampleBuy';
+import SampleSell from './SampleSell';
+import BlockchainExplorer from './BlockchainExplorer';
+import TutorialCompletion from './TutorialCompletion';
+import Market from './Market';
+import Wallets from './Wallets';
 
-const Container = props => (
-  <div className="container">
+const Tutorial = props => (
+  <div className="tutorial container">
     <Switch>
       {/* Home Page */}
       <Route path="/home" exact component={Homepage} />
@@ -51,4 +51,4 @@ const Container = props => (
   </div>
 );
 
-export default Container;
+export default Tutorial;
