@@ -11,14 +11,13 @@ class CoinInfo extends Component {
     return (
       <main className="componentContainer">
         <section className="description">
+          <h3>Crypto Coins</h3>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-            error dolor consequuntur, natus eum itaque harum fugit perspiciatis
-            nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Beatae, error dolor consequuntur, natus eum itaque harum fugit
-            perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
-            dolorem voluptas repellat.
+            Before you start practicing with the transactions, here is some 
+            information on the more popular coins on the market. There are thousands 
+            of different coins out there, but most of them are worth mere cents, 
+            while some of these more popular ones, like Bitcoin, reached $17,900 USD
+            in December of 2017.
           </p>
         </section>
 
@@ -29,18 +28,22 @@ class CoinInfo extends Component {
           </p>
           <div classname="eth-desc">
             <h3>Ethereum</h3>
+            <p>Current Price: </p>
             <p>desc.</p>
           </div>
           <div classname="btc-desc">
             <h3>Litecoin</h3>
+            <p>Current Price: </p>
             <p>desc.</p>
           </div>
           <div classname="doge-desc">
             <h3>Bitcoin</h3>
+            <p>Current Price: </p>
             <p>desc.</p>
           </div>
           <div classname="ltc-desc">
             <h3>Dogecoin</h3>
+            <p>Current Price: </p>
             <p>desc.</p>
           </div>
           <button><Link to={'/createwallet'}>Previous</Link></button>
