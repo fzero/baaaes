@@ -16,6 +16,8 @@ import TutorialCompletion from './TutorialCompletion';
 import Market from './Market';
 import Wallets from './Wallets';
 import MakeWallet from './MakeWallet';
+// Generate Random Bitcoin Mnemonic -> Private Key (WIF) -> Public Key
+// This will be a "test wallet" but the keys will correspond with real bitcoin addresses
 import generator from '../helpers/generator';
 const generated = generator();
 
@@ -79,6 +81,7 @@ class Tutorial extends Component {
           <Route path="/blockchainexplorer" component={BlockchainExplorer} />
           {/* Tutorial Completed Messsage */}
           <Route path="/tutorialcomplete" component={TutorialCompletion} />
+          {/* THESE ROUTES (BELOW) DO NOT BELONG HERE AND WILL BE MOVED */}
           {/* Market Page */}
           <Route path="/market" component={Market} />
           {/* Make new Wallet */}
