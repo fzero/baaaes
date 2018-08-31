@@ -1,7 +1,41 @@
 import React, { Component } from 'react';
-import { Table, Row, Col } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 class Market extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      BTC: {
+        Name: 'Bitcoin',
+        Price: 7000,
+        Symbol: 'BTC',
+        TotalCoinSuply: 21000000,
+        Img: 'img_url'
+      },
+      LTC: {
+        Name: 'Litecoin',
+        Price: 7000,
+        Symbol: 'LTC',
+        TotalCoinSuply: 21000000,
+        Img: 'img_url'
+      },
+      ETH: {
+        Name: 'Bitcoin',
+        Price: 7000,
+        Symbol: 'ETH',
+        TotalCoinSuply: 21000000,
+        Img: 'img_url'
+      },
+      DOGE: {
+        Name: 'DogeCoin',
+        Price: 7000,
+        Symbol: 'DOGE',
+        TotalCoinSuply: 21000000,
+        Img: 'img_url'
+      }
+    };
+  }
   render() {
     return (
       <Table striped bordered condensed hover>
@@ -19,7 +53,7 @@ class Market extends Component {
         <tbody>
           <tr>
             <td>BTC</td>
-            <td>Bitcoin</td>
+            <td>{this.state.BTC.Name}</td>
             <td>99999999</td>
             <td>9000</td>
             <td>1</td>
