@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
-class ConfirmMneumonic extends Component {
+class ConfirmMnemonic extends Component {
   render() {
     return (
       <main className="componentContainer">
@@ -41,7 +41,7 @@ class ConfirmMneumonic extends Component {
           <div>
             <h3>Enter Mnemonic Phrase</h3>
             <textarea placeholder="Please re-enter your Mnemonic Phrase here..." />
-            <Link to={'/createmneumonic'}>Previous</Link>
+            <Link to={'/createmnemonic'}>Previous</Link>
             <Link to={'/publickey'}>Next</Link>
           </div>
         </section>
@@ -50,4 +50,4 @@ class ConfirmMneumonic extends Component {
   }
 }
 
-export default ConfirmMneumonic;
+export default ConfirmMnemonic;

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import { Table, Row, Col, PageHeader } from 'react-bootstrap';
 
 class Wallets extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      publicKeys: {}
+    };
   }
 
   render() {
@@ -24,8 +27,7 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
-
-               {/*{this.state.products.map((product, index) => (  ))}*/} 
+              {/*{this.state.publicKeys.map((key, index) => (  ))}*/}
               <tr>
                 <td>Bitcoin</td>
                 <td>My Wallet</td>
@@ -37,10 +39,8 @@ class Wallets extends Component {
           </Table>
         </Col>
       </Row>
-
-    ) 
+    );
   }
 }
 
-export default Wallets
-
+export default Wallets;
