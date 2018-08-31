@@ -14,12 +14,8 @@ class Register extends Component {
 
   // Event handler for user info
   handleSubmit = ev => {
-<<<<<<< HEAD:client/src/components/Register.jsx
     ev.preventDefault();
     console.log(this.state);
-=======
-    ev.preventDefault()
-    console.log(this.state)
 
     fetch('http://localhost:8080/users', {
       method: "POST",
@@ -29,7 +25,6 @@ class Register extends Component {
       body: JSON.stringify(this.state),
     })
     .catch(e => console.log(e))
->>>>>>> master:client/src/components/tutorial/Register.jsx
 
     // submit form
     this.props.history.push('/createmnemonic');
@@ -109,12 +104,9 @@ class Register extends Component {
             </label>
             <button type="submit">Submit</button>
           </form>
-<<<<<<< HEAD
           <br/>
           <Link to={'/createmneumonic'}>Link to createmneumonic instead of making new user everytime</Link>
-=======
           <br />
->>>>>>> 6dd3bf1453e8dc9554ab74730aa327b69b58f89c
           <Link to={'/home'}>Return</Link>
         </section>
       </main>
