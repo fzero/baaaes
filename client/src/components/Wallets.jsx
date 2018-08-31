@@ -6,7 +6,9 @@ class Wallets extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {};
+    this.state = {
+      publicKeys: {}
+    };
   }
 
   render() {
@@ -25,7 +27,7 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
-              {/*{this.state.products.map((product, index) => (  ))}*/}
+              {/*{this.state.publicKeys.map((key, index) => (  ))}*/}
               <tr>
                 <td>Bitcoin</td>
                 <td>My Wallet</td>

@@ -13,6 +13,8 @@ import SampleBuy from './SampleBuy';
 import SampleSell from './SampleSell';
 import BlockchainExplorer from './BlockchainExplorer';
 import TutorialCompletion from './TutorialCompletion';
+// will not live here forever...
+import Mnemonic from './Mnemonic';
 import Market from './Market';
 import Wallets from './Wallets';
 import MakeWallet from './MakeWallet';
@@ -35,7 +37,14 @@ class Tutorial extends Component {
   render() {
     console.log(this.state.mneominic);
     return (
-      <div className="container">
+      <div className="tutorial container">
+        <Route path="/mnemonic" component={Mnemonic} />
+        {/* Market Page */}
+        <Route path="/market" component={Market} />
+        {/* Make new Wallet */}
+        <Route path="/makewallet" component={MakeWallet} />
+        {/* Wallets Page */}
+        <Route path="/wallets" component={Wallets} />
         <Switch>
           {/* Home Page */}
           <Route path="/home" exact component={Homepage} />
@@ -82,12 +91,7 @@ class Tutorial extends Component {
           {/* Tutorial Completed Messsage */}
           <Route path="/tutorialcomplete" component={TutorialCompletion} />
           {/* THESE ROUTES (BELOW) DO NOT BELONG HERE AND WILL BE MOVED */}
-          {/* Market Page */}
-          <Route path="/market" component={Market} />
-          {/* Make new Wallet */}
-          <Route path="/makewallet" component={MakeWallet} />
-          {/* Wallets Page */}
-          <Route path="/wallets" component={Wallets} />
+          {/* Create Real Mnemonic */}
         </Switch>
       </div>
     );
