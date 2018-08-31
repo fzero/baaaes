@@ -14,8 +14,22 @@ class Register extends Component {
 
   // Event handler for user info
   handleSubmit = ev => {
+<<<<<<< HEAD:client/src/components/Register.jsx
     ev.preventDefault();
     console.log(this.state);
+=======
+    ev.preventDefault()
+    console.log(this.state)
+
+    fetch('http://localhost:8080/users', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state),
+    })
+    .catch(e => console.log(e))
+>>>>>>> master:client/src/components/tutorial/Register.jsx
 
     // submit form
     this.props.history.push('/createmnemonic');

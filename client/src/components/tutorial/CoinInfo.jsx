@@ -46,8 +46,8 @@ class CoinInfo extends Component {
             <p>Current Price: </p>
             <p>desc.</p>
           </div>
-          <button><Link to={'/createwallet'}>Previous</Link></button>
-          <button><Link to={'/samplebuy'}>Next</Link></button>
+          <Link to={'/createwallet'}>Previous</Link>
+          <Link to={'/samplebuy'}>Next</Link>
         </section>
       </main>
     );
