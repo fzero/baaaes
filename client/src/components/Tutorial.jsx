@@ -1,18 +1,18 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 // Components
-import Homepage from './HomePage';
-import Register from './Register';
-import CreateMnemonic from './CreateMnemonic';
-import ConfirmMnemonic from './ConfirmMnemonic';
-import PublicKey from './PublicKey';
-import PrivateKey from './PrivateKey';
-import TestWallet from './TestWallet';
-import CoinInfo from './CoinInfo';
-import SampleBuy from './SampleBuy';
-import SampleSell from './SampleSell';
-import BlockchainExplorer from './BlockchainExplorer';
-import TutorialCompletion from './TutorialCompletion';
+import Homepage from './tutorial/HomePage';
+import Register from './tutorial/Register';
+import CreateMnemonic from './tutorial/CreateMnemonic';
+import ConfirmMnemonic from './tutorial/ConfirmMnemonic';
+import PublicKey from './tutorial/PublicKey';
+import PrivateKey from './tutorial/PrivateKey';
+import TestWallet from './tutorial/TestWallet';
+import CoinInfo from './tutorial/CoinInfo';
+import SampleBuy from './tutorial/SampleBuy';
+import SampleSell from './tutorial/SampleSell';
+import BlockchainExplorer from './tutorial/BlockchainExplorer';
+import TutorialCompletion from './tutorial/TutorialCompletion';
 // will not live here forever...
 import Mnemonic from './Mnemonic';
 import Market from './Market';
