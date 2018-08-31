@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class BlockchainExplorer extends Component {
   render() {
@@ -10,10 +10,10 @@ class BlockchainExplorer extends Component {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis
             nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Beatae, error dolor consequuntur, natus eum itaque harum fugit
-            perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
-            dolorem voluptas repellat.
+            voluptas repellat.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Beatae, error dolor consequuntur, natus eum itaque
+            harum fugit perspiciatis nobis id aperiam sed architecto et esse
+            perferendis nisi dolorem voluptas repellat.
           </p>
         </section>
 
@@ -38,12 +38,16 @@ class BlockchainExplorer extends Component {
               <p>Recieving Address</p>
             </div>
           </div>
-          <Link to={'/samplesell'}>Previous</Link>
-          <Link to={'/tutorialcomplete'}>Next</Link>
+          <Link onClick={this.props.pageBackwards} to={"/samplesell"}>
+            Previous
+          </Link>
+          <Link onClick={this.props.pageForwards} to={"/tutorialcomplete"}>
+            Next
+          </Link>
         </section>
       </main>
     );
   }
 }
 
-export default BlockchainExplorer
+export default BlockchainExplorer;

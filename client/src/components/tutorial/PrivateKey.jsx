@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class PrivateKey extends Component {
   render() {
@@ -35,17 +35,12 @@ class PrivateKey extends Component {
             <input placeholder="abvoi3uvjs838t1bf84bd73f5u48492" />
             <p>Add some notes on private key</p>
             <p>Please copy this down on paper</p>
-<<<<<<< HEAD:client/src/components/PrivateKey.jsx
-            <button>
-              <Link to={'/publickey'}>Previous</Link>
-            </button>
-            <button>
-              <Link to={'/testwallet'}>Next</Link>
-            </button>
-=======
-            <Link to={'/publickey'}>Previous</Link>
-            <Link to={'/createwallet'}>Next</Link>
->>>>>>> master:client/src/components/tutorial/PrivateKey.jsx
+            <Link onClick={this.props.pageBackwards} to={"/publickey"}>
+              Previous
+            </Link>
+            <Link onClick={this.props.pageForwards} to={"/testwallet"}>
+              Next
+            </Link>
           </div>
         </section>
       </main>
