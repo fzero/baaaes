@@ -2,6 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 // Components
 import Homepage from './tutorial/HomePage.jsx';
+import Login from './Login.jsx';
 import Register from './tutorial/Register.jsx';
 import CreateMneumonic from './tutorial/CreateMneumonic.jsx';
 import ConfirmMneumonic from './tutorial/ConfirmMneumonic.jsx';
@@ -22,6 +23,8 @@ const Container = props => (
     <Switch>
       {/* Home Page */}
       <Route path="/home" exact component={Homepage} />
+    {/* Login Page */}
+      <Route path="/login" exact component={Login} />
       {/* Registration Page */}
       <Route path="/register" component={Register} />
       {/* Create Mnemonic/Recovery */}

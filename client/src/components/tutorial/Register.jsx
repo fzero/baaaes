@@ -81,6 +81,7 @@ class Register extends Component {
             <button type="submit">Submit</button>
           </form>
           <br/>
+          <Link to={'/createmneumonic'}>Link to createmneumonic instead of making new user everytime</Link>
           <Link to={'/home'}>Return</Link>
         </section>
       </main>
