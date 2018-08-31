@@ -20,7 +20,7 @@ class Homepage extends Component {
           of cryptocurrency.
         </p>
         <button>Existing User</button>
-        <button><Link to={'/register'}>Get Started!</Link></button>
+        <Link to={'/register'}>Get Started!</Link>
       </section>
     );
   }

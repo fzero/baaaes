@@ -34,8 +34,8 @@ class PrivateKey extends Component {
             <input placeholder="abvoi3uvjs838t1bf84bd73f5u48492" />
             <p>Add some notes on private key</p>
             <p>Please copy this down on paper</p>
-            <button><Link to={'/publickey'}>Previous</Link></button>
-            <button><Link to={'/createwallet'}>Next</Link></button>
+            <Link to={'/publickey'}>Previous</Link>
+            <Link to={'/createwallet'}>Next</Link>
           </div>
         </section>
       </main>

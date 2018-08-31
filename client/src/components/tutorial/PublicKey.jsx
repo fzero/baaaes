@@ -26,12 +26,8 @@ class PublicKey extends Component {
           <h3>Public Key</h3>
           <textarea name="mnemonic-phrase-box" />
           <label for="mnemonic-phrase-box">*please write this down</label>
-          <button>
-            <Link to={'/confirmmneumonic'}>Previous</Link>
-          </button>
-          <button>
-            <Link to={'/privatekey'}>Next</Link>
-          </button>
+          <Link to={'/confirmmneumonic'}>Previous</Link>
+          <Link to={'/privatekey'}>Next</Link>
         </section>
       </main>
     );
