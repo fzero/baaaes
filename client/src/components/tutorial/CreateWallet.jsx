@@ -14,8 +14,8 @@ class CreateWallet extends Component {
           a fake bitcoin, which you will then sell back to Cryptorial, so you can
           see the procedure in action.
         </p>
-        <button><Link to={'/privatekey'}>Previous</Link></button>
-        <button><Link to={'/coininfo'}>Next</Link></button>
+        <Link to={'/privatekey'}>Previous</Link>
+        <Link to={'/coininfo'}>Next</Link>
       </section>
     );
   }

@@ -19,8 +19,8 @@ class Homepage extends Component {
           needed to create a real crypto-wallet and begin your journey into the world
           of cryptocurrency.
         </p>
-        <button>Existing User</button>
-        <button><Link to={'/register'}>Get Started!</Link></button>
+        <Link to={'/login'}>Existing User?</Link>
+        <Link to={'/register'}>Get Started!</Link>
       </section>
     );
   }

@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
-class BlockchainExplorer extends Component {
+class SampleBuy extends Component {
   render() {
-    return (
+    return(
       <main className="componentContainer">
         <section className="description">
           <p>
@@ -18,32 +18,33 @@ class BlockchainExplorer extends Component {
         </section>
 
         <section className="component">
-          <h3>Blockchain Transactions</h3>
-          <div>
-            <h5>Bought</h5>
+          <h3>Sample Buy Transaction</h3>
+          <form>
             <div>
-              <p>Cost:</p>
-              <p>Spent:</p>
-              <p>Sender Address</p>
-              <p>Recieving Address</p>
+              {/* balalnce will be dynamic */}
+              FunnyMoney Balance: $10000000
             </div>
-          </div>
-
-          <div>
-            <h5>Sold</h5>
+            <div>BTC Balance: 10</div>
+            <div>Buy BTC for $PRICE</div>
             <div>
-              <p>Cost:</p>
-              <p>Spent:</p>
-              <p>Sender Address</p>
-              <p>Recieving Address</p>
+              Amount:
+              <input type="text" />
             </div>
-          </div>
-          <button><Link to={'/samplesell'}>Previous</Link></button>
-          <button><Link to={'/tutorialcomplete'}>Next</Link></button>
+            <div>
+              Price:
+              <input type="text" />
+            </div>
+            <div>Total: $Total</div>
+            <div>Enter Privatekey or upload encrypted keystore</div>
+            <div>
+              <Link to={'/coininfo'}>Previous</Link>
+              <Link to={'/samplesell'}>Next</Link>
+            </div>
+          </form>
         </section>
       </main>
-    );
+    )
   }
 }
 
-export default BlockchainExplorer
+export default SampleBuy

@@ -16,7 +16,16 @@ class Register extends Component {
   handleSubmit = ev => {
     ev.preventDefault()
     console.log(this.state)
-    
+
+    fetch('http://localhost:8080/users', {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state),
+    })
+    .catch(e => console.log(e))
+
     // submit form
     this.props.history.push('/createmneumonic')
   }
@@ -72,6 +81,7 @@ class Register extends Component {
             <button type="submit">Submit</button>
           </form>
           <br/>
+          <Link to={'/createmneumonic'}>Link to createmneumonic instead of making new user everytime</Link>
           <Link to={'/home'}>Return</Link>
         </section>
       </main>

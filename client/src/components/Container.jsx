@@ -1,18 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 // Components
-import Homepage from './HomePage.jsx';
-import Register from './Register.jsx';
-import CreateMneumonic from './CreateMneumonic.jsx';
-import ConfirmMneumonic from './ConfirmMneumonic.jsx';
-import PublicKey from './PublicKey.jsx';
-import PrivateKey from './PrivateKey.jsx';
-import CreateWallet from './CreateWallet.jsx';
-import CoinInfo from './CoinInfo.jsx';
-import SampleBuy from './SampleBuy.jsx';
-import SampleSell from './SampleSell.jsx';
-import BlockchainExplorer from './BlockchainExplorer.jsx';
-import TutorialCompletion from './TutorialCompletion.jsx';
+import Homepage from './tutorial/HomePage.jsx';
+import Login from './Login.jsx';
+import Register from './tutorial/Register.jsx';
+import CreateMneumonic from './tutorial/CreateMneumonic.jsx';
+import ConfirmMneumonic from './tutorial/ConfirmMneumonic.jsx';
+import PublicKey from './tutorial/PublicKey.jsx';
+import PrivateKey from './tutorial/PrivateKey.jsx';
+import CreateWallet from './tutorial/CreateWallet.jsx';
+import CoinInfo from './tutorial/CoinInfo.jsx';
+import SampleBuy from './tutorial/SampleBuy.jsx';
+import SampleSell from './tutorial/SampleSell.jsx';
+import BlockchainExplorer from './tutorial/BlockchainExplorer.jsx';
+import TutorialCompletion from './tutorial/TutorialCompletion.jsx';
 import Market from './Market.jsx';
 import Wallets from './Wallets.jsx';
 import MakeWallet from './MakeWallet.jsx';
@@ -22,6 +23,8 @@ const Container = props => (
     <Switch>
       {/* Home Page */}
       <Route path="/home" exact component={Homepage} />
+    {/* Login Page */}
+      <Route path="/login" exact component={Login} />
       {/* Registration Page */}
       <Route path="/register" component={Register} />
       {/* Create Mnemonic/Recovery */}
