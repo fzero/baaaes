@@ -3,11 +3,11 @@ import { Route, Switch } from 'react-router-dom';
 // Components
 import Homepage from './HomePage';
 import Register from './Register';
-import CreateMneumonic from './CreateMneumonic';
-import ConfirmMneumonic from './ConfirmMneumonic';
+import CreateMnemonic from './CreateMnemonic';
+import ConfirmMnemonic from './ConfirmMnemonic';
 import PublicKey from './PublicKey';
 import PrivateKey from './PrivateKey';
-import CreateWallet from './CreateWallet';
+import TestWallet from './TestWallet';
 import CoinInfo from './CoinInfo';
 import SampleBuy from './SampleBuy';
 import SampleSell from './SampleSell';
@@ -17,6 +17,7 @@ import Market from './Market';
 import Wallets from './Wallets';
 import MakeWallet from './MakeWallet';
 import generator from '../helpers/generator';
+const generated = generator();
 
 class Tutorial extends Component {
   constructor(props) {
@@ -24,9 +25,9 @@ class Tutorial extends Component {
 
     this.state = {
       page: 1,
-      mnemonic: generator.mnemonic,
-      publ: generator.address,
-      priv: generator.wif
+      mnemonic: generated.mnemonic,
+      publ: generated.address,
+      priv: generated.wif
     };
   }
   render() {
@@ -39,15 +40,35 @@ class Tutorial extends Component {
           {/* Registration Page */}
           <Route path="/register" component={Register} />
           {/* Create Mnemonic/Recovery */}
-          <Route path="/createmneumonic" component={CreateMneumonic} />
+          <Route
+            path="/createmnemonic"
+            render={props => (
+              <CreateMnemonic {...props} mnemonic={this.state.mnemonic} />
+            )}
+          />
           {/* Confirm Recovery */}
-          <Route path="/confirmmneumonic" component={ConfirmMneumonic} />
+          <Route
+            path="/confirmmnemonic"
+            render={props => (
+              <ConfirmMnemonic {...props} mnemonic={this.state.mnemonic} />
+            )}
+          />
           {/* What is a Public Key? */}
-          <Route path="/publickey" component={PublicKey} />
+          <Route
+            path="/publickey"
+            render={props => (
+              <PublicKey {...props} mnemonic={this.state.publ} />
+            )}
+          />
           {/* What is a Private Key? */}
-          <Route path="/privatekey" component={PrivateKey} />
+          <Route
+            path="/privatekey"
+            render={props => (
+              <PrivateKey {...props} mnemonic={this.state.priv} />
+            )}
+          />
           {/* Create Test Wallet */}
-          <Route path="/createwallet" component={CreateWallet} />
+          <Route path="/testwallet" component={TestWallet} />
           {/* Descriptions of Top Coins */}
           <Route path="/coininfo" component={CoinInfo} />
           {/* Sample Buy Transaction */}
