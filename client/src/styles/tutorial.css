@@ -23,3 +23,7 @@
   border-left: 2px solid #222;
   width: 50%;
 }
+
+.mnemonic-input {
+  width: 90%;
+}
