@@ -50,41 +50,41 @@ class Market extends Component {
     prices().then(result =>
       this.setState({
         BTC: {
-          Price: result.BTC.CAD,
-          Supply: result.BTC.SUPPLY,
-          Change: result.BTC.CHANGEPCTDAY,
-          Volume: result.BTC.VOLUMEDAY,
-          MarketCap: result.BTC.MKTCAP
+          Price: result.BTC.CAD.PRICE,
+          Supply: result.BTC.CAD.SUPPLY,
+          Change: result.BTC.CAD.CHANGEPCTDAY,
+          Volume: result.BTC.CAD.VOLUMEDAY,
+          MarketCap: result.BTC.CAD.MKTCAP
         },
 
         LTC: {
-          Price: result.LTC.CAD,
-          Supply: result.LTC.SUPPLY,
-          Change: result.LTC.CHANGEPCTDAY,
-          Volume: result.LTC.VOLUMEDAY,
-          MarketCap: result.LTC.MKTCAP
+          Price: result.LTC.CAD.PRICE,
+          Supply: result.LTC.CAD.SUPPLY,
+          Change: result.LTC.CAD.CHANGEPCTDAY,
+          Volume: result.LTC.CAD.VOLUMEDAY,
+          MarketCap: result.LTC.CAD.MKTCAP
         },
 
         ETH: {
-          Price: result.ETH.CAD,
-          Supply: result.ETH.SUPPLY,
-          Change: result.ETH.CHANGEPCTDAY,
-          Volume: result.ETH.VOLUMEDAY,
-          MarketCap: result.ETH.MKTCAP
+          Price: result.ETH.CAD.PRICE,
+          Supply: result.ETH.CAD.SUPPLY,
+          Change: result.ETH.CAD.CHANGEPCTDAY,
+          Volume: result.ETH.CAD.VOLUMEDAY,
+          MarketCap: result.ETH.CAD.MKTCAP
         },
         DOGE: {
-          Price: result.DOGE.CAD,
-          Supply: result.DOGE.SUPPLY,
-          Change: result.DOGE.CHANGEPCTDAY,
-          Volume: result.DOGE.VOLUMEDAY,
-          MarketCap: result.DOGE.MKTCAP
+          Price: result.DOGE.CAD.PRICE,
+          Supply: result.DOGE.CAD.SUPPLY,
+          Change: result.DOGE.CAD.CHANGEPCTDAY,
+          Volume: result.DOGE.CAD.VOLUMEDAY,
+          MarketCap: result.DOGE.CAD.MKTCAP
         }
       })
     );
     // .catch(error => alert(error));
   };
   componentDidMount() {
-    // this._setStats();
+    this._setStats();
   }
 
   render() {

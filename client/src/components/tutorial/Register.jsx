@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Resource from '../../models/resource.js';
+const User = Resource('users');
 
 class Register extends Component {
   constructor(props) {
@@ -17,17 +19,22 @@ class Register extends Component {
     ev.preventDefault();
     console.log(this.state);
 
-    fetch('http://localhost:8080/users', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state)
-    }).catch(e => console.log(e));
-
-    // submit form
-    this.props.history.push('/createmnemonic');
+    User.create(this.state)
+      .then(() => this.props.history.push('/createmnemonic'))
+      .catch(e => alert(e));
   };
+
+  // fetch('http://localhost:8080/users', {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json'
+  //   },
+  //   body: JSON.stringify(this.state)
+  // }).catch(e => console.log(e));
+
+  //   // submit form
+  //   this.props.history.push('/createmnemonic');
+  // };
 
   setEmail = ev => {
     this.setState({ email: ev.target.value });
