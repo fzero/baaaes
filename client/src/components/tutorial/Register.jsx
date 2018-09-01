@@ -1,14 +1,16 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Resource from '../../models/resource.js';
+const User = Resource('users');
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      username: "",
-      password: "",
-      passwordConfirmation: ""
+      email: '',
+      username: '',
+      password: '',
+      passwordConfirmation: ''
     };
   }
 
@@ -17,17 +19,9 @@ class Register extends Component {
     ev.preventDefault();
     console.log(this.state);
 
-
-    fetch("http://localhost:8080/users", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(this.state)
-    }).catch(e => console.log(e));
-
-    // submit form
-    this.props.history.push("/createmnemonic");
+    User.create(this.state)
+      .then(() => this.props.history.push('/createmnemonic'))
+      .catch(e => alert(e));
   };
 
   setEmail = ev => {
@@ -106,11 +100,11 @@ class Register extends Component {
           </form>
           <br />
 
-          <Link onClick={this.props.pageForwards} to={"/createmnemonic"}>
+          <Link onClick={this.props.pageForwards} to={'/createmnemonic'}>
             Link to createmneumonic instead of making new user everytime
           </Link>
           <br />
-          <Link onClick={this.props.pageBackwards} to={"/home"}>
+          <Link onClick={this.props.pageBackwards} to={'/home'}>
             Return
           </Link>
         </section>
