@@ -17,7 +17,6 @@ class Register extends Component {
     ev.preventDefault();
     console.log(this.state);
 
-
     fetch("http://localhost:8080/users", {
       method: "POST",
       headers: {

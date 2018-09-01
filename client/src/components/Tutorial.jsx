@@ -15,6 +15,7 @@ import SampleSell from "./tutorial/SampleSell";
 import BlockchainExplorer from "./tutorial/BlockchainExplorer";
 import TutorialCompletion from "./tutorial/TutorialCompletion";
 // will not live here forever...
+import Login from "./Login";
 import Mnemonic from "./Mnemonic";
 import Market from "./Market";
 import Wallets from "./Wallets";
@@ -53,6 +54,9 @@ class Tutorial extends Component {
     return (
       <div className="tutorial container">
         <DottedProgress numSteps={12} activeStep={this.state.page} />
+        {/* Login Page */}
+        <Route path="/login" component={Login} />
+        {/* Mnemonic Page */}
         <Route path="/mnemonic" component={Mnemonic} />
         {/* Market Page */}
         <Route path="/market" component={Market} />

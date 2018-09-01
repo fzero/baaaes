@@ -1,23 +1,23 @@
 // React
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom';
+import React from "react";
+import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 
 // App Componenet
-import App from './App.jsx';
+import App from "./App.jsx";
 
 // Service Worker
-import registerServiceWorker from './registerServiceWorker';
+import registerServiceWorker from "./registerServiceWorker";
 // Import Stylesheets
-import './styles/index.css';
-import './styles/App.css';
-import './styles/Container.css';
+import "./styles/index.css";
+import "./styles/App.css";
+import "./styles/Tutorial.css";
 
 // ReactDOM Render App
 ReactDOM.render(
   <BrowserRouter>
     <App />
   </BrowserRouter>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 registerServiceWorker();
