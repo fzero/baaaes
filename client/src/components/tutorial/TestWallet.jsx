@@ -1,3 +1,4 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
@@ -14,6 +15,7 @@ class TestWallet extends Component {
           to purchase a fake bitcoin, which you will then sell back to
           Cryptorial, so you can see the procedure in action.
         </p>
+
         <Link onClick={this.props.pageBackwards} to={"/privatekey"}>
           Previous
         </Link>

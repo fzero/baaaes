@@ -35,6 +35,7 @@ class PrivateKey extends Component {
             <input placeholder="abvoi3uvjs838t1bf84bd73f5u48492" />
             <p>Add some notes on private key</p>
             <p>Please copy this down on paper</p>
+
             <Link onClick={this.props.pageBackwards} to={"/publickey"}>
               Previous
             </Link>

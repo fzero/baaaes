@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+
 
 class ConfirmMnemonic extends Component {
   render() {
@@ -41,6 +42,7 @@ class ConfirmMnemonic extends Component {
           <div>
             <h3>Enter Mnemonic Phrase</h3>
             <textarea placeholder="Please re-enter your Mnemonic Phrase here..." />
+
             <Link onClick={this.props.pageBackwards} to={"/createmnemonic"}>
               Previous
             </Link>

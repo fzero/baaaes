@@ -19,11 +19,11 @@ class Wallets extends Component {
           <Table>
             <thead>
               <tr>
-                <th>Coin</th>
-                <th>Wallet-Name</th>
-                <th>Address</th>
-                <th>Balance</th>
-                <th>History</th>
+                <td>Coin</td>
+                <td>Wallet-Name</td>
+                <td>Address</td>
+                <td>Balance</td>
+                <td>History</td>
               </tr>
             </thead>
             <tbody>

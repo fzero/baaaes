@@ -17,6 +17,7 @@ class Register extends Component {
     ev.preventDefault();
     console.log(this.state);
 
+
     fetch("http://localhost:8080/users", {
       method: "POST",
       headers: {
@@ -104,6 +105,7 @@ class Register extends Component {
             <button type="submit">Submit</button>
           </form>
           <br />
+
           <Link onClick={this.props.pageForwards} to={"/createmnemonic"}>
             Link to createmneumonic instead of making new user everytime
           </Link>
