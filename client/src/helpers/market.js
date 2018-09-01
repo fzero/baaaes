@@ -17,15 +17,13 @@ const server = axios.create({
 
 // MARKET FUNCTIONS
 
-function getPrices() {
+module.exports = function() {
   return new Promise((resolve, reject) => {
     server
       .get(
-        `/pricemulti?fsyms=BTC,ETH,LTC,DOGE&tsyms=USD,CAD&extraParams=walletCryptorial`
+        `/pricemultifull?fsyms=BTC,ETH,LTC,DOGE&tsyms=USD,CAD&extraParams=walletCryptorial`
       )
-      .then(result => resolve(result.data))
+      .then(result => resolve(result.data.RAW))
       .catch(errors => reject(errors));
   });
-}
-
-getPrices().then(result => console.log(result));
+};

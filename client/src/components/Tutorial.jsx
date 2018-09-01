@@ -35,7 +35,6 @@ class Tutorial extends Component {
     };
   }
   render() {
-    console.log(this.state.mneominic);
     return (
       <div className="tutorial container">
         <Route path="/mnemonic" component={Mnemonic} />
