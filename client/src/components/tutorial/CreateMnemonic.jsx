@@ -1,5 +1,7 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+
 
 class CreateMnemonic extends Component {
   constructor(props) {
@@ -46,8 +48,13 @@ class CreateMnemonic extends Component {
           <h3>Mnemonic Phrase</h3>
           <textarea name="mnemonic-phrase-box" placeholder="" />
           <label>*Do not copy, please write it down</label>
-          <Link to={'/register'}>Previous</Link>
-          <Link to={'/confirmmnemonic'}>Next</Link>
+
+          <Link onClick={this.props.pageBackwards} to={"/register"}>
+            Previous
+          </Link>
+          <Link onClick={this.props.pageForwards} to={"/confirmmnemonic"}>
+            Next
+          </Link>
         </section>
       </main>
     );

@@ -1,18 +1,20 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class Login extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
+  validateUser = () => {};
+
   render() {
-    return(
+    return (
       <section className="noDescription">
         <h3>Login!</h3>
-        <form>
+        <form onClick={this.validateUser}>
           <label>
-            Email: 
+            Email:
             <input type="email" />
           </label>
           <label>
@@ -22,8 +24,8 @@ class Login extends Component {
           <button type="submit">Login</button>
         </form>
       </section>
-    )
+    );
   }
 }
 
-export default Login
+export default Login;

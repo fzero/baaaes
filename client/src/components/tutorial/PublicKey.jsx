@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class PublicKey extends Component {
   constructor(props) {
@@ -26,8 +26,14 @@ class PublicKey extends Component {
           <h3>Public Key</h3>
           <textarea name="mnemonic-phrase-box" />
           <label for="mnemonic-phrase-box">*please write this down</label>
-          <Link to={'/confirmmnemonic'}>Previous</Link>
-          <Link to={'/privatekey'}>Next</Link>
+
+          <Link onClick={this.props.pageBackwards} to={"/confirmmnemonic"}>
+            Previous
+          </Link>
+          <Link onClick={this.props.pageForwards} to={"/privatekey"}>
+            Next
+          </Link>
+
         </section>
       </main>
     );

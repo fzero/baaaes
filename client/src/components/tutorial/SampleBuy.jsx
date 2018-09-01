@@ -1,19 +1,19 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class SampleBuy extends Component {
   render() {
-    return(
+    return (
       <main className="componentContainer">
         <section className="description">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis
             nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Beatae, error dolor consequuntur, natus eum itaque harum fugit
-            perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
-            dolorem voluptas repellat.
+            voluptas repellat.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Beatae, error dolor consequuntur, natus eum itaque
+            harum fugit perspiciatis nobis id aperiam sed architecto et esse
+            perferendis nisi dolorem voluptas repellat.
           </p>
         </section>
 
@@ -37,14 +37,18 @@ class SampleBuy extends Component {
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
             <div>
-              <Link to={'/coininfo'}>Previous</Link>
-              <Link to={'/samplesell'}>Next</Link>
+              <Link onClick={this.props.pageBackwards} to={"/coininfo"}>
+                Previous
+              </Link>
+              <Link onClick={this.props.pageForwards} to={"/samplesell"}>
+                Next
+              </Link>
             </div>
           </form>
         </section>
       </main>
-    )
+    );
   }
 }
 
-export default SampleBuy
+export default SampleBuy;
