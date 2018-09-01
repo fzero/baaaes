@@ -24,18 +24,6 @@ class Register extends Component {
       .catch(e => alert(e));
   };
 
-  // fetch('http://localhost:8080/users', {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json'
-  //   },
-  //   body: JSON.stringify(this.state)
-  // }).catch(e => console.log(e));
-
-  //   // submit form
-  //   this.props.history.push('/createmnemonic');
-  // };
-
   setEmail = ev => {
     this.setState({ email: ev.target.value });
   };
@@ -111,7 +99,14 @@ class Register extends Component {
             <button type="submit">Submit</button>
           </form>
           <br />
-          <Link to={'/home'}>Return</Link>
+
+          <Link onClick={this.props.pageForwards} to={'/createmnemonic'}>
+            Link to createmneumonic instead of making new user everytime
+          </Link>
+          <br />
+          <Link onClick={this.props.pageBackwards} to={'/home'}>
+            Return
+          </Link>
         </section>
       </main>
     );

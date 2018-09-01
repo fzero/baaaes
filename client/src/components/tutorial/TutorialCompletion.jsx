@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import {Link} from 'react-router-dom'
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 class TutorialCompletion extends Component {
   render() {
@@ -10,20 +10,22 @@ class TutorialCompletion extends Component {
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis
             nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur adipisicing
-            elit. Beatae, error dolor consequuntur, natus eum itaque harum fugit
-            perspiciatis nobis id aperiam sed architecto et esse perferendis nisi
-            dolorem voluptas repellat.
+            voluptas repellat.Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Beatae, error dolor consequuntur, natus eum itaque
+            harum fugit perspiciatis nobis id aperiam sed architecto et esse
+            perferendis nisi dolorem voluptas repellat.
           </p>
         </section>
 
         <section className="component">
           <h3>You Have Completed the Tutorial!</h3>
           <p>
-            Congratulations on completing the blockchain tutorial. You now know enough 
-            to send and recieve cryptocurrency for real!
+            Congratulations on completing the blockchain tutorial. You now know
+            enough to send and recieve cryptocurrency for real!
           </p>
-          <Link to={'/home'}>Restart Tutorial</Link>
+          <Link onClick={this.props.pageReset} to={"/home"}>
+            Restart Tutorial
+          </Link>
           <button>Finish Tutorial</button>
         </section>
       </main>
@@ -31,6 +33,4 @@ class TutorialCompletion extends Component {
   }
 }
 
-
 export default TutorialCompletion;
-

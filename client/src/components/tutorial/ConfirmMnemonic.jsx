@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
+
 class ConfirmMnemonic extends Component {
   render() {
     return (
@@ -41,8 +42,13 @@ class ConfirmMnemonic extends Component {
           <div>
             <h3>Enter Mnemonic Phrase</h3>
             <textarea placeholder="Please re-enter your Mnemonic Phrase here..." />
-            <Link to={'/createmnemonic'}>Previous</Link>
-            <Link to={'/publickey'}>Next</Link>
+
+            <Link onClick={this.props.pageBackwards} to={"/createmnemonic"}>
+              Previous
+            </Link>
+            <Link onClick={this.props.pageForwards} to={"/publickey"}>
+              Next
+            </Link>
           </div>
         </section>
       </main>
