@@ -42,71 +42,61 @@ class Register extends Component {
 
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
-          <h3>Registering a Wallet</h3>
-          <p>
+      <section className="componentContainer">
+        <div className="description">
+          <h3 className="register_desc-title">Registering a Wallet</h3>
+          <p className="register_desc-para">
             Before the actual creation of your test cryptocurrency wallet, you
-            will need to register an account. Your email, username, password and
-            your public key, which will be discussed later, will be what you use
-            to access your account and wallet in the future.
+            will need to register an account. Your account will allow access to
+            your real and fake wallets using your email, username, password. For
+            further security to your wallets, a mnemonic phrase will be
+            generated, and from that a private key and public key will derived,
+            all of which shall be defined later in the Cryptorial.
           </p>
-        </section>
-
-        <section className="component">
-          <h3>Register a new account!</h3>
-          <form className="register" onSubmit={this.handleSubmit}>
-            <label>
-              Email:
-              <br />
-              <input
-                type="email"
-                onChange={this.setEmail}
-                value={this.state.email}
-              />
-              <br />
-            </label>
-            <label>
-              Username:
-              <br />
-              <input
-                type="text"
-                onChange={this.setUsername}
-                value={this.state.username}
-              />
-              <br />
-            </label>
-            <label>
-              Password:
-              <br />
-              <input
-                type="password"
-                onChange={this.setPassword}
-                value={this.state.password}
-              />
-              <br />
-            </label>
-            <label>
-              Confirm Password:
-              <br />
-              <input
-                type="password"
-                onChange={this.setPasswordConfirm}
-                value={this.state.passwordConfirmation}
-              />
-              <br />
-            </label>
-            <button type="submit">Submit</button>
-          </form>
-          <br />
-
           <Link
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
             to={"/home"}
           >
-            Return
+            Previous Page
           </Link>
+        </div>
+
+        <div className="component">
+          <h3 className="register-title">Register a new account!</h3>
+          <form className="register" onSubmit={this.handleSubmit}>
+            <label>Email:</label>
+            <input
+              type="email"
+              onChange={this.setEmail}
+              value={this.state.email}
+            />
+            <label>Username:</label>
+            <input
+              type="text"
+              onChange={this.setUsername}
+              value={this.state.username}
+            />
+            <label>Password:</label>
+            <input
+              type="password"
+              onChange={this.setPassword}
+              value={this.state.password}
+            />
+            <label>Confirm Password:</label>
+            <input
+              type="password"
+              onChange={this.setPasswordConfirm}
+              value={this.state.passwordConfirmation}
+            />
+            <button
+              className="buttonForwards"
+              onClick={this.props.pageBackwards}
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}
@@ -114,8 +104,8 @@ class Register extends Component {
           >
             Link to createmneumonic
           </Link>
-        </section>
-      </main>
+        </div>
+      </section>
     );
   }
 }

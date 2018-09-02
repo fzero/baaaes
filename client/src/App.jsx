@@ -10,7 +10,9 @@ class App extends Component {
         <header className="app-header">
           <h1 className="app-title">Wallet Cryptorial</h1>
         </header>
-        <Tutorial />
+        <div className="app-centering">
+          <Tutorial />
+        </div>
         {/*if statement to add TutorialComplete*/}
       </div>
     );

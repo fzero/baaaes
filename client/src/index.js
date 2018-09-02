@@ -13,7 +13,12 @@ import registerServiceWorker from "./registerServiceWorker";
 import "./styles/index.css";
 import "./styles/App.css";
 import "./styles/Tutorial.css";
-import "./styles/homepage.css";
+import "./styles/tutorialStyles/homepage.css";
+import "./styles/tutorialStyles/register.css";
+import "./styles/tutorialStyles/createmnemonic.css";
+import "./styles/tutorialStyles/privatekey.css";
+import "./styles/tutorialStyles/publickey.css";
+import "./styles/tutorialStyles/coininfo.css";
 
 // ReactDOM Render App
 ReactDOM.render(

@@ -1,0 +1,36 @@
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.description {
+  background-color: #5f6469;
+  height: 591px;
+  overflow: scroll;
+  padding: 10px 40px;
+  width: 50%;
+}
+
+.mnemonic_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.mnemonic_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.warning {
+  font-weight: bold;
+}
+
+.component {
+  width: 50%;
+}
+
+

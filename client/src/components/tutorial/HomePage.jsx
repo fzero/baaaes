@@ -9,41 +9,43 @@ class Homepage extends Component {
           <h2>Table of Contents</h2>
           <ul className="contents_list">
             <li>
-              <span>Chapter 1:</span> The Cryptorial
+              <span className="chapter">Chapter 1:</span> The Cryptorial
             </li>
             <li>
-              <span>Chapter 2:</span> Register
+              <span className="chapter">Chapter 2:</span> Register
             </li>
             <li>
-              <span>Chapter 3:</span> Mnemonic Phrase
+              <span className="chapter">Chapter 3:</span> Mnemonic Phrase
             </li>
             <li>
-              <span>Chapter 4:</span> Private Key
+              <span className="chapter">Chapter 4:</span> Private Key
             </li>
             <li>
-              <span>Chapter 5:</span> Public Key
+              <span className="chapter">Chapter 5:</span> Public Key
             </li>
             <li>
-              <span>Chapter 6:</span> Coin Information
+              <span className="chapter">Chapter 6:</span> Coin Information
             </li>
             <li>
-              <span>Chapter 7:</span> Sample Buying Transaction
+              <span className="chapter">Chapter 7:</span> Sample Buying
+              Transaction
             </li>
             <li>
-              <span>Chapter 8:</span> Sample Selling Transaction
+              <span className="chapter">Chapter 8:</span> Sample Selling
+              Transaction
             </li>
             <li>
-              <span>Chapter 9:</span> Explore the Blockchain
+              <span className="chapter">Chapter 9:</span> Explore the Blockchain
             </li>
             <li>
-              <span>Chapter 10:</span> Complete Tutorial
+              <span className="chapter">Chapter 10:</span> Complete Tutorial
             </li>
           </ul>
         </div>
 
         <div className="noDescription">
-          <h1>The Cryptorial</h1>
-          <p>
+          <h1 className="title">The Cryptorial</h1>
+          <p className="desc_para">
             Wallet Cryptorial is a quick and easy tool to help anyone with
             little to no knowledge about the cryptocurrency world learn what the
             blockchain is and how it works, how to create a crypto wallet, and

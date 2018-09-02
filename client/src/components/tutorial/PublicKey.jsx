@@ -11,22 +11,17 @@ class PublicKey extends Component {
     return (
       <main className="componentContainer">
         <section className="description">
-          <h3>Public Key Description</h3>
-          <p>
-            A public key is derived from the private key, which will be
-            discussed in the next step, using a complex mathematic algorithm, is
-            used as the address where you will recieve transactions sent from
-            someone else. It is a 256-bit number, and unlike a private key, a
-            public key can be shared openly without any worry that someone will
-            use it to access your wallet.
+          <h3 className="public_desc-title">Public Key Description</h3>
+          <p className="public_desc-para">
+            A public key is derived from the private key using a complex
+            mathematic algorithm. A public key is used as the address where you
+            will recieve transactions sent from someone else. You might think of
+            it as if it was your mailbox, but instead of accepting mail you can
+            receive cryptocurrency that someone has sent to you. It also has
+            256-bit levels of security, and unlike a private key, a public key
+            can be shared openly without any concern that someone will use it to
+            access your wallet.
           </p>
-        </section>
-
-        <section className="component">
-          <h3>Public Key</h3>
-          <textarea name="mnemonic-phrase-box" />
-          <label for="mnemonic-phrase-box">*please write this down</label>
-
           <Link
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
@@ -34,6 +29,12 @@ class PublicKey extends Component {
           >
             Previous
           </Link>
+        </section>
+
+        <section className="component">
+          <h3>Public Key</h3>
+          <textarea name="mnemonic-phrase-box" />
+          <label for="mnemonic-phrase-box">*please write this down</label>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}

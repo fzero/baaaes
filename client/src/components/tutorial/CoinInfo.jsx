@@ -11,8 +11,10 @@ class CoinInfo extends Component {
     return (
       <main className="componentContainer">
         <section className="description">
-          <h3>You have successfully created your very own Test Wallet</h3>
-          <p>
+          <h3 className="coin_desc-title">
+            You have successfully created your very own Test Wallet
+          </h3>
+          <p className="coin_desc-para">
             Congratulations! Now that your test wallet has been created and you
             know what each piece is and how they work, you are now ready to do
             some test transactions to get you familiar with the process. You
@@ -21,13 +23,20 @@ class CoinInfo extends Component {
             to Cryptorial, so you can see the procedure in action.
           </p>
           <h3>Crypto Coins</h3>
-          <p>
+          <p className="coin_desc-para">
             Before you start practicing with the transactions, here is some
             information on the more popular coins on the market. There are
             thousands of different coins out there, but most of them are worth
             mere cents, while some of these more popular ones, like Bitcoin,
             reached $17,900 USD in December of 2017.
           </p>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/publickey"}
+          >
+            Previous
+          </Link>
         </section>
 
         <section className="component">
@@ -56,13 +65,6 @@ class CoinInfo extends Component {
             <p>Current Price: </p>
             <p>desc.</p>
           </div>
-          <Link
-            className="buttonBackwards"
-            onClick={this.props.pageBackwards}
-            to={"/testwallet"}
-          >
-            Previous
-          </Link>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}
