@@ -1,0 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents {
+  background-color: #5f6469;
+  height: 591px;
+  width: 35%;
+}
+
+h2 {
+  font-family: "Adamina", serif;
+  text-decoration: underline;
+}
+
+.contents_list {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding: 10.5px 0;
+}
+
+.chapter {
+  font-family: "Adamina", serif;
+  font-size: 2rem;
+}
+
+.noDescription {
+  margin: 0 auto;
+  padding: 10px 50px;
+  width: 65%;
+}
+
+h1 {
+  font-family: "Adamina", serif;
+  font-size: 4rem;
+}
+
+.desc_para {
+  font-family: "Barlow", sans-serif;
+  margin: 40px 0 60px 0;
+  text-align: left;
+}

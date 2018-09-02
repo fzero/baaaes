@@ -38,10 +38,18 @@ class BlockchainExplorer extends Component {
               <p>Recieving Address</p>
             </div>
           </div>
-          <Link onClick={this.props.pageBackwards} to={"/samplesell"}>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/samplesell"}
+          >
             Previous
           </Link>
-          <Link onClick={this.props.pageForwards} to={"/tutorialcomplete"}>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/tutorialcomplete"}
+          >
             Next
           </Link>
         </section>

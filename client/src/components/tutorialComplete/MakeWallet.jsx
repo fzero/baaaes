@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
 // import generator from '../helpers/generator';
 // const generated = generator();
 
@@ -8,8 +8,8 @@ class MakeWallet extends Component {
     super(props);
 
     this.state = {
-      privateKey: this.props.history.location.state.privateKey || '',
-      publicKey: this.props.history.location.state.publicKey || ''
+      privateKey: this.props.history.location.state.privateKey || "",
+      publicKey: this.props.history.location.state.publicKey || ""
     };
   }
 

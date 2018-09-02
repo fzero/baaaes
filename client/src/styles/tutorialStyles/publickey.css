@@ -1,0 +1,29 @@
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.description {
+  background-color: #5f6469;
+  padding: 10px 50px;
+  width: 50%;
+}
+
+.public_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 40px;
+  text-decoration: underline;
+}
+
+.public_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.padding {
+  padding-bottom: 20px;
+}

@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Resource from '../../models/resource.js';
-const User = Resource('users');
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Resource from "../../models/resource.js";
+const User = Resource("users");
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      username: '',
-      password: '',
-      passwordConfirmation: ''
+      email: "",
+      username: "",
+      password: "",
+      passwordConfirmation: ""
     };
   }
 
@@ -20,7 +20,7 @@ class Register extends Component {
     console.log(this.state);
 
     User.create(this.state)
-      .then(() => this.props.history.push('/createmnemonic'))
+      .then(() => this.props.history.push("/createmnemonic"))
       .catch(e => alert(e));
   };
 
@@ -42,73 +42,70 @@ class Register extends Component {
 
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
-          <h3>Registering a Wallet</h3>
-          <p>
+      <section className="componentContainer">
+        <div className="description">
+          <h3 className="register_desc-title">Registering a Wallet</h3>
+          <p className="register_desc-para">
             Before the actual creation of your test cryptocurrency wallet, you
-            will need to register an account. Your email, username, password and
-            your public key, which will be discussed later, will be what you use
-            to access your account and wallet in the future.
+            will need to register an account. Your account will allow access to
+            your real and fake wallets using your email, username, password. For
+            further security to your wallets, a mnemonic phrase will be
+            generated, and from that a private key and public key will derived,
+            all of which shall be defined later in the Cryptorial.
           </p>
-        </section>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/home"}
+          >
+            Previous Page
+          </Link>
+        </div>
 
-        <section className="component">
-          <h3>Register a new account!</h3>
+        <div className="component">
+          <h3 className="register-title">Register a new account!</h3>
           <form className="register" onSubmit={this.handleSubmit}>
-            <label>
-              Email:
-              <br />
-              <input
-                type="email"
-                onChange={this.setEmail}
-                value={this.state.email}
-              />
-              <br />
-            </label>
-            <label>
-              Username:
-              <br />
-              <input
-                type="text"
-                onChange={this.setUsername}
-                value={this.state.username}
-              />
-              <br />
-            </label>
-            <label>
-              Password:
-              <br />
-              <input
-                type="password"
-                onChange={this.setPassword}
-                value={this.state.password}
-              />
-              <br />
-            </label>
-            <label>
-              Confirm Password:
-              <br />
-              <input
-                type="password"
-                onChange={this.setPasswordConfirm}
-                value={this.state.passwordConfirmation}
-              />
-              <br />
-            </label>
-            <button type="submit">Submit</button>
+            <label>Email:</label>
+            <input
+              type="email"
+              onChange={this.setEmail}
+              value={this.state.email}
+            />
+            <label>Username:</label>
+            <input
+              type="text"
+              onChange={this.setUsername}
+              value={this.state.username}
+            />
+            <label>Password:</label>
+            <input
+              type="password"
+              onChange={this.setPassword}
+              value={this.state.password}
+            />
+            <label>Confirm Password:</label>
+            <input
+              type="password"
+              onChange={this.setPasswordConfirm}
+              value={this.state.passwordConfirmation}
+            />
+            <button
+              className="buttonForwards"
+              onClick={this.props.pageBackwards}
+              type="submit"
+            >
+              Submit
+            </button>
           </form>
-          <br />
-
-          <Link onClick={this.props.pageForwards} to={'/createmnemonic'}>
-            Link to createmneumonic instead of making new user everytime
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/createmnemonic"}
+          >
+            Link to createmneumonic
           </Link>
-          <br />
-          <Link onClick={this.props.pageBackwards} to={'/home'}>
-            Return
-          </Link>
-        </section>
-      </main>
+        </div>
+      </section>
     );
   }
 }

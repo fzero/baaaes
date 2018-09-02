@@ -1,16 +1,19 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 // import container
-import Tutorial from './components/Tutorial';
+import Tutorial from "./components/Tutorial";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Wallet-Cryptorial</h1>
+      <div className="app">
+        <header className="app-header">
+          <h1 className="app-title">Wallet Cryptorial</h1>
         </header>
-        <Tutorial />
+        <div className="app-centering">
+          <Tutorial />
+        </div>
+        {/*if statement to add TutorialComplete*/}
       </div>
     );
   }
