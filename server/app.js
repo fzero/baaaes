@@ -77,6 +77,7 @@ app.use('/', require('./web/index')(models));
 
 // API routes
 app.use('/users', require('./api/users')(models));
+app.use('/keys', require('./api/keys')(models));
 
 // catch 404 and forward to error handler
 app.use((req, res, next) => {
