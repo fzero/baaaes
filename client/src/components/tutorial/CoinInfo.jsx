@@ -22,7 +22,7 @@ class CoinInfo extends Component {
             allow you to purchase a fake bitcoin, which you will then sell back
             to Cryptorial, so you can see the procedure in action.
           </p>
-          <h3>Crypto Coins</h3>
+          <h3 className="coin_desc-sub">Crypto Coins</h3>
           <p className="coin_desc-para">
             Before you start practicing with the transactions, here is some
             information on the more popular coins on the market. There are
@@ -40,38 +40,38 @@ class CoinInfo extends Component {
         </section>
 
         <section className="component">
-          <h3>Some Popular Digital Assets</h3>
-          <p>
-            Here are some of the most popular digital assets on the market
-            today!
-          </p>
-          <div classname="eth-desc">
-            <h3>Ethereum</h3>
-            <p>Current Price: </p>
-            <p>desc.</p>
+          <div className="coin">
+            <h3 className="coin_title">Popular Digital Assets</h3>
+            <div className="coin_desc">
+              <div className="btc_desc">
+                <h3>Bitcoin</h3>
+                <p>Current Price: </p>
+                <p>desc.</p>
+              </div>
+              <div className="eth_desc">
+                <h3>Ethereum</h3>
+                <p>Current Price: </p>
+                <p>desc.</p>
+              </div>
+              <div className="doge_desc">
+                <h3>Dogecoin</h3>
+                <p>Current Price: </p>
+                <p>desc.</p>
+              </div>
+              <div className="ltc_desc">
+                <h3>Litecoin</h3>
+                <p>Current Price: </p>
+                <p>desc.</p>
+              </div>
+            </div>
+            <Link
+              className="buttonForwards"
+              onClick={this.props.pageForwards}
+              to={"/samplebuy"}
+            >
+              Next
+            </Link>
           </div>
-          <div classname="btc-desc">
-            <h3>Litecoin</h3>
-            <p>Current Price: </p>
-            <p>desc.</p>
-          </div>
-          <div classname="doge-desc">
-            <h3>Bitcoin</h3>
-            <p>Current Price: </p>
-            <p>desc.</p>
-          </div>
-          <div classname="ltc-desc">
-            <h3>Dogecoin</h3>
-            <p>Current Price: </p>
-            <p>desc.</p>
-          </div>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/samplebuy"}
-          >
-            Next
-          </Link>
         </section>
       </main>
     );
