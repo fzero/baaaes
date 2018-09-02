@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import { DottedProgress } from "react-progress-ui";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { DottedProgress } from 'react-progress-ui';
+import { Route, Switch } from 'react-router-dom';
 // Components
-import Homepage from "./tutorial/HomePage";
-import Register from "./tutorial/Register";
-import CreateMnemonic from "./tutorial/CreateMnemonic";
-import ConfirmMnemonic from "./tutorial/ConfirmMnemonic";
-import PublicKey from "./tutorial/PublicKey";
-import PrivateKey from "./tutorial/PrivateKey";
-import TestWallet from "./tutorial/TestWallet";
-import CoinInfo from "./tutorial/CoinInfo";
-import SampleBuy from "./tutorial/SampleBuy";
-import SampleSell from "./tutorial/SampleSell";
-import BlockchainExplorer from "./tutorial/BlockchainExplorer";
-import TutorialCompletion from "./tutorial/TutorialCompletion";
+import Homepage from './tutorial/HomePage';
+import Register from './tutorial/Register';
+import CreateMnemonic from './tutorial/CreateMnemonic';
+import ConfirmMnemonic from './tutorial/ConfirmMnemonic';
+import PublicKey from './tutorial/PublicKey';
+import PrivateKey from './tutorial/PrivateKey';
+import TestWallet from './tutorial/TestWallet';
+import CoinInfo from './tutorial/CoinInfo';
+import SampleBuy from './tutorial/SampleBuy';
+import SampleSell from './tutorial/SampleSell';
+import BlockchainExplorer from './tutorial/BlockchainExplorer';
+import TutorialCompletion from './tutorial/TutorialCompletion';
 // will not live here forever...
-import Login from "./Login";
-import Mnemonic from "./Mnemonic";
-import Market from "./Market";
-import Wallets from "./Wallets";
-import MakeWallet from "./MakeWallet";
+import Login from './Login';
+import Mnemonic from './Mnemonic';
+import Market from './Market';
+import Wallets from './Wallets';
+import MakeWallet from './MakeWallet';
 // Generate Random Bitcoin Mnemonic -> Private Key (WIF) -> Public Key
 // This will be a "test wallet" but the keys will correspond with real bitcoin addresses
-import generator from "../helpers/generator";
+import generator from '../helpers/generator';
 const generated = generator();
 
 class Tutorial extends Component {
@@ -63,6 +63,7 @@ class Tutorial extends Component {
         <Route path="/makewallet" component={MakeWallet} />
         {/* Wallets Page */}
         <Route path="/wallets" component={Wallets} />
+
         <Switch>
           {/* Home Page */}
           <Route
