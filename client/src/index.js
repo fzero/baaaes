@@ -13,6 +13,7 @@ import registerServiceWorker from "./registerServiceWorker";
 import "./styles/index.css";
 import "./styles/App.css";
 import "./styles/Tutorial.css";
+import "./styles/homepage.css";
 
 // ReactDOM Render App
 ReactDOM.render(

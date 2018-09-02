@@ -1,0 +1,51 @@
+.main {
+  display: flex;
+  flex-direction: row;
+}
+
+.contents {
+  background-color: #5f6469;
+  border-right: 2px solid #222;
+  color: #fff;
+  width: 35%;
+}
+
+h2 {
+  font-family: "Adamina", serif;
+  text-decoration: underline;
+  padding-bottom: 20px;
+}
+
+.contents_list {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding: 11.7px 0;
+}
+
+span {
+  font-family: "Adamina", serif;
+  font-size: 2rem;
+}
+
+.noDescription {
+  border-left: 2px solid #222;
+  margin: 0 auto;
+  padding: 10px 50px;
+  width: 65%;
+}
+
+h1 {
+  font-family: "Adamina", serif;
+  font-size: 4rem;
+}
+
+p {
+  font-family: "Barlow", sans-serif;
+  margin: 40px 0 60px 0;
+  text-align: left;
+}

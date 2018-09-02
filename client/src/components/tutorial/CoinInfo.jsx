@@ -56,10 +56,18 @@ class CoinInfo extends Component {
             <p>Current Price: </p>
             <p>desc.</p>
           </div>
-          <Link onClick={this.props.pageBackwards} to={"/testwallet"}>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/testwallet"}
+          >
             Previous
           </Link>
-          <Link onClick={this.props.pageForwards} to={"/samplebuy"}>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/samplebuy"}
+          >
             Next
           </Link>
         </section>

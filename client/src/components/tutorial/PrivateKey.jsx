@@ -36,10 +36,18 @@ class PrivateKey extends Component {
             <p>Add some notes on private key</p>
             <p>Please copy this down on paper</p>
 
-            <Link onClick={this.props.pageBackwards} to={"/createmnemonic"}>
+            <Link
+              className="buttonBackwards"
+              onClick={this.props.pageBackwards}
+              to={"/createmnemonic"}
+            >
               Previous
             </Link>
-            <Link onClick={this.props.pageForwards} to={"/publickey"}>
+            <Link
+              className="buttonForwards"
+              onClick={this.props.pageForwards}
+              to={"/publickey"}
+            >
               Next
             </Link>
           </div>

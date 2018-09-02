@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Resource from '../../models/resource.js';
-const User = Resource('users');
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Resource from "../../models/resource.js";
+const User = Resource("users");
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: '',
-      username: '',
-      password: '',
-      passwordConfirmation: ''
+      email: "",
+      username: "",
+      password: "",
+      passwordConfirmation: ""
     };
   }
 
@@ -20,7 +20,7 @@ class Register extends Component {
     console.log(this.state);
 
     User.create(this.state)
-      .then(() => this.props.history.push('/createmnemonic'))
+      .then(() => this.props.history.push("/createmnemonic"))
       .catch(e => alert(e));
   };
 
@@ -100,12 +100,19 @@ class Register extends Component {
           </form>
           <br />
 
-          <Link onClick={this.props.pageForwards} to={'/createmnemonic'}>
-            Link to createmneumonic instead of making new user everytime
-          </Link>
-          <br />
-          <Link onClick={this.props.pageBackwards} to={'/home'}>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/home"}
+          >
             Return
+          </Link>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/createmnemonic"}
+          >
+            Link to createmneumonic
           </Link>
         </section>
       </main>

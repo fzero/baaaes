@@ -47,10 +47,18 @@ class CreateMnemonic extends Component {
           <textarea name="mnemonic-phrase-box" placeholder="" />
           <label>*Do not copy, please write it down</label>
 
-          <Link onClick={this.props.pageBackwards} to={"/register"}>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/register"}
+          >
             Previous
           </Link>
-          <Link onClick={this.props.pageForwards} to={"/privatekey"}>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/privatekey"}
+          >
             Next
           </Link>
         </section>

@@ -23,7 +23,11 @@ class TutorialCompletion extends Component {
             Congratulations on completing the blockchain tutorial. You now know
             enough to send and recieve cryptocurrency for real!
           </p>
-          <Link onClick={this.props.pageReset} to={"/home"}>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageReset}
+            to={"/home"}
+          >
             Restart Tutorial
           </Link>
           <button>Finish Tutorial</button>

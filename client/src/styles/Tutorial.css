@@ -1,21 +1,27 @@
+html {
+  background-color: #23282e;
+}
+
 .container {
+  background-color: #868b91;
   border: 4px solid #222;
   font-size: 20px;
   height: 700px;
   margin: 10px auto;
   padding: 0;
-  width: 70%;
-}
-
-.noDescription {
-  margin: 0 auto;
   width: 80%;
 }
 
+.noDescription {
+  border-left: 2px solid #222;
+  margin: 0 auto;
+  width: 70%;
+}
+
 .componentContainer {
-  width: 100%;
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .description {
@@ -36,7 +42,7 @@
   background-color: #092956;
   border-radius: 5px;
   color: #fff;
-  margin: 20px;
+  margin: 50px;
   padding: 10px;
 }
 
@@ -49,7 +55,7 @@
   background-color: #092956;
   border-radius: 5px;
   color: #fff;
-  margin: 20px;
+  margin: 50px;
   padding: 10px;
 }
 
