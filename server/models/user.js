@@ -1,9 +1,9 @@
-const Sequelize = require('sequelize');
-const uuid = require('uuid/v4');
+const Sequelize = require("sequelize");
+const uuid = require("uuid/v4");
 
 module.exports = sequelize => {
   const User = sequelize.define(
-    'users',
+    "users",
     {
       id: {
         allowNull: false,
@@ -34,6 +34,11 @@ module.exports = sequelize => {
       },
       balance: {
         type: Sequelize.FLOAT
+      },
+      tutorialComplete: {
+        type: Sequelize.boolean,
+        allowNull: false,
+        defaultValue: false
       }
     },
     {

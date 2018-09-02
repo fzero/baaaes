@@ -5,23 +5,16 @@ import { Route, Switch } from "react-router-dom";
 import Homepage from "./tutorial/HomePage";
 import Register from "./tutorial/Register";
 import CreateMnemonic from "./tutorial/CreateMnemonic";
-import ConfirmMnemonic from "./tutorial/ConfirmMnemonic";
-import PublicKey from "./tutorial/PublicKey";
 import PrivateKey from "./tutorial/PrivateKey";
-import TestWallet from "./tutorial/TestWallet";
+import PublicKey from "./tutorial/PublicKey";
 import CoinInfo from "./tutorial/CoinInfo";
 import SampleBuy from "./tutorial/SampleBuy";
 import SampleSell from "./tutorial/SampleSell";
 import BlockchainExplorer from "./tutorial/BlockchainExplorer";
 import TutorialCompletion from "./tutorial/TutorialCompletion";
-// will not live here forever...
-import Login from "./Login";
-import Mnemonic from "./Mnemonic";
-import Market from "./Market";
-import Wallets from "./Wallets";
-import MakeWallet from "./MakeWallet";
 // Generate Random Bitcoin Mnemonic -> Private Key (WIF) -> Public Key
-// This will be a "test wallet" but the keys will correspond with real bitcoin addresses
+// This will be a "test wallet" but the keys will correspond with real
+// bitcoin addresses
 import generator from "../helpers/generator";
 const generated = generator();
 
@@ -52,17 +45,27 @@ class Tutorial extends Component {
   render() {
     return (
       <div className="tutorial container">
-        <DottedProgress numSteps={12} activeStep={this.state.page} />
-        {/* Login Page */}
-        <Route path="/login" component={Login} />
-        {/* Mnemonic Page */}
-        <Route path="/mnemonic" component={Mnemonic} />
-        {/* Market Page */}
-        <Route path="/market" component={Market} />
-        {/* Make new Wallet */}
-        <Route path="/makewallet" component={MakeWallet} />
-        {/* Wallets Page */}
-        <Route path="/wallets" component={Wallets} />
+        <div className="progressBar">
+          <DottedProgress
+            numSteps={10}
+            activeStep={this.state.page}
+            activeDotColor="#0A971F"
+            dotStyles={{
+              background: "#092956", // should be changed
+              border: "1px solid #000",
+              borderRadius: "12.5px",
+              height: "25px",
+              width: "25px"
+            }}
+            lineStyles={{
+              background: "#000",
+              height: "2px",
+              margin: "40px auto",
+              width: "70%"
+            }}
+            styles="border-bottom: 4px solid black"
+          />
+        </div>
         <Switch>
           {/* Home Page */}
           <Route
@@ -86,7 +89,7 @@ class Tutorial extends Component {
               />
             )}
           />
-          {/* Create Mnemonic/Recovery */}
+          {/* Create Mnemonic */}
           <Route
             path="/createmnemonic"
             render={props => (
@@ -95,30 +98,6 @@ class Tutorial extends Component {
                 pageForwards={this.pageForwards}
                 pageBackwards={this.pageBackwards}
                 mnemonic={this.state.mnemonic}
-              />
-            )}
-          />
-          {/* Confirm Recovery */}
-          <Route
-            path="/confirmmnemonic"
-            render={props => (
-              <ConfirmMnemonic
-                {...props}
-                pageForwards={this.pageForwards}
-                pageBackwards={this.pageBackwards}
-                mnemonic={this.state.mnemonic}
-              />
-            )}
-          />
-          {/* What is a Public Key? */}
-          <Route
-            path="/publickey"
-            render={props => (
-              <PublicKey
-                {...props}
-                pageForwards={this.pageForwards}
-                pageBackwards={this.pageBackwards}
-                mnemonic={this.state.publ}
               />
             )}
           />
@@ -134,14 +113,15 @@ class Tutorial extends Component {
               />
             )}
           />
-          {/* Create Test Wallet */}
+          {/* What is a Public Key? */}
           <Route
-            path="/testwallet"
+            path="/publickey"
             render={props => (
-              <TestWallet
+              <PublicKey
                 {...props}
                 pageForwards={this.pageForwards}
                 pageBackwards={this.pageBackwards}
+                mnemonic={this.state.publ}
               />
             )}
           />

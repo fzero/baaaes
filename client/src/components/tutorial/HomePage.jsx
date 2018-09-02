@@ -19,8 +19,14 @@ class Homepage extends Component {
           walkthrough, you will have all the knowledge needed to create a real
           crypto-wallet and begin your journey into the world of cryptocurrency.
         </p>
-        <Link to={"/login"}>Existing User?</Link>
-        <Link onClick={this.props.pageForwards} to={"/register"}>
+        <Link className="buttonBackwards" to={"/login"}>
+          Existing User?
+        </Link>
+        <Link
+          className="buttonForwards"
+          onClick={this.props.pageForwards}
+          to={"/register"}
+        >
           Get Started!
         </Link>
       </section>

@@ -1,7 +1,5 @@
-
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 
 class CreateMnemonic extends Component {
   constructor(props) {
@@ -52,7 +50,7 @@ class CreateMnemonic extends Component {
           <Link onClick={this.props.pageBackwards} to={"/register"}>
             Previous
           </Link>
-          <Link onClick={this.props.pageForwards} to={"/confirmmnemonic"}>
+          <Link onClick={this.props.pageForwards} to={"/privatekey"}>
             Next
           </Link>
         </section>

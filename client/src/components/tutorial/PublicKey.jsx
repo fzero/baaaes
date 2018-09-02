@@ -27,13 +27,12 @@ class PublicKey extends Component {
           <textarea name="mnemonic-phrase-box" />
           <label for="mnemonic-phrase-box">*please write this down</label>
 
-          <Link onClick={this.props.pageBackwards} to={"/confirmmnemonic"}>
+          <Link onClick={this.props.pageBackwards} to={"/privatekey"}>
             Previous
           </Link>
-          <Link onClick={this.props.pageForwards} to={"/privatekey"}>
+          <Link onClick={this.props.pageForwards} to={"/coininfo"}>
             Next
           </Link>
-
         </section>
       </main>
     );
