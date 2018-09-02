@@ -42,10 +42,15 @@ class SampleSell extends Component {
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
             <div>
-              <Link onClick={this.props.pageBackwards} to={"/samplebuy"}>
+              <Link
+                className="buttonBackwards"
+                onClick={this.props.pageBackwards}
+                to={"/samplebuy"}
+              >
                 Previous
               </Link>
               <Link
+                className="buttonForwards"
                 onClick={this.props.pageForwards}
                 to={"/blockchainexplorer"}
               >
