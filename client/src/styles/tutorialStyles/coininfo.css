@@ -1,0 +1,54 @@
+.coin_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.coin_desc-sub {
+  font-family: "Adamina", serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.coin_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.coin {
+  padding: 0 30px;
+}
+
+.coin_title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.coin_desc {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.btc_desc {
+  padding-bottom: 50px;
+  width: 50%;
+}
+
+.eth_desc {
+  padding-bottom: 50px;
+  width: 50%;
+}
+
+.doge_desc {
+  padding-bottom: 50px;
+  width: 50%;
+}
+
+.ltc_desc {
+  padding-bottom: 50px;
+  width: 50%;
+}
