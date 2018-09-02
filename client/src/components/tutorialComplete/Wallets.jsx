@@ -1,5 +1,6 @@
-import React, { Component } from "react";
-import { Table, Row, Col, PageHeader } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { Table, Row, Col, PageHeader } from 'react-bootstrap';
 
 class Wallets extends Component {
   constructor(props) {
@@ -15,6 +16,9 @@ class Wallets extends Component {
       <Row className="wallets">
         <Col xs={12}>
           <PageHeader>Wallets</PageHeader>
+          <Link to="/mnemonic" className="new-wallet btn btn-primary btn-sm">
+            Create New Wallet +
+          </Link>
           <Table>
             <thead>
               <tr>

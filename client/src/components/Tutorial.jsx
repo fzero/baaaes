@@ -1,21 +1,21 @@
-import React, { Component } from "react";
-import { DottedProgress } from "react-progress-ui";
-import { Route, Switch } from "react-router-dom";
+import React, { Component } from 'react';
+import { DottedProgress } from 'react-progress-ui';
+import { Route, Switch } from 'react-router-dom';
 // Components
-import Homepage from "./tutorial/HomePage";
-import Register from "./tutorial/Register";
-import CreateMnemonic from "./tutorial/CreateMnemonic";
-import PrivateKey from "./tutorial/PrivateKey";
-import PublicKey from "./tutorial/PublicKey";
-import CoinInfo from "./tutorial/CoinInfo";
-import SampleBuy from "./tutorial/SampleBuy";
-import SampleSell from "./tutorial/SampleSell";
-import BlockchainExplorer from "./tutorial/BlockchainExplorer";
-import TutorialCompletion from "./tutorial/TutorialCompletion";
+import Homepage from './tutorial/HomePage';
+import Register from './tutorial/Register';
+import CreateMnemonic from './tutorial/CreateMnemonic';
+import PrivateKey from './tutorial/PrivateKey';
+import PublicKey from './tutorial/PublicKey';
+import CoinInfo from './tutorial/CoinInfo';
+import SampleBuy from './tutorial/SampleBuy';
+import SampleSell from './tutorial/SampleSell';
+import BlockchainExplorer from './tutorial/BlockchainExplorer';
+import TutorialCompletion from './tutorial/TutorialCompletion';
 // Generate Random Bitcoin Mnemonic -> Private Key (WIF) -> Public Key
 // This will be a "test wallet" but the keys will correspond with real
 // bitcoin addresses
-import generator from "../helpers/generator";
+import generator from '../helpers/generator';
 const generated = generator();
 
 class Tutorial extends Component {
@@ -51,17 +51,17 @@ class Tutorial extends Component {
             activeStep={this.state.page}
             activeDotColor="#0A971F"
             dotStyles={{
-              background: "#092956", // should be changed
-              border: "1px solid #000",
-              borderRadius: "12.5px",
-              height: "25px",
-              width: "25px"
+              background: '#092956', // should be changed
+              border: '1px solid #000',
+              borderRadius: '12.5px',
+              height: '25px',
+              width: '25px'
             }}
             lineStyles={{
-              background: "#000",
-              height: "2px",
-              margin: "40px auto",
-              width: "70%"
+              background: '#000',
+              height: '2px',
+              margin: '40px auto',
+              width: '70%'
             }}
             styles="border-bottom: 4px solid black"
           />

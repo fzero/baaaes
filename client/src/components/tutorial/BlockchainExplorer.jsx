@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class BlockchainExplorer extends Component {
   render() {
@@ -41,14 +41,14 @@ class BlockchainExplorer extends Component {
           <Link
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/samplesell"}
+            to={'/samplesell'}
           >
             Previous
           </Link>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}
-            to={"/tutorialcomplete"}
+            to={'/tutorialcomplete'}
           >
             Next
           </Link>
