@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 // import container
-import Tutorial from "./components/Tutorial";
+// import Tutorial from './components/Tutorial';
+import TutorialComplete from './components/TutorialComplete';
 
 class App extends Component {
   render() {
@@ -11,7 +12,8 @@ class App extends Component {
           <h1 className="app-title">Wallet Cryptorial</h1>
         </header>
         <div className="app-centering">
-          <Tutorial />
+          {/* <Tutorial /> */}
+          <TutorialComplete />
         </div>
         {/*if statement to add TutorialComplete*/}
       </div>
