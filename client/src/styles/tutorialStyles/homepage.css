@@ -1,6 +1,7 @@
-.main {
+.componentContainer {
   display: flex;
   flex-direction: row;
+  width: 100%;
 }
 
 .contents {
@@ -9,7 +10,7 @@
   width: 35%;
 }
 
-h2 {
+.contents_title {
   font-family: "Adamina", serif;
   text-decoration: underline;
 }
@@ -33,10 +34,11 @@ li {
 .noDescription {
   margin: 0 auto;
   padding: 10px 50px;
+  position: relative;
   width: 65%;
 }
 
-h1 {
+.title {
   font-family: "Adamina", serif;
   font-size: 4rem;
 }

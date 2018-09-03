@@ -1,3 +1,17 @@
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.private_description {
+  background-color: #5f6469;
+  height: 591px;
+  padding: 10px 50px;
+  position: relative;
+  width: 70%;
+}
+
 .private_desc-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
@@ -10,3 +24,33 @@
   font-size: 1.8rem;
   text-align: left;
 }
+
+.private_desc-para .warning {
+  font-weight: bold;
+}
+
+.private_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.private_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.private_comp-key {
+  margin-bottom: 30px;
+}
+
+.private_comp-desc {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 50px;
+  text-align: left;
+}
+

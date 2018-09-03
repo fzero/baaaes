@@ -1,5 +1,4 @@
 .app {
-  /* background-color: #23282e; */
   text-align: center;
 }
 
@@ -16,10 +15,3 @@
   font-size: 4rem;
   margin: 10px;
 }
-
-/*app-centering {
-  display: flex;
-  align-items: center;
-  max-height: 100%;
-}
-*/

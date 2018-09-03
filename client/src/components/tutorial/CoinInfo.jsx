@@ -9,11 +9,9 @@ class CoinInfo extends Component {
 
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
-          <h3 className="coin_desc-title">
-            You have successfully created your very own Test Wallet
-          </h3>
+      <section className="componentContainer">
+        <div className="coin_desc">
+          <h3 className="coin_desc-title">Crypto Coins</h3>
           <p className="coin_desc-para">
             Congratulations! Now that your test wallet has been created and you
             know what each piece is and how they work, you are now ready to do
@@ -22,7 +20,6 @@ class CoinInfo extends Component {
             allow you to purchase a fake bitcoin, which you will then sell back
             to Cryptorial, so you can see the procedure in action.
           </p>
-          <h3 className="coin_desc-sub">Crypto Coins</h3>
           <p className="coin_desc-para">
             Before you start practicing with the transactions, here is some
             information on the more popular coins on the market. There are
@@ -37,43 +34,41 @@ class CoinInfo extends Component {
           >
             Previous
           </Link>
-        </section>
+        </div>
 
-        <section className="component">
-          <div className="coin">
-            <h3 className="coin_title">Popular Digital Assets</h3>
-            <div className="coin_desc">
-              <div className="btc_desc">
-                <h3>Bitcoin</h3>
-                <p>Current Price: </p>
-                <p>desc.</p>
-              </div>
-              <div className="eth_desc">
-                <h3>Ethereum</h3>
-                <p>Current Price: </p>
-                <p>desc.</p>
-              </div>
-              <div className="doge_desc">
-                <h3>Dogecoin</h3>
-                <p>Current Price: </p>
-                <p>desc.</p>
-              </div>
-              <div className="ltc_desc">
-                <h3>Litecoin</h3>
-                <p>Current Price: </p>
-                <p>desc.</p>
-              </div>
+        <div className="coin_comp">
+          <h3 className="coin_comp-title">Popular Digital Assets</h3>
+          <div className="coin_comp-desc">
+            <div className="btc_desc">
+              <h3>Bitcoin</h3>
+              <p>Current Price: </p>
+              <p>desc.</p>
             </div>
-            <Link
-              className="buttonForwards"
-              onClick={this.props.pageForwards}
-              to={"/samplebuy"}
-            >
-              Next
-            </Link>
+            <div className="eth_desc">
+              <h3>Ethereum</h3>
+              <p>Current Price: </p>
+              <p>desc.</p>
+            </div>
+            <div className="doge_desc">
+              <h3>Dogecoin</h3>
+              <p>Current Price: </p>
+              <p>desc.</p>
+            </div>
+            <div className="ltc_desc">
+              <h3>Litecoin</h3>
+              <p>Current Price: </p>
+              <p>desc.</p>
+            </div>
           </div>
-        </section>
-      </main>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/samplebuy"}
+          >
+            Next
+          </Link>
+        </div>
+      </section>
     );
   }
 }

@@ -4,55 +4,63 @@
   width: 100%;
 }
 
-.description {
+.register_desc {
   background-color: #5f6469;
   height: 591px;
-  padding: 10px 75px;
+  padding: 10px 50px;
+  position: relative;
   width: 50%;
 }
 
 .register_desc-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   text-decoration: underline;
 }
 
 .register_desc-para {
   font-family: "Barlow", sans-serif;
-  margin-bottom: 40px;
+  font-size: 1.8rem;
   text-align: left;
 }
 
-.component {
+.register_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
   width: 50%;
 }
 
-.register-title {
+.register_comp-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   text-decoration: underline;
 }
 
-.register {
+.register_comp-form {
   display: flex;
   flex-direction: column;
 }
 
-label {
+.register_comp-label {
   margin: 10px auto;
   text-align: left;
   width: 50%;
 }
 
-input {
+.register_comp-input {
   margin: 0 auto;
   width: 50%;
 }
 
-.buttonForwards {
+.buttonSubmit {
+  background-color: #092956;
   border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
   margin: 20px auto;
   width: 20%;
 }

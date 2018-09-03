@@ -4,10 +4,12 @@
   width: 100%;
 }
 
-.description {
+.public_description {
   background-color: #5f6469;
+  height: 591px;
   padding: 10px 50px;
-  width: 50%;
+  position: relative;
+  width: 70%;
 }
 
 .public_desc-title {
@@ -24,6 +26,27 @@
   text-align: left;
 }
 
-.padding {
+.public_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.public_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
   padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.public_comp-key {
+  margin-bottom: 30px;
+}
+
+.public_comp-desc {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 50px;
+  text-align: left;
 }

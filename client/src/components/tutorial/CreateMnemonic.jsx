@@ -10,7 +10,7 @@ class CreateMnemonic extends Component {
   render() {
     return (
       <main className="componentContainer">
-        <section className="description">
+        <section className="mnemonic_description">
           <h3 className="mnemonic_desc-title">Mnemonic Phrase Description</h3>
           <p className="mnemonic_desc-para">
             A Mnemonic Phrase, also known as a "seed phrase" or "seed recovery
@@ -24,11 +24,9 @@ class CreateMnemonic extends Component {
           <p className="mnemonic_desc-para">
             <span className="warning">Warning:</span> Forgetting this Phrase
             could result in the loss of your wallet and everything it contains.
-          </p>
-          <p className="mnemonic_desc-para">
-            <span className="warning">Do Not</span> overestimate your ability to
-            memorize this phrase, please write it down on a piece of paper
-            instead, and store it in a secure location.
+            Do not overestimate your ability to memorize this phrase, please
+            write it down on a piece of paper instead, and store it in a secure
+            location.
           </p>
           <p className="mnemonic_desc-para">
             Crypto Wallet software contains a list of 2048 words from a
@@ -48,10 +46,13 @@ class CreateMnemonic extends Component {
           </Link>
         </section>
 
-        <section className="component">
-          <h3>Mnemonic Phrase</h3>
-          <textarea name="mnemonic-phrase-box" placeholder="" />
-          <label>*Do not copy, please write it down</label>
+        <section className="mnemonic_component">
+          <h3 className="mnemonic_comp-title">Mnemonic Phrase</h3>
+          <input className="mnemonic_comp-phrase" />
+          <p className="mnemonic_comp-desc">
+            Please write this phrase down on paper and deposit it in a safe and
+            secure location
+          </p>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}

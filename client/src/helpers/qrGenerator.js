@@ -1,4 +1,4 @@
-var qr = require('qr-encode');
+var qr = require("qr-encode");
 
 // Error Correction:
 
@@ -7,10 +7,10 @@ var qr = require('qr-encode');
 // level: Q (Quartile) 25% of codewords can be restored.
 // level: H (High) 30% of codewords can be restored.
 
-var dataURI = qr('1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV', {
+var dataURI = qr("1F3sAm6ZtwLAUnj7d38pGFxtP3RVEvtsbV", {
   type: 6,
   size: 6,
-  level: 'Q'
+  level: "Q"
 });
 
 //If using in browsers:
@@ -22,9 +22,9 @@ module.exports = function(address) {
   var dataURI = qr(address, {
     type: 6,
     size: 6,
-    level: 'Q'
+    level: "Q"
   });
   var img = new Image();
   img.src = dataURI;
-  // document.body.appendChild(img); img is the QR code
+  document.body.appendChild(img); //img is the QR code
 };

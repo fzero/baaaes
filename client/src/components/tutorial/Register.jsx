@@ -43,7 +43,7 @@ class Register extends Component {
   render() {
     return (
       <section className="componentContainer">
-        <div className="description">
+        <div className="register_desc">
           <h3 className="register_desc-title">Registering a Wallet</h3>
           <p className="register_desc-para">
             Before the actual creation of your test cryptocurrency wallet, you
@@ -62,46 +62,46 @@ class Register extends Component {
           </Link>
         </div>
 
-        <div className="component">
-          <h3 className="register-title">Register a new account!</h3>
-          <form className="register" onSubmit={this.handleSubmit}>
-            <label>Email:</label>
+        <div className="register_comp">
+          <h3 className="register_comp-title">Register a new account!</h3>
+          <form className="register_comp-form" onSubmit={this.handleSubmit}>
+            <label className="register_comp-label">Email:</label>
             <input
+              className="register_comp-input"
               type="email"
               onChange={this.setEmail}
               value={this.state.email}
             />
-            <label>Username:</label>
+            <label className="register_comp-label">Username:</label>
             <input
+              className="register_comp-input"
               type="text"
               onChange={this.setUsername}
               value={this.state.username}
             />
-            <label>Password:</label>
+            <label className="register_comp-label">Password:</label>
             <input
+              className="register_comp-input"
               type="password"
               onChange={this.setPassword}
               value={this.state.password}
             />
-            <label>Confirm Password:</label>
+            <label className="register_comp-label">Confirm Password:</label>
             <input
+              className="register_comp-input"
               type="password"
               onChange={this.setPasswordConfirm}
               value={this.state.passwordConfirmation}
             />
             <button
-              className="buttonForwards"
+              className="buttonSubmit"
               onClick={this.props.pageForwards}
               type="submit"
             >
               Submit
             </button>
           </form>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/createmnemonic"}
-          >
+          <Link onClick={this.props.pageForwards} to={"/createmnemonic"}>
             Link to createmneumonic
           </Link>
         </div>

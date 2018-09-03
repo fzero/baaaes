@@ -1,3 +1,11 @@
+.coin_desc {
+  background-color: #5f6469;
+  height: 591px;
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
 .coin_desc-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
@@ -17,18 +25,21 @@
   text-align: left;
 }
 
-.coin {
-  padding: 0 30px;
+.coin_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
 }
 
-.coin_title {
+.coin_comp-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
   padding-bottom: 20px;
   text-decoration: underline;
 }
 
-.coin_desc {
+.coin_comp-desc {
   display: flex;
   flex-wrap: wrap;
 }

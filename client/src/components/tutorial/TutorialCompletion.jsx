@@ -41,7 +41,7 @@ class TutorialCompletion extends Component {
             onClick={this.handleCompletion}
             to={"/wallets"}
           >
-            Restart Tutorial
+            Complete Tutorial
           </Link>
         </section>
       </main>

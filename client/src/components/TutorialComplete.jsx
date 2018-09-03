@@ -1,19 +1,16 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
 
 // Routes within
-import Login from './tutorialComplete/Login';
-import Mnemonic from './tutorialComplete/Mnemonic';
-import Market from './tutorialComplete/Market';
-import Wallets from './tutorialComplete/Wallets';
-import MakeWallet from './tutorialComplete/MakeWallet';
+import Mnemonic from "./tutorialComplete/Mnemonic";
+import Market from "./tutorialComplete/Market";
+import Wallets from "./tutorialComplete/Wallets";
+import MakeWallet from "./tutorialComplete/MakeWallet";
 
 class TutorialComplete extends Component {
   render() {
     return (
       <Switch className="complete">
-        {/* Login Page */}
-        <Route path="/login" component={Login} />
         {/* Mnemonic Page */}
         <Route path="/mnemonic" component={Mnemonic} />
         {/* Market Page */}

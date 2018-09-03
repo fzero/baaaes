@@ -4,12 +4,12 @@
   width: 100%;
 }
 
-.description {
+.mnemonic_description {
   background-color: #5f6469;
   height: 591px;
-  overflow: scroll;
-  padding: 10px 40px;
-  width: 50%;
+  padding: 10px 50px;
+  position: relative;
+  width: 70%;
 }
 
 .mnemonic_desc-title {
@@ -29,8 +29,29 @@
   font-weight: bold;
 }
 
-.component {
-  width: 50%;
+.mnemonic_component {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.mnemonic_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.mnemonic_comp-phrase {
+  margin-bottom: 30px;
+}
+
+.mnemonic_comp-desc {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 50px;
+  text-align: left;
 }
 
 

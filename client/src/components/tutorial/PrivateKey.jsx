@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 class PrivateKey extends Component {
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
+      <section className="componentContainer">
+        <div className="private_description">
           <h3 className="private_desc-title">Private Key Description</h3>
           <p className="private_desc-para">
             A Private Key, or a private address is a 256-bit security level
@@ -38,24 +38,24 @@ class PrivateKey extends Component {
           >
             Previous
           </Link>
-        </section>
+        </div>
 
-        <section className="component">
-          <div>
-            <h3>Private Key</h3>
-            <input placeholder="abvoi3uvjs838t1bf84bd73f5u48492" />
-            <p>Add some notes on private key</p>
-            <p>Please copy this down on paper</p>
-            <Link
-              className="buttonForwards"
-              onClick={this.props.pageForwards}
-              to={"/publickey"}
-            >
-              Next
-            </Link>
-          </div>
-        </section>
-      </main>
+        <div className="private_comp">
+          <h3 className="private_comp-title">Private Key</h3>
+          <input className="private_comp-key" />
+          <p className="private_comp-desc">
+            Please copy this key down on paper and hide it in an appropriate and
+            safe location.
+          </p>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/publickey"}
+          >
+            Next
+          </Link>
+        </div>
+      </section>
     );
   }
 }

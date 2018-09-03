@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 class Homepage extends Component {
   render() {
     return (
-      <section className="main">
+      <section className="componentContainer">
         <div className="contents">
-          <h2>Table of Contents</h2>
+          <h2 className="contents_title">Table of Contents</h2>
           <ul className="contents_list">
             <li>
               <span className="chapter">Chapter 1:</span> The Cryptorial

@@ -27,11 +27,13 @@ html {
   background-color: #5f6469;
   height: 591px;
   overflow: scroll;
-  padding: 10px 40px;
+  padding: 10px 50px;
   width: 50%;
 }
 
 .component {
+  margin: 0 auto;
+  padding: 10px 50px;
   width: 50%;
 }
 
@@ -45,6 +47,9 @@ html {
   color: #fff;
   margin: 50px;
   padding: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
 }
 
 .buttonForwards:hover {
@@ -56,8 +61,10 @@ html {
   background-color: #092956;
   border-radius: 5px;
   color: #fff;
-  margin: 50px;
   padding: 10px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
 }
 
 .buttonBackwards:hover {
