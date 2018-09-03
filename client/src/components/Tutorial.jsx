@@ -9,11 +9,11 @@ import CoinInfo from "./tutorial/CoinInfo";
 import SampleBuy from "./tutorial/SampleBuy";
 import SampleSell from "./tutorial/SampleSell";
 import BlockchainExplorer from "./tutorial/BlockchainExplorer";
-import TutorialCompletion from "./tutorial/TutorialCompletion";
+import TutorialFinish from "./tutorial/TutorialFinish";
 // Generate Random Bitcoin Mnemonic -> Private Key (WIF) -> Public Key
 // This will be a "test wallet" but the keys will correspond with real
 // bitcoin addresses
-import generator from "../../helpers/generator";
+import generator from "../helpers/generator";
 const generated = generator();
 
 class Tutorial extends Component {
@@ -112,7 +112,7 @@ class Tutorial extends Component {
         break;
       case 9:
         page = (
-          <TutorialCompletion
+          <TutorialFinish
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
           />
@@ -159,102 +159,3 @@ class Tutorial extends Component {
   }
 }
 export default Tutorial;
-
-// {/* Home Page */}
-//         <Route
-//           path="/tutorial"
-//           render={props => (
-//             <TutorialStart
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//             />
-//           )}
-//         />
-//         {/* Create Mnemonic */}
-//         <Route
-//           path="/tutorial/createmnemonic"
-//           render={props => (
-//             <CreateMnemonic
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//               mnemonic={this.state.mnemonic}
-//             />
-//           )}
-//         />
-//         {/* What is a Private Key? */}
-//         <Route
-//           path="/tutorial/privatekey"
-//           render={props => (
-//             <PrivateKey
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//               mnemonic={this.state.priv}
-//             />
-//           )}
-//         />
-//         {/* What is a Public Key? */}
-//         <Route
-//           path="/tutorial/publickey"
-//           render={props => (
-//             <PublicKey
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//               mnemonic={this.state.publ}
-//             />
-//           )}
-//         />
-//         {/* Descriptions of Top Coins */}
-//         <Route
-//           path="/tutorial/coininfo"
-//           render={props => (
-//             <CoinInfo
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//             />
-//           )}
-//         />
-//         {/* Sample Buy Transaction */}
-//         <Route
-//           path="/tutorial/samplebuy"
-//           render={props => (
-//             <SampleBuy
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//             />
-//           )}
-//         />
-//         {/* Sample Sell Transaction */}
-//         <Route
-//           path="/tutorial/samplesell"
-//           render={props => (
-//             <SampleSell
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//             />
-//           )}
-//         />
-//         {/* Example Blockchain Explorer */}
-//         <Route
-//           path="/tutorial/blockchainexplorer"
-//           render={props => (
-//             <BlockchainExplorer
-//               {...props}
-//               pageForwards={this.pageForwards}
-//               pageBackwards={this.pageBackwards}
-//             />
-//           )}
-//         />
-//         {/* Tutorial Completed Messsage */}
-//         <Route
-//           path="/tutorial/tutorialcomplete"
-//           render={props => (
-//             <TutorialCompletion {...props} pageReset={this.pageReset} />
-//           )}
-//         />
