@@ -33,8 +33,8 @@ const LITECOIN = {
   scriptHash: 0x32,
   wif: 0xb0
 };
-keypair = bitcoin.ECPair.makeRandom({ network: LITECOIN });
-wif = keypair.toWIF();
+const keypair = bitcoin.ECPair.makeRandom({ network: LITECOIN });
+const wif = keypair.toWIF();
 const { address } = bitcoin.payments.p2pkh({
   pubkey: keypair.publicKey,
   network: LITECOIN
