@@ -25,7 +25,7 @@ module.exports = function(address) {
       .catch(errors => reject(errors));
   });
 };
-
+// divide final_balane by 100,000,000 one hundred million
 // /*
 // Sample JSON Output
 // data = {
