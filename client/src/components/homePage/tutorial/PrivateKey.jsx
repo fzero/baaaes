@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class PrivateKey extends Component {
   render() {
@@ -31,14 +30,13 @@ class PrivateKey extends Component {
             expensive that it would consume all the energy that the sun can
             produce for 32 years.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/createmnemonic"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </div>
 
         <div className="private_comp">
@@ -48,14 +46,10 @@ class PrivateKey extends Component {
             Please copy this key down on paper and hide it in an appropriate and
             safe location.
           </p>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/publickey"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </div>
       </section>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class CoinInfo extends Component {
   constructor(props) {
@@ -27,14 +26,13 @@ class CoinInfo extends Component {
             mere cents, while some of these more popular ones, like Bitcoin,
             reached $17,900 USD in December of 2017.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/publickey"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </div>
 
         <div className="coin_comp">
@@ -61,14 +59,10 @@ class CoinInfo extends Component {
               <p>desc.</p>
             </div>
           </div>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/samplebuy"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </div>
       </section>
     );

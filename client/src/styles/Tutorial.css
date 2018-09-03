@@ -39,6 +39,7 @@
 
 .buttonBackwards {
   background-color: #092956;
+  border: none;
   border-radius: 5px;
   color: #fff;
   padding: 10px;
@@ -58,6 +59,7 @@
 
 .buttonForwards {
   background-color: #092956;
+  border: none;
   border-radius: 5px;
   color: #fff;
   margin: 50px;

@@ -20,7 +20,7 @@ class Register extends Component {
     console.log(this.state);
 
     User.create(this.state)
-      .then(() => this.props.history.push("/createmnemonic"))
+      .then(() => this.props.history.push("/tutorial"))
       .catch(e => alert(e));
   };
 
@@ -102,8 +102,8 @@ class Register extends Component {
               Submit
             </button>
           </form>
-          <Link onClick={this.props.pageForwards} to={"/createmnemonic"}>
-            Link to createmneumonic
+          <Link onClick={this.props.pageForwards} to={"/tutorial"}>
+            Link to tutorial
           </Link>
         </div>
       </section>

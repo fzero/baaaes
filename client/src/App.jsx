@@ -1,9 +1,10 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-// import { Route, Switch } from "react-router-dom";
+import { Route } from "react-router-dom";
 
 // import container
-import Tutorial from "./components/Tutorial";
+import Homepage from "./components/Homepage.jsx";
+import Tutorial from "./components/homePage/Tutorial.jsx";
+import Register from "./components/homePage/Register.jsx";
 // import TutorialComplete from "./components/TutorialComplete";
 // import Login from "./components/Login.jsx";
 
@@ -13,14 +14,10 @@ class App extends Component {
       <div className="app">
         <header className="app-header">
           <h1 className="app-title">Wallet Cryptorial</h1>
-          <Link to={"/login"}>Login</Link>
-          {/*<Route path="/login" component={Login} />*/}
         </header>
-        <div className="app-centering">
-          <Tutorial />
-          {/*<TutorialComplete />*/}
-        </div>
-        {/*if statement to add TutorialComplete*/}
+        <Route path="/" exact component={Homepage} />
+        <Route path="/tutorial" component={Tutorial} />
+        <Route path="/register" component={Register} />
       </div>
     );
   }

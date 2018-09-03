@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class PublicKey extends Component {
   constructor(props) {
@@ -23,14 +22,13 @@ class PublicKey extends Component {
             shared openly without any concern that someone will use it to access
             your wallet.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/privatekey"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </section>
 
         <section className="public_comp">
@@ -40,14 +38,10 @@ class PublicKey extends Component {
             Please save a copy of this key, preferably on your computer as well
             as a hard copy.
           </p>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/coininfo"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </section>
       </main>
     );

@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class BlockchainExplorer extends Component {
   render() {
@@ -38,22 +37,17 @@ class BlockchainExplorer extends Component {
               <p>Recieving Address</p>
             </div>
           </div>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/samplesell"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/tutorialcomplete"}
-          >
+          </button>
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </section>
       </main>
     );
