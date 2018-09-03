@@ -7,8 +7,12 @@ module.exports = sequelize => {
       publickey: {
         allowNull: false,
         primaryKey: true,
+        type: Sequelize.STRING
+      },
+      type: {
+        allowNull: false,
         type: Sequelize.STRING,
-        defaultValue: 'default'
+        defaultValue: 'Bitcoin'
       }
     },
     {
