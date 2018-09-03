@@ -58,7 +58,7 @@ class Register extends Component {
             onClick={this.props.pageBackwards}
             to={"/home"}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
             Previous Page
           </Link>
         </div>

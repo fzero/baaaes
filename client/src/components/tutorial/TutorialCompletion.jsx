@@ -34,7 +34,7 @@ class TutorialCompletion extends Component {
             onClick={this.props.pageReset}
             to={"/home"}
           >
-            <i class="fas fa-redo-alt" />
+            <i className="fas fa-redo-alt" />
             Restart Tutorial
           </Link>
           <Link
@@ -43,7 +43,7 @@ class TutorialCompletion extends Component {
             to={"/wallets"}
           >
             Complete Tutorial
-            <i class="fas fa-home" />
+            <i className="fas fa-home" />
           </Link>
         </div>
       </section>

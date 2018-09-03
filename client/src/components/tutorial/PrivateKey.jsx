@@ -36,7 +36,7 @@ class PrivateKey extends Component {
             onClick={this.props.pageBackwards}
             to={"/createmnemonic"}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
             Previous
           </Link>
         </div>
@@ -54,7 +54,7 @@ class PrivateKey extends Component {
             to={"/publickey"}
           >
             Next
-            <i class="fas fa-arrow-right" />
+            <i className="fas fa-arrow-right" />
           </Link>
         </div>
       </section>

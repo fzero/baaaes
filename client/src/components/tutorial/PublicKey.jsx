@@ -28,7 +28,7 @@ class PublicKey extends Component {
             onClick={this.props.pageBackwards}
             to={"/privatekey"}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
             Previous
           </Link>
         </section>
@@ -46,7 +46,7 @@ class PublicKey extends Component {
             to={"/coininfo"}
           >
             Next
-            <i class="fas fa-arrow-right" />
+            <i className="fas fa-arrow-right" />
           </Link>
         </section>
       </main>

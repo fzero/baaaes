@@ -43,7 +43,7 @@ class BlockchainExplorer extends Component {
             onClick={this.props.pageBackwards}
             to={"/samplesell"}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
             Previous
           </Link>
           <Link
@@ -52,7 +52,7 @@ class BlockchainExplorer extends Component {
             to={"/tutorialcomplete"}
           >
             Next
-            <i class="fas fa-arrow-right" />
+            <i className="fas fa-arrow-right" />
           </Link>
         </section>
       </main>

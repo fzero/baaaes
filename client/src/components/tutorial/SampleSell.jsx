@@ -34,7 +34,7 @@ class SampleSell extends Component {
             onClick={this.props.pageBackwards}
             to={"/samplebuy"}
           >
-            <i class="fas fa-arrow-left" />
+            <i className="fas fa-arrow-left" />
             Previous
           </Link>
         </section>
@@ -65,7 +65,7 @@ class SampleSell extends Component {
             to={"/blockchainexplorer"}
           >
             Next
-            <i class="fas fa-arrow-right" />
+            <i className="fas fa-arrow-right" />
           </Link>
         </section>
       </main>
