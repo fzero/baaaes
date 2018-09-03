@@ -13,7 +13,11 @@ class Wallet extends Component {
     };
   }
   _getBalance = () => {
-    BitBalance().then(result => console.log(result));
+    BitBalance(this.state.publickey).then(result =>
+      this.setState({
+        balance: result.final_balance / 100000000
+      })
+    );
   };
 
   componentDidMount() {
