@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class CreateMnemonic extends Component {
   constructor(props) {
@@ -37,14 +36,13 @@ class CreateMnemonic extends Component {
             2048^2 or 4,194,304 different possible combinations, which would
             offer a 128-bit security level.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/register"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </section>
 
         <section className="mnemonic_component">
@@ -54,14 +52,10 @@ class CreateMnemonic extends Component {
             Please write this phrase down on paper and deposit it in a safe and
             secure location
           </p>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/privatekey"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </section>
       </main>
     );

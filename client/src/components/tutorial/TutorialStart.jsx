@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class Homepage extends Component {
   render() {
@@ -59,18 +58,14 @@ class Homepage extends Component {
             create a real crypto-wallet and begin your journey into the world of
             cryptocurrency.
           </p>
-          <Link className="buttonBackwards" to={"/login"}>
+          <button className="buttonBackwards" to={"/login"}>
             <i className="fas fa-pen" />
             Existing User?
-          </Link>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/register"}
-          >
+          </button>
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Get Started!
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </div>
       </section>
     );

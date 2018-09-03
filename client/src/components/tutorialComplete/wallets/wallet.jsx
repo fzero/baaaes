@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import BitBalance from '../../../helpers/balance';
+import React, { Component } from "react";
+import BitBalance from "../../../../helpers/balance";
 
 class Wallet extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      name: 'Bitcoin',
-      description: 'My Wallet',
-      publickey: '3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF', //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
-      balance: '',
+      name: "Bitcoin",
+      description: "My Wallet",
+      publickey: "3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF", //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
+      balance: "",
       numOfTxs: 0,
       txs: []
     };
@@ -19,7 +19,7 @@ class Wallet extends Component {
       this.setState({
         balance: result.final_balance / 100000000,
         numOfTxs: result.n_tx,
-        txs: result.
+        txs: result
       })
     );
   };

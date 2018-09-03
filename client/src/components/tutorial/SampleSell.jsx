@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class SampleSell extends Component {
   constructor(props) {
@@ -29,14 +28,13 @@ class SampleSell extends Component {
             sent your coins to an address, there is no way to recover them, so
             make sure that the public address is the correct one.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/samplebuy"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </section>
 
         <section className="sell_comp">
@@ -59,14 +57,10 @@ class SampleSell extends Component {
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
           </form>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/blockchainexplorer"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </section>
       </main>
     );
