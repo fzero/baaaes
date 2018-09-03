@@ -10,8 +10,8 @@ class TutorialCompletion extends Component {
 
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
+      <section className="componentContainer">
+        <div className="description">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis
@@ -21,9 +21,9 @@ class TutorialCompletion extends Component {
             harum fugit perspiciatis nobis id aperiam sed architecto et esse
             perferendis nisi dolorem voluptas repellat.
           </p>
-        </section>
+        </div>
 
-        <section className="component">
+        <div className="component">
           <h3>You Have Completed the Tutorial!</h3>
           <p>
             Congratulations on completing the blockchain tutorial. You now know
@@ -34,6 +34,7 @@ class TutorialCompletion extends Component {
             onClick={this.props.pageReset}
             to={"/home"}
           >
+            <i class="fas fa-redo-alt" />
             Restart Tutorial
           </Link>
           <Link
@@ -42,9 +43,10 @@ class TutorialCompletion extends Component {
             to={"/wallets"}
           >
             Complete Tutorial
+            <i class="fas fa-home" />
           </Link>
-        </section>
-      </main>
+        </div>
+      </section>
     );
   }
 }

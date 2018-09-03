@@ -42,6 +42,7 @@ class CreateMnemonic extends Component {
             onClick={this.props.pageBackwards}
             to={"/register"}
           >
+            <i class="fas fa-arrow-left" />
             Previous
           </Link>
         </section>
@@ -59,6 +60,7 @@ class CreateMnemonic extends Component {
             to={"/privatekey"}
           >
             Next
+            <i class="fas fa-arrow-right" />
           </Link>
         </section>
       </main>

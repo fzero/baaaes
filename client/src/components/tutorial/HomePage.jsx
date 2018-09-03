@@ -60,6 +60,7 @@ class Homepage extends Component {
             cryptocurrency.
           </p>
           <Link className="buttonBackwards" to={"/login"}>
+            <i class="fas fa-pen" />
             Existing User?
           </Link>
           <Link
@@ -68,6 +69,7 @@ class Homepage extends Component {
             to={"/register"}
           >
             Get Started!
+            <i class="fas fa-arrow-right" />
           </Link>
         </div>
       </section>

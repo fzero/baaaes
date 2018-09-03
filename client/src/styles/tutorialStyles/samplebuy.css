@@ -1,0 +1,34 @@
+.buy_desc {
+  background-color: #5f6469;
+  height: 591px;
+  padding: 10px 50px;
+  position: relative;
+  width: 70%;
+}
+
+.buy_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.buy_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.buy_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.buy_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}

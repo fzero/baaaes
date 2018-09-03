@@ -20,6 +20,8 @@ import "./styles/tutorialStyles/createmnemonic.css";
 import "./styles/tutorialStyles/privatekey.css";
 import "./styles/tutorialStyles/publickey.css";
 import "./styles/tutorialStyles/coininfo.css";
+import "./styles/tutorialStyles/samplebuy.css";
+import "./styles/tutorialStyles/samplesell.css";
 
 // ReactDOM Render App
 ReactDOM.render(

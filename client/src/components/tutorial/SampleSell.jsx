@@ -10,20 +10,37 @@ class SampleSell extends Component {
   render() {
     return (
       <main className="componentContainer">
-        <section className="description">
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-            error dolor consequuntur, natus eum itaque harum fugit perspiciatis
-            nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Beatae, error dolor consequuntur, natus eum itaque
-            harum fugit perspiciatis nobis id aperiam sed architecto et esse
-            perferendis nisi dolorem voluptas repellat.
+        <section className="sell_desc">
+          <h3 className="sell_desc-title">Selling Crypto Coins </h3>
+          <p className="sell_desc-para">
+            Many people are excited with the prospect of buying CryptoCurrency
+            to add to their assets, but are a little more nervous when it comes
+            to being able to sell their coins when they wish to liquidate their
+            holdings.
           </p>
+          <p className="sell_desc-para">
+            When you do wish to sell your coins, the first step would be to go
+            to a coin exchange and transfer your balance to the account. You
+            must ensure that they support the type of transaction you are
+            looking to complete, whether that is Bitcoin to USD or Bitcoin to a
+            different currency on the market. If you are looking to make a large
+            withdrawal, you may need to verify your identity to comply with
+            finance regulations. Another thing to remember is that once you have
+            sent your coins to an address, there is no way to recover them, so
+            make sure that the public address is the correct one.
+          </p>
+          <Link
+            className="buttonBackwards"
+            onClick={this.props.pageBackwards}
+            to={"/samplebuy"}
+          >
+            <i class="fas fa-arrow-left" />
+            Previous
+          </Link>
         </section>
 
-        <section className="component">
-          <h3>Sample Sell Transaction</h3>
+        <section className="sell_comp">
+          <h3 className="sell_comp-title">Sample Sell Transaction</h3>
           <form>
             <div>
               {/* balance will be dynamic */}
@@ -41,23 +58,15 @@ class SampleSell extends Component {
             </div>
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
-            <div>
-              <Link
-                className="buttonBackwards"
-                onClick={this.props.pageBackwards}
-                to={"/samplebuy"}
-              >
-                Previous
-              </Link>
-              <Link
-                className="buttonForwards"
-                onClick={this.props.pageForwards}
-                to={"/blockchainexplorer"}
-              >
-                Next
-              </Link>
-            </div>
           </form>
+          <Link
+            className="buttonForwards"
+            onClick={this.props.pageForwards}
+            to={"/blockchainexplorer"}
+          >
+            Next
+            <i class="fas fa-arrow-right" />
+          </Link>
         </section>
       </main>
     );

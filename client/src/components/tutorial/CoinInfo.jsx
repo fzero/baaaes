@@ -32,6 +32,7 @@ class CoinInfo extends Component {
             onClick={this.props.pageBackwards}
             to={"/publickey"}
           >
+            <i class="fas fa-arrow-left" />
             Previous
           </Link>
         </div>
@@ -66,6 +67,7 @@ class CoinInfo extends Component {
             to={"/samplebuy"}
           >
             Next
+            <i class="fas fa-arrow-right" />
           </Link>
         </div>
       </section>
