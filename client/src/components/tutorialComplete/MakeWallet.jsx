@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Col, PageHeader, Button } from 'react-bootstrap';
-import Resource from '../models/resource.js';
+import Resource from '../../models/resource.js';
 const Key = Resource('keys');
 
 class MakeWallet extends Component {

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap';
-import prices from '../helpers/market.js';
+import prices from '../../helpers/market.js';
 
 class Market extends Component {
   constructor(props) {
