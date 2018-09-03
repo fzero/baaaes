@@ -9,20 +9,24 @@ class Wallet extends Component {
       name: 'Bitcoin',
       description: 'My Wallet',
       publickey: '3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF', //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
-      balance: ''
+      balance: '',
+      numOfTxs: 0,
+      txs: []
     };
   }
-  _getBalance = () => {
+  _getTransactions = () => {
     BitBalance(this.state.publickey).then(result =>
       this.setState({
-        balance: result.final_balance / 100000000
+        balance: result.final_balance / 100000000,
+        numOfTxs: result.n_tx,
+        txs: result.
       })
     );
   };
 
   componentDidMount() {
     // set state to reflect publickey
-    this._getBalance();
+    this._getTransactions();
   }
   render() {
     return (
