@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Form, Col, PageHeader, Button } from 'react-bootstrap';
-import Resource from '../../models/resource.js';
-const Key = Resource('keys');
+import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import { Form, Col, PageHeader, Button } from "react-bootstrap";
+import Resource from "../../../models/resource.js";
+const Key = Resource("keys");
 
 class MakeWallet extends Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class MakeWallet extends Component {
     console.log(publicKey);
 
     Key.create(publicKey)
-      .then(() => alert('success'))
+      .then(() => alert("success"))
       .catch(e => alert(e));
   };
   _addNewWallet() {}

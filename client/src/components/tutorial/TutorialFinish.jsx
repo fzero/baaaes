@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class TutorialCompletion extends Component {
   // Send info to User table to update tutorialComplete
@@ -29,22 +28,14 @@ class TutorialCompletion extends Component {
             Congratulations on completing the blockchain tutorial. You now know
             enough to send and recieve cryptocurrency for real!
           </p>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageReset}
-            to={"/home"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageReset}>
             <i className="fas fa-redo-alt" />
             Restart Tutorial
-          </Link>
-          <Link
-            className="buttonForwards"
-            onClick={this.handleCompletion}
-            to={"/wallets"}
-          >
+          </button>
+          <button className="buttonForwards" onClick={this.handleCompletion}>
             Complete Tutorial
             <i className="fas fa-home" />
-          </Link>
+          </button>
         </div>
       </section>
     );

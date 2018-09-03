@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class SampleBuy extends Component {
   render() {
@@ -32,14 +31,13 @@ class SampleBuy extends Component {
             exchanges will direct you to a bank to make a direct cash deposit,
             and then send you Bitcoin just a few hours later.
           </p>
-          <Link
+          <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
-            to={"/coininfo"}
           >
             <i className="fas fa-arrow-left" />
             Previous
-          </Link>
+          </button>
         </section>
 
         <section className="buy_comp">
@@ -62,14 +60,10 @@ class SampleBuy extends Component {
             <div>Total: $Total</div>
             <div>Enter Privatekey or upload encrypted keystore</div>
           </form>
-          <Link
-            className="buttonForwards"
-            onClick={this.props.pageForwards}
-            to={"/samplesell"}
-          >
+          <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />
-          </Link>
+          </button>
         </section>
       </main>
     );
