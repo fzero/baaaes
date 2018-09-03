@@ -34,7 +34,7 @@ class PublicKey extends Component {
         <section className="component">
           <h3>Public Key</h3>
           <textarea name="mnemonic-phrase-box" />
-          <label for="mnemonic-phrase-box">*please write this down</label>
+          <label>*please write this down</label>
           <Link
             className="buttonForwards"
             onClick={this.props.pageForwards}

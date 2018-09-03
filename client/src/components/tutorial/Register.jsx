@@ -91,7 +91,7 @@ class Register extends Component {
             />
             <button
               className="buttonForwards"
-              onClick={this.props.pageBackwards}
+              onClick={this.props.pageForwards}
               type="submit"
             >
               Submit

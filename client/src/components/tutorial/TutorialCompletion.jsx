@@ -2,6 +2,12 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
 class TutorialCompletion extends Component {
+  // Send info to User table to update tutorialComplete
+  handleCompletion = ev => {
+    ev.preventDefault();
+    // User.update()
+  };
+
   render() {
     return (
       <main className="componentContainer">
@@ -24,13 +30,19 @@ class TutorialCompletion extends Component {
             enough to send and recieve cryptocurrency for real!
           </p>
           <Link
-            className="buttonBackwards"
+            className="buttonForwards"
             onClick={this.props.pageReset}
             to={"/home"}
           >
             Restart Tutorial
           </Link>
-          <button>Finish Tutorial</button>
+          <Link
+            className="buttonForwards"
+            onClick={this.handleCompletion}
+            to={"/wallets"}
+          >
+            Restart Tutorial
+          </Link>
         </section>
       </main>
     );

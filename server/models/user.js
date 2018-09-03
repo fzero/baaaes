@@ -35,8 +35,8 @@ module.exports = sequelize => {
       balance: {
         type: Sequelize.FLOAT
       },
-      tutorialComplete: {
-        type: Sequelize.boolean,
+      tutorialcomplete: {
+        type: Sequelize.BOOLEAN,
         allowNull: false,
         defaultValue: false
       }
