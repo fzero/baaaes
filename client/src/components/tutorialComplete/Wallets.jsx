@@ -1,7 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Table, Row, Col, PageHeader } from 'react-bootstrap';
+// import { Link } from 'react-router-dom';
+import {
+  Table,
+  Row,
+  Col,
+  PageHeader,
+  Button,
+  Modal,
+  FormControl,
+  Form
+} from 'react-bootstrap';
 import Wallet from './wallets/wallet';
+import isValid from '../../helpers/isValid';
+// import addWallet from './wallets/modal/addWallet';
 import Resource from '../../models/resource';
 const Key = Resource('keys');
 
@@ -10,18 +21,55 @@ class Wallets extends Component {
     super(props);
 
     this.state = {
-      publicKeys: []
+      publicKeys: [],
+      show: false,
+      key: ''
     };
   }
+  // MODAL FUNCTIONS
+  handleShow = () => {
+    this.setState({ show: true });
+  };
+  handleClose = () => {
+    this.setState({ show: false });
+  };
+  // END OF MODAL FUNCTIONS
+  // GET PUBLIC ADRESSES FROM DB
   getWallets = () => {
     Key.find(localStorage.getItem('userid'))
       .then(result => {
         console.log(result);
         this.setState({
-          publicKeys: [...this.state.publicKeys, ...result.result]
+          publicKeys: result.result
         });
       })
       .catch(e => alert(e));
+  };
+
+  enterKey = ev => {
+    this.setState({ key: ev.target.value });
+  };
+  addKey = ev => {
+    ev.preventDefault();
+    isValid(this.state.key).then(result => {
+      console.log(result);
+      if (result === false) {
+        return alert('key is invalid');
+      }
+      const data = {
+        publicKey: this.state.key,
+        userId: localStorage.getItem('userid')
+      };
+      // console.log(data);
+
+      Key.create(data)
+        .then(() => {
+          alert('You have successfully added your public key');
+          this.handleClose();
+          this.getWallets();
+        })
+        .catch(e => alert(e));
+    });
   };
   componentDidMount() {
     this.getWallets();
@@ -31,17 +79,46 @@ class Wallets extends Component {
       <Row className="wallets">
         <Col xs={12}>
           <PageHeader>Wallets</PageHeader>
-          <Link to="/mnemonic" className="new-wallet btn btn-primary btn-sm">
-            Create New Wallet +
-          </Link>
+          <Button
+            bsStyle="primary"
+            bsSize="large"
+            onClick={this.handleShow}
+            className="new-wallet"
+          >
+            Add Wallet
+          </Button>
+          <Modal show={this.state.show} onHide={this.handleClose}>
+            <Modal.Header closeButton>
+              <Modal.Title>Add Wallet</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              <Form onSubmit={this.addKey}>
+                Enter Public Key or Create New Wallet
+                <FormControl
+                  id="add-wallet-from-publickey"
+                  onChange={this.enterKey}
+                  type="text"
+                  label="From Public Key"
+                  placeholder="Public Key Goes Here"
+                  value={this.state.key}
+                />
+              </Form>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={console.log(this)}>Create New Wallet</Button>
+              <Button onClick={this.handleClose}>Close</Button>
+            </Modal.Footer>
+          </Modal>
           <Table>
             <thead>
               <tr>
                 <td>Coin</td>
                 <td>Wallet-Name</td>
                 <td>Address</td>
+                <td>Total Recieved</td>
+                <td>Total Spent</td>
+                <td>Total # of Transactions</td>
                 <td>Balance</td>
-                <td>History</td>
               </tr>
             </thead>
             <tbody>

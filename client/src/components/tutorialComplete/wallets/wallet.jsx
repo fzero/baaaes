@@ -9,8 +9,10 @@ class Wallet extends Component {
       name: 'Bitcoin',
       description: 'My Wallet',
       publickey: '3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF', //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
-      balance: '',
+      recieved: 0,
+      spent: 0,
       numOfTxs: 0,
+      balance: '',
       txs: []
     };
   }
@@ -19,7 +21,9 @@ class Wallet extends Component {
       this.setState({
         balance: result.balance / 100000000,
         numOfTxs: result.txAppearances,
-        txs: result.transactions
+        txs: result.transactions,
+        received: result.totalReceived,
+        spent: result.spent
       });
     });
   };
@@ -36,8 +40,10 @@ class Wallet extends Component {
         <td>{this.state.name}</td>
         <td>{this.state.description}</td>
         <td>{this.state.publickey}</td>
+        <td>{this.state.recieved}</td>
+        <td>{this.state.spent}</td>
+        <td>{this.state.numOfTxs}</td>
         <td>{this.state.balance}</td>
-        <td>See Transactions</td>
       </tr>
     );
   }
