@@ -1,6 +1,6 @@
 .coin_desc {
   background-color: #5f6469;
-  height: 591px;
+  height: 75vh;
   padding: 10px 50px;
   position: relative;
   width: 50%;
@@ -90,6 +90,7 @@
 .coin_price {
   background-color: white;
   border: 1px solid black;
+  color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
   margin: 0 auto;

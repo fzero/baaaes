@@ -1,5 +1,5 @@
 .app {
-  background-color: green;
+  background-color: #152029;
   text-align: center;
 }
 
@@ -7,7 +7,7 @@
   align-items: center;
   background-color: #092956;
   display: flex;
-  height: 15vh;
+  height: 12.5vh;
   justify-content: center;
   margin: 0 auto;
   width: 80%;

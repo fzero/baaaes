@@ -1,6 +1,6 @@
 .buy_desc {
   background-color: #5f6469;
-  height: 591px;
+  height: 75vh;
   padding: 10px 50px;
   position: relative;
   width: 70%;
@@ -62,6 +62,7 @@
 .buy_comp-input {
   background-color: white;
   border: 1px solid black;
+  color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
   margin-left: 5px;
@@ -72,8 +73,19 @@
 .BTCprice {
   background-color: white;
   border: 1px solid black;
+  color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
   margin-left: 5px;
   padding: 0 5px;
+}
+
+.label {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+}
+
+.privateKey {
+  border: 1px solid black;
+  color: black;
 }

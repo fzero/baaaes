@@ -24,6 +24,7 @@ import "./styles/tutorialStyles/coininfo.css";
 import "./styles/tutorialStyles/samplebuy.css";
 import "./styles/tutorialStyles/samplesell.css";
 import "./styles/tutorialStyles/blockchainexplorer.css";
+import "./styles/tutorialStyles/tutorialcomplete.css";
 
 // ReactDOM Render App
 ReactDOM.render(

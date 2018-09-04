@@ -1,7 +1,8 @@
 .container {
   background-color: #868b91;
+  color: white;
   font-size: 20px;
-  height: 70vh;
+  height: 75vh;
   margin: 0 auto;
   padding: 0;
   width: 80%;
@@ -20,14 +21,14 @@
 
 .description {
   background-color: #5f6469;
-  height: 70vh;
+  height: 75vh;
   overflow: scroll;
   padding: 10px 50px;
   width: 50%;
 }
 
 .component {
-  height: 70vh;
+  height: 75vh;
   margin: 0 auto;
   padding: 10px 50px;
   width: 50%;
@@ -35,7 +36,7 @@
 
 .footer {
   background-color: #092956;
-  height: 15vh;
+  height: 12.5vh;
   margin: 0 auto;
   width: 80%;
 }
