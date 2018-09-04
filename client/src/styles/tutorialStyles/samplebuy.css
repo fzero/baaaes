@@ -59,6 +59,10 @@
   width: 100%;
 }
 
+.center {
+  text-align: center;
+}
+
 .buy_comp-input {
   background-color: white;
   border: 1px solid black;

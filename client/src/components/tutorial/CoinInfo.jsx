@@ -9,19 +9,19 @@ class CoinInfo extends Component {
     this.state = {
       BTC: {
         Name: "Bitcoin",
-        Price: 7000
+        Price: 0
       },
       LTC: {
         Name: "Litecoin",
-        Price: 7000
+        Price: 0
       },
       ETH: {
         Name: "Bitcoin",
-        Price: 7000
+        Price: 0
       },
       DOGE: {
         Name: "DogeCoin",
-        Price: 7000
+        Price: 0
       }
     };
   }
