@@ -20,6 +20,7 @@ class App extends Component {
         <Route path="/tutorial" component={Tutorial} />
         <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
+        <TutorialComplete />
       </div>
     );
   }

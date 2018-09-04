@@ -1,4 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+// import Resource from '../models/resource.js';
+// const User = Resource('users');
 
 class Login extends Component {
   constructor(props) {
@@ -12,7 +14,7 @@ class Login extends Component {
     return (
       <section className="noDescription">
         <h3>Login!</h3>
-        <form onClick={this.validateUser}>
+        <form onSubmit={this.validateUser}>
           <label>
             Email:
             <input type="email" />
