@@ -1,7 +1,7 @@
 const express = require('express');
 const errors = require('../lib/errors');
 const router = express.Router();
-const { signToken, verifyToken } = require('../authapp');
+// const { signToken, verifyToken } = require('../.authapp');
 
 /////////
 // Support functions

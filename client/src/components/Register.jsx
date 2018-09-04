@@ -21,6 +21,7 @@ class Register extends Component {
     // log info input into register
 
     User.create(this.state)
+
       .then(result => localStorage.setItem("userid", result.data.id))
       .then(() => this.props.history.push("/tutorial"))
       .catch(e => alert(e));

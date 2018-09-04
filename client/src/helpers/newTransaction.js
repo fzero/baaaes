@@ -1,6 +1,6 @@
 const bitcoin = require('bitcoinjs-lib');
 
-const alice = bitcoin.ECPair.fromWIF(
+const user = bitcoin.ECPair.fromWIF(
   'L1uyy5qTuGrVXrmrsvHWHgVzW9kKdrp27wBC7Vs6nZDTF2BRUVwy'
 );
 const txb = new bitcoin.TransactionBuilder();
@@ -16,7 +16,7 @@ txb.addOutput('1cMh228HTCiwS8ZsaakH8A8wze1JR5ZsP', 12000);
 txb.sign(0, alice);
 
 // prepare for broadcast to the Bitcoin network, see "can broadcast a Transaction" below
-console.log(txb.build().toHex());
+const rawtx = txb.build().toHex();
 
 // //
 // https://github.com/blockchain/api-v1-client-node/tree/master/pushtx
