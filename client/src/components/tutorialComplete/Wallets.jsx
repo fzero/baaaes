@@ -12,7 +12,6 @@ import {
 } from 'react-bootstrap';
 import Wallet from './wallets/wallet';
 import isValid from '../../helpers/isValid';
-// import addWallet from './wallets/modal/addWallet';
 import Resource from '../../models/resource';
 const Key = Resource('keys');
 
@@ -45,7 +44,7 @@ class Wallets extends Component {
       })
       .catch(e => alert(e));
   };
-
+  // FORM CONTROL FUNCTIONS
   enterKey = ev => {
     this.setState({ key: ev.target.value });
   };
@@ -60,7 +59,6 @@ class Wallets extends Component {
         publicKey: this.state.key,
         userId: localStorage.getItem('userid')
       };
-      // console.log(data);
 
       Key.create(data)
         .then(() => {
@@ -71,9 +69,12 @@ class Wallets extends Component {
         .catch(e => alert(e));
     });
   };
+
+  // LOAD ON MOUNT
   componentDidMount() {
     this.getWallets();
   }
+
   render() {
     return (
       <Row className="wallets">
