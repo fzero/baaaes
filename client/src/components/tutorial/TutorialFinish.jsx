@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class TutorialCompletion extends Component {
-  // Send info to User table to update tutorialComplete
+  // Send info to User table to update tutorialComplete---------
   handleCompletion = ev => {
     ev.preventDefault();
     // User.update()
@@ -10,28 +10,18 @@ class TutorialCompletion extends Component {
   render() {
     return (
       <section className="componentContainer">
-        <div className="description">
-          <h3>
-            Add a description about blockchain when youre not cooked u idiot
+        <div className="tutorial_comp">
+          <h3 className="tutorial_comp-title">
+            You Have Completed the Tutorial!
           </h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-            error dolor consequuntur, natus eum itaque harum fugit perspiciatis
-            nobis id aperiam sed architecto et esse perferendis nisi dolorem
-            voluptas repellat.Lorem ipsum dolor sit amet, consectetur
-            adipisicing elit. Beatae, error dolor consequuntur, natus eum itaque
-            harum fugit perspiciatis nobis id aperiam sed architecto et esse
-            perferendis nisi dolorem voluptas repellat.
-          </p>
-        </div>
-
-        <div className="component">
-          <h3>You Have Completed the Tutorial!</h3>
-          <p>
+          <p className="tutorial_comp-para">
             Congratulations on completing the blockchain tutorial. You now know
-            enough to send and recieve cryptocurrency for real!
+            enough to send and recieve cryptocurrency for real! From this page,
+            you may either restart the tutorial again, if you wish to take a
+            look through it again, or complete the tutorial, and move on to
+            creating a real cryptocurrency wallet.
           </p>
-          <button className="buttonForwards" onClick={this.props.pageReset}>
+          <button className="buttonBackwards" onClick={this.props.pageReset}>
             <i className="fas fa-redo-alt" />
             Restart Tutorial
           </button>

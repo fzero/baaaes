@@ -158,8 +158,8 @@ class SampleSell extends Component {
 
           <form onSubmit={this.handleTransaction}>
             <div>
-              <label>Please Enter your Public Key:</label>
-              <input name="public" type="text" />
+              <label className="label">Please Enter your Public Key:</label>
+              <input className="publicKey" name="public" type="text" />
             </div>
             <button className="buttonForwards" type="submit">
               Sell

@@ -6,7 +6,7 @@
 
 .mnemonic_description {
   background-color: #5f6469;
-  height: 591px;
+  height: 75vh;
   padding: 10px 50px;
   position: relative;
   width: 70%;
@@ -44,8 +44,9 @@
 }
 
 .mnemonic_comp-phrase {
-  border: 2px solid black;
+  border: 1px solid black;
   background-color: white;
+  color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
   margin-bottom: 30px;
@@ -57,5 +58,3 @@
   padding-bottom: 50px;
   text-align: center;
 }
-
-

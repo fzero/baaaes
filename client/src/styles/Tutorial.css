@@ -1,9 +1,9 @@
 .container {
   background-color: #868b91;
-  border: 4px solid #222;
+  color: white;
   font-size: 20px;
-  height: 685px;
-  margin: 8px auto;
+  height: 75vh;
+  margin: 0 auto;
   padding: 0;
   width: 80%;
 }
@@ -21,20 +21,29 @@
 
 .description {
   background-color: #5f6469;
-  height: 591px;
+  height: 75vh;
   overflow: scroll;
   padding: 10px 50px;
   width: 50%;
 }
 
 .component {
+  height: 75vh;
   margin: 0 auto;
   padding: 10px 50px;
   width: 50%;
 }
 
+.footer {
+  background-color: #092956;
+  height: 12.5vh;
+  margin: 0 auto;
+  width: 80%;
+}
+
 .progressBar {
-  border-bottom: 4px solid #222;
+  position: relative;
+  top: 50%;
 }
 
 .buttonBackwards {

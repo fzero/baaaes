@@ -21,7 +21,7 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 1, //---------------------Change this back later
+      page: 1,
       mnemonic: generated.mnemonic,
       publ: generated.address,
       priv: generated.wif
@@ -113,50 +113,40 @@ class Tutorial extends Component {
         );
         break;
       case 9:
-        page = (
-          <TutorialFinish
-            pageForwards={this.pageForwards}
-            pageBackwards={this.pageBackwards}
-          />
-        );
-        break;
-      case 10:
-        page = (
-          <CreateMnemonic
-            pageForwards={this.pageForwards}
-            pageBackwards={this.pageBackwards}
-          />
-        );
+        page = <TutorialFinish pageReset={this.pageReset} />;
         break;
       default:
         page = <TutorialStart pageReset={this.pageReset} />;
         break;
     }
     return (
-      <div className="container">
-        <div className="progressBar">
-          <DottedProgress
-            numSteps={9}
-            activeStep={this.state.page}
-            activeDotColor="#0A971F"
-            dotStyles={{
-              background: "#092956", // should be changed
-              border: "1px solid #000",
-              borderRadius: "12.5px",
-              height: "25px",
-              width: "25px"
-            }}
-            lineStyles={{
-              background: "#000",
-              height: "2px",
-              margin: "40px auto",
-              width: "70%"
-            }}
-            styles="border-bottom: 4px solid black"
-          />
+      <main>
+        <div className="container">
+          <div>{page}</div>
         </div>
-        <div>{page}</div>
-      </div>
+        <section className="footer">
+          <div className="progressBar">
+            <DottedProgress
+              numSteps={9}
+              activeStep={this.state.page}
+              activeDotColor="#0A971F"
+              dotStyles={{
+                background: "white", // should be changed
+                border: "1px solid #000",
+                borderRadius: "12.5px",
+                height: "25px",
+                width: "25px"
+              }}
+              lineStyles={{
+                background: "#000",
+                height: "2px",
+                margin: "auto auto",
+                width: "70%"
+              }}
+            />
+          </div>
+        </section>
+      </main>
     );
   }
 }

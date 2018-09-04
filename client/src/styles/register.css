@@ -1,3 +1,13 @@
+.register_container {
+  background-color: #868b91;
+  color: white;
+  font-size: 20px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
 .componentContainer {
   display: flex;
   flex-direction: row;
@@ -6,7 +16,7 @@
 
 .register_desc {
   background-color: #5f6469;
-  height: 677px;
+  height: 75vh;
   padding: 10px 50px;
   position: relative;
   width: 50%;
@@ -45,12 +55,15 @@
 }
 
 .register_comp-label {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   margin: 10px auto;
   text-align: left;
   width: 50%;
 }
 
 .register_comp-input {
+  color: black;
   margin: 0 auto;
   width: 50%;
 }
@@ -63,4 +76,9 @@
   padding: 5px;
   margin: 20px auto;
   width: 20%;
+}
+
+.register_footer {
+  background-color: #092956;
+  height: 15vh;
 }

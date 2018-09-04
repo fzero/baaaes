@@ -1,0 +1,29 @@
+.tutorial_comp {
+  background-color: #5f6469;
+  height: 75vh;
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 100%;
+}
+
+.tutorial_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.tutorial_comp-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.fa-redo-alt {
+  padding-right: 10px;
+}
+
+.fa-home {
+  padding-left: 10px;
+}

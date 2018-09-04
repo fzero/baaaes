@@ -160,8 +160,8 @@ class SampleBuy extends Component {
 
           <form onSubmit={this.handleTransaction}>
             <div>
-              <label>Please Enter your Private Key:</label>
-              <input name="private" type="text" />
+              <label className="label">Please Enter your Private Key:</label>
+              <input className="privateKey" name="private" type="text" />
             </div>
             <button className="buttonForwards" type="submit">
               Purchase
