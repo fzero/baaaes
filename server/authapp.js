@@ -1,11 +1,13 @@
 const jwt = require('jsonwebtoken');
-const User = require('./models/User.js');
+const User = require('./models/user.js');
 const { JWT_SECRET } = process.env;
 
 // Create and Sign Token
 function signToken(user) {
   // toObject() returns a basic js object
+  console.log("we're here");
   const userData = JSON.parse(user);
+  console.log(userdata, 'userdata');
   delete userData.password;
   return jwt.sign(userData, JWT_SECRET);
 }

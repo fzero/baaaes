@@ -1,5 +1,4 @@
 const Sequelize = require('sequelize');
-const uuid = require('uuid/v4');
 
 module.exports = sequelize => {
   const User = sequelize.define(

@@ -11,7 +11,7 @@ const router = express.Router();
 const sanitizeKeys = body => {
   return {
     userId: body.userId,
-    publicKey: body.publicKey
+    publickey: body.publicKey
   };
 };
 
@@ -37,40 +37,42 @@ Gods intended.
 // models is an object containing all loaded Sequelize models
 // See models/index.js
 module.exports = models => {
-  // GET /users
+  // GET /keys
   // Returns a JSON array containing all available user objects
   router.get('/', async (req, res) => {
     try {
-      let result = await models.Keys.findAll();
+      let result = await models.Key.findAll();
       res.json({ data: result });
     } catch (error) {
       res.status(400).json(errors.normalize(error));
     }
   });
 
-  // GET /users/:id
-  // Returns a single user JSON object
-  // router.get('/:id', async (req, res) => {
-  //   try {
-  //     let result = await models.Keys.findById(req.params.id);
-  //     if (!result) {
-  //       res
-  //         .status(404)
-  //         .json(errors.normalize(`Keys id=${req.params.id} not found`));
-  //       return;
-  //     }
-  //     res.json({
-  //       data: {
-  //         username: result.username,
-  //         email: result.email
-  //       }
-  //     });
-  //   } catch (error) {
-  //     res.status(400).json(errors.normalize(error));
-  //   }
-  // });
+  // GET /keys/:id
+  // Returns a single users public keys JSON object
+  router.get('/:id', async (req, res) => {
+    try {
+      let result = await models.Key.findAll().where({
+        userId: request.params.id
+      });
+      if (!result) {
+        res
+          .status(404)
+          .json(errors.normalize(`Keys id=${req.params.id} not found`));
+        return;
+      }
+      res.json({
+        data: {
+          publicKey: result.publickey,
+          id: result.userId
+        }
+      });
+    } catch (error) {
+      res.status(400).json(errors.normalize(error));
+    }
+  });
 
-  // POST /users
+  // POST /keys
   // Inserts a new user from a JSON object
   // Returns the inserted user JSON object
   router.post('/', async (req, res) => {
@@ -83,7 +85,7 @@ module.exports = models => {
     }
   });
 
-  // PUT /users/:id
+  // PUT /keys/:id
   // Updates a user from a JSON object
   // Returns the updated user JSON object
   router.put('/:id', async (req, res) => {
@@ -103,7 +105,7 @@ module.exports = models => {
     }
   });
 
-  // DELETE /users/:id
+  // DELETE /keys/:id
   // Deletes a user by ID
   // Returns the deleted user JSON object
   router.delete('/:id', async (req, res) => {

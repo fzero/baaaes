@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Link, Redirect } from "react-router-dom";
-import generator from "../../../helpers/generator";
+import React, { Component } from 'react';
+import { Link, Redirect } from 'react-router-dom';
+import generator from '../../helpers/generator';
 // import qr from "../../helpers/qrGenerator";
 
 class Mnemonic extends Component {
@@ -8,10 +8,10 @@ class Mnemonic extends Component {
     super(props);
 
     this.state = {
-      mnemonic: "",
-      privateKey: "",
-      publicKey: "",
-      confirm: ""
+      mnemonic: '',
+      privateKey: '',
+      publicKey: '',
+      confirm: ''
     };
   }
 
@@ -32,7 +32,7 @@ class Mnemonic extends Component {
     if (this.state.confirm === this.state.mnemonic) {
       return <Redirect to="/makewallet" />;
     } else {
-      return alert("They do not match!");
+      return alert('They do not match!');
     }
   };
   componentDidMount() {
@@ -61,7 +61,7 @@ class Mnemonic extends Component {
           {/* Eventually setup an intermediary confirm */}
           <Link
             to={{
-              pathname: "/makewallet",
+              pathname: '/makewallet',
               state: {
                 privateKey: this.state.privateKey,
                 publicKey: this.state.publicKey
