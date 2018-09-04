@@ -7,9 +7,11 @@ class SampleBuy extends Component {
     console.log(this.props.private);
 
     this.state = {
+      //send testbalance and testbtcbalance to samplesell
       testBalance: 100000,
       testBTCBalance: 0,
       totalCost: 0,
+      totalCost1: 0,
       totalBTC: 0,
       BTC: {
         Name: "Bitcoin",
@@ -32,25 +34,27 @@ class SampleBuy extends Component {
     ev.preventDefault();
     const amountOfBTC = ev.target.value;
     const totalCost = amountOfBTC * this.state.BTC.Price;
-    this.setState({ totalCost: totalCost });
+    this.setState({ totalCost: totalCost, testBTCBalance: amountOfBTC });
   };
 
   handleUSD = ev => {
     ev.preventDefault();
     const amountOfUSD = ev.target.value;
     const totalBTC = amountOfUSD / this.state.BTC.Price;
-    this.setState({ totalBTC });
+    this.setState({ totalBTC: totalBTC, totalCost1: amountOfUSD });
   };
 
   handleTransaction = ev => {
     ev.preventDefault();
-
-    //ev.target.privatekey doesnt work
-    console.log(ev.target.getAttribute("data-key"));
-    if (ev.target.dataset.key === this.props.private) {
-      console.log("success!");
+    console.log(ev.target.private.value);
+    if (
+      ev.target.private.value === this.props.private &&
+      this.state.totalCost < this.state.testBalance &&
+      this.state.totalCost1 < this.state.testBalance
+    ) {
+      this.props.pageForwards();
     } else {
-      console.log("fail");
+      window.alert("Transaction is not valid");
     }
   };
 
@@ -99,18 +103,15 @@ class SampleBuy extends Component {
 
         <section className="buy_comp">
           <h3 className="buy_comp-title">Test Transaction</h3>
-          <form className="buy_comp-form">
+          <div className="buy_comp-form">
             <div className="buy_comp-prices">
               <div className="buy_comp-USD">
                 Test Balance:
-                <span className="BTCprice">${this.state.testBalance}</span>
+                <span className="BTCprice">$100000</span>
               </div>
               <div className="buy_comp-BTC">
                 BTC Balance:
-                <span className="BTCprice">
-                  {this.state.testBTCBalance}
-                  BTC
-                </span>
+                <span className="BTCprice">0 BTC</span>
               </div>
             </div>
 
@@ -128,7 +129,6 @@ class SampleBuy extends Component {
               <input
                 className="buy_comp-input"
                 onChange={this.handleBTC}
-                name="bitcoin"
                 type="number"
               />
             </div>
@@ -144,7 +144,6 @@ class SampleBuy extends Component {
               <input
                 className="buy_comp-input"
                 onChange={this.handleUSD}
-                name="dollar"
                 type="number"
               />
             </div>
@@ -157,15 +156,14 @@ class SampleBuy extends Component {
             </div>
 
             <div className="line" />
+          </div>
 
+          <form onSubmit={this.handleTransaction}>
             <div>
               <label>Please Enter your Private Key:</label>
-              <input data-key="privatekey" type="text" />
+              <input name="private" type="text" />
             </div>
-            <button
-              className="buttonForwards"
-              onClick={(this.props.pageForwards, this.handleTransaction)}
-            >
+            <button className="buttonForwards" type="submit">
               Purchase
               <i className="fas fa-arrow-right" />
             </button>
@@ -175,5 +173,7 @@ class SampleBuy extends Component {
     );
   }
 }
+
+// onClick={this.props.pageForwards}
 
 export default SampleBuy;

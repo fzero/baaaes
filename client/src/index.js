@@ -23,6 +23,7 @@ import "./styles/tutorialStyles/publickey.css";
 import "./styles/tutorialStyles/coininfo.css";
 import "./styles/tutorialStyles/samplebuy.css";
 import "./styles/tutorialStyles/samplesell.css";
+import "./styles/tutorialStyles/blockchainexplorer.css";
 
 // ReactDOM Render App
 ReactDOM.render(

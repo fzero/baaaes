@@ -21,7 +21,7 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 1,
+      page: 1, //---------------------Change this back later
       mnemonic: generated.mnemonic,
       publ: generated.address,
       priv: generated.wif

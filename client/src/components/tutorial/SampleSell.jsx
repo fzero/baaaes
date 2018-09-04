@@ -1,9 +1,65 @@
 import React, { Component } from "react";
+import prices from "../../helpers/market.js";
 
 class SampleSell extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    console.log(this.props.public);
+
+    this.state = {
+      //recieve testbalance and testbtcbalance from samplebuy
+      testBalance: 100000,
+      testBTCBalance: 0,
+      totalCost: 0,
+      totalCost1: 0,
+      totalBTC: 0,
+      BTC: {
+        Name: "Bitcoin",
+        Price: 7000
+      }
+    };
+  }
+
+  _setStats = () => {
+    prices().then(result =>
+      this.setState({
+        BTC: {
+          Price: result.BTC.CAD.PRICE
+        }
+      })
+    );
+  };
+
+  handleBTC = ev => {
+    ev.preventDefault();
+    const amountOfBTC = ev.target.value;
+    const totalCost = amountOfBTC * this.state.BTC.Price;
+    this.setState({ totalCost: totalCost, testBTCBalance: amountOfBTC });
+  };
+
+  handleUSD = ev => {
+    ev.preventDefault();
+    const amountOfUSD = ev.target.value;
+    const totalBTC = amountOfUSD / this.state.BTC.Price;
+    this.setState({ totalBTC: totalBTC, totalCost1: amountOfUSD });
+  };
+
+  handleTransaction = ev => {
+    ev.preventDefault();
+    console.log(ev.target.public.value);
+    if (
+      ev.target.public.value === this.props.public &&
+      this.state.totalCost < this.state.testBalance &&
+      this.state.totalCost1 < this.state.testBalance
+    ) {
+      this.props.pageForwards();
+    } else {
+      window.alert("Transaction is not valid");
+    }
+  };
+
+  componentDidMount() {
+    this._setStats();
   }
 
   render() {
@@ -40,30 +96,76 @@ class SampleSell extends Component {
           </button>
         </section>
 
-        <section className="sell_comp">
-          <h3 className="sell_comp-title">Sample Sell Transaction</h3>
-          <form>
-            <div>
-              {/* balance will be dynamic */}
-              FunnyMoney Balance: $10000000
+        <section className="buy_comp">
+          <h3 className="buy_comp-title">Test Transaction</h3>
+          <div className="buy_comp-form">
+            <div className="buy_comp-prices">
+              <div className="buy_comp-USD">
+                Test Balance:
+                <span className="BTCprice">${this.state.testBalance}</span>
+              </div>
+              <div className="buy_comp-BTC">
+                BTC Balance:
+                <span className="BTCprice">
+                  {this.state.testBTCBalance}
+                  BTC
+                </span>
+              </div>
             </div>
-            <div>BTC Balance: 10</div>
-            <div>Sell BTC for $PRICE</div>
-            <div>
-              Amount:
-              <input type="text" />
+
+            <div className="line" />
+
+            <div className="buy_comp-BTC">
+              Buy 1 BTC for
+              <span className="BTCprice">${this.state.BTC.Price}</span>
             </div>
-            <div>
-              Price:
-              <input type="text" />
+
+            <div className="line" />
+
+            <div className="buy_comp-BTC">
+              Amount in BTC:
+              <input
+                className="buy_comp-input"
+                onChange={this.handleBTC}
+                type="number"
+              />
             </div>
-            <div>Total: $Total</div>
-            <div>Enter Privatekey or upload encrypted keystore</div>
+            <div className="buy_comp-BTC">
+              Total Cost:
+              <span className="BTCprice">${this.state.totalCost}</span>
+            </div>
+
+            <div className="line" />
+
+            <div className="buy_comp-BTC">
+              Amount in USD:
+              <input
+                className="buy_comp-input"
+                onChange={this.handleUSD}
+                type="number"
+              />
+            </div>
+            <div className="buy_comp-BTC">
+              Total BTC:
+              <span className="BTCprice">
+                {this.state.totalBTC}
+                BTC
+              </span>
+            </div>
+          </div>
+
+          <div className="line" />
+
+          <form onSubmit={this.handleTransaction}>
+            <div>
+              <label>Please Enter your Public Key:</label>
+              <input name="public" type="text" />
+            </div>
+            <button className="buttonForwards" type="submit">
+              Sell
+              <i className="fas fa-arrow-right" />
+            </button>
           </form>
-          <button className="buttonForwards" onClick={this.props.pageForwards}>
-            Next
-            <i className="fas fa-arrow-right" />
-          </button>
         </section>
       </main>
     );
