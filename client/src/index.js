@@ -14,6 +14,7 @@ import "./styles/index.css";
 import "./styles/App.css";
 import "./styles/Tutorial.css";
 import "./styles/register.css";
+import "./styles/landing.css";
 
 import "./styles/tutorialStyles/homepage.css";
 import "./styles/tutorialStyles/createmnemonic.css";

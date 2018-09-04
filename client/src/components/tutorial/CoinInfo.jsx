@@ -1,9 +1,54 @@
 import React, { Component } from "react";
+import prices from "../../helpers/market.js";
 
 class CoinInfo extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    console.log(prices());
+
+    this.state = {
+      BTC: {
+        Name: "Bitcoin",
+        Price: 7000
+      },
+      LTC: {
+        Name: "Litecoin",
+        Price: 7000
+      },
+      ETH: {
+        Name: "Bitcoin",
+        Price: 7000
+      },
+      DOGE: {
+        Name: "DogeCoin",
+        Price: 7000
+      }
+    };
+  }
+
+  _setStats = () => {
+    prices().then(result =>
+      this.setState({
+        BTC: {
+          Price: result.BTC.CAD.PRICE
+        },
+
+        LTC: {
+          Price: result.LTC.CAD.PRICE
+        },
+
+        ETH: {
+          Price: result.ETH.CAD.PRICE
+        },
+        DOGE: {
+          Price: result.DOGE.CAD.PRICE
+        }
+      })
+    );
+  };
+
+  componentDidMount() {
+    this._setStats();
   }
 
   render() {
@@ -39,24 +84,24 @@ class CoinInfo extends Component {
           <h3 className="coin_comp-title">Popular Digital Assets</h3>
           <div className="coin_comp-desc">
             <div className="btc_desc">
-              <h3>Bitcoin</h3>
-              <p>Current Price: </p>
-              <p>desc.</p>
+              <h3 className="btc_desc-title">Bitcoin</h3>
+              <h4 className="btc_desc-sub">Current Price: </h4>
+              <p className="coin_price">${this.state.BTC.Price}</p>
             </div>
             <div className="eth_desc">
-              <h3>Ethereum</h3>
-              <p>Current Price: </p>
-              <p>desc.</p>
+              <h3 className="btc_desc-title">Ethereum</h3>
+              <h4 className="btc_desc-sub">Current Price: </h4>
+              <p className="coin_price">${this.state.ETH.Price}</p>
             </div>
             <div className="doge_desc">
-              <h3>Dogecoin</h3>
-              <p>Current Price: </p>
-              <p>desc.</p>
+              <h3 className="btc_desc-title">Dogecoin</h3>
+              <h4 className="btc_desc-sub">Current Price: </h4>
+              <p className="coin_price">${this.state.DOGE.Price}</p>
             </div>
             <div className="ltc_desc">
-              <h3>Litecoin</h3>
-              <p>Current Price: </p>
-              <p>desc.</p>
+              <h3 className="btc_desc-title">Litecoin</h3>
+              <h4 className="btc_desc-sub">Current Price: </h4>
+              <p className="coin_price">${this.state.LTC.Price}</p>
             </div>
           </div>
           <button className="buttonForwards" onClick={this.props.pageForwards}>

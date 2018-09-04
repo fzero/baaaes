@@ -27,7 +27,7 @@ class Market extends Component {
         Volume: 10000000
       },
       ETH: {
-        Name: "Bitcoin",
+        Name: "Ethereum",
         Price: 7000,
         Symbol: "ETH",
         Supply: 21000000,
@@ -81,7 +81,6 @@ class Market extends Component {
         }
       })
     );
-    // .catch(error => alert(error));
   };
   componentDidMount() {
     this._setStats();

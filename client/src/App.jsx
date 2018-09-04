@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route } from "react-router-dom";
 
 // import container
-import Landing from "./components/LandingPage.jsx";
+import Landing from "./components/Landing.jsx";
 import Tutorial from "./components/Tutorial.jsx";
 import Register from "./components/Register.jsx";
 import Login from "./components/Login.jsx";

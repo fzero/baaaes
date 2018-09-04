@@ -24,9 +24,12 @@ class SampleSell extends Component {
             looking to complete, whether that is Bitcoin to USD or Bitcoin to a
             different currency on the market. If you are looking to make a large
             withdrawal, you may need to verify your identity to comply with
-            finance regulations. Another thing to remember is that once you have
-            sent your coins to an address, there is no way to recover them, so
-            make sure that the public address is the correct one.
+            finance regulations.
+          </p>
+          <p className="sell_desc-para">
+            Another thing to remember is that once you have sent your coins to
+            an address, there is no way to recover them, so make sure that the
+            public address is the correct one.
           </p>
           <button
             className="buttonBackwards"
