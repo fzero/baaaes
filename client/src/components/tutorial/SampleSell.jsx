@@ -8,14 +8,13 @@ class SampleSell extends Component {
 
     this.state = {
       //recieve testbalance and testbtcbalance from samplebuy
-      testBalance: 100000,
-      testBTCBalance: 0,
+      testBalance: this.props.USDbalance,
+      testBTCBalance: this.props.BTCbalance,
       totalCost: 0,
-      totalCost1: 0,
       totalBTC: 0,
       BTC: {
         Name: "Bitcoin",
-        Price: 7000
+        Price: 0
       }
     };
   }
@@ -34,14 +33,7 @@ class SampleSell extends Component {
     ev.preventDefault();
     const amountOfBTC = ev.target.value;
     const totalCost = amountOfBTC * this.state.BTC.Price;
-    this.setState({ totalCost: totalCost, testBTCBalance: amountOfBTC });
-  };
-
-  handleUSD = ev => {
-    ev.preventDefault();
-    const amountOfUSD = ev.target.value;
-    const totalBTC = amountOfUSD / this.state.BTC.Price;
-    this.setState({ totalBTC: totalBTC, totalCost1: amountOfUSD });
+    this.setState({ totalCost: totalCost, totalBTC: amountOfBTC });
   };
 
   handleTransaction = ev => {
@@ -49,8 +41,7 @@ class SampleSell extends Component {
     console.log(ev.target.public.value);
     if (
       ev.target.public.value === this.props.public &&
-      this.state.totalCost < this.state.testBalance &&
-      this.state.totalCost1 < this.state.testBalance
+      this.state.testBTCBalance < this.state.testBTCBalance
     ) {
       this.props.pageForwards();
     } else {
@@ -107,8 +98,7 @@ class SampleSell extends Component {
               <div className="buy_comp-BTC">
                 BTC Balance:
                 <span className="BTCprice">
-                  {this.state.testBTCBalance}
-                  BTC
+                  {this.state.testBTCBalance} BTC
                 </span>
               </div>
             </div>
@@ -124,15 +114,7 @@ class SampleSell extends Component {
 
             <div className="buy_comp-BTC">
               Amount in BTC:
-              <input
-                className="buy_comp-input"
-                onChange={this.handleBTC}
-                type="number"
-              />
-            </div>
-            <div className="buy_comp-BTC">
-              Total Cost:
-              <span className="BTCprice">${this.state.totalCost}</span>
+              <span className="buy_comp-input">${this.state.totalBTC}</span>
             </div>
 
             <div className="line" />
@@ -141,28 +123,26 @@ class SampleSell extends Component {
               Amount in USD:
               <input
                 className="buy_comp-input"
-                onChange={this.handleUSD}
+                onChange={this.handleBTC}
                 type="number"
               />
             </div>
-            <div className="buy_comp-BTC">
-              Total BTC:
-              <span className="BTCprice">
-                {this.state.totalBTC}
-                BTC
-              </span>
-            </div>
-          </div>
 
-          <div className="line" />
+            <div className="line" />
+          </div>
 
           <form onSubmit={this.handleTransaction}>
             <div>
               <label className="label">Please Enter your Public Key:</label>
-              <input className="publicKey" name="public" type="text" />
+              <input className="privateKey" name="public" type="text" />
+            </div>
+            <div className="line" />
+            <div className="buy_comp-BTC center">
+              Please ensure that the Amount in BTC is less than your BTC
+              Balance.
             </div>
             <button className="buttonForwards" type="submit">
-              Sell
+              Purchase
               <i className="fas fa-arrow-right" />
             </button>
           </form>

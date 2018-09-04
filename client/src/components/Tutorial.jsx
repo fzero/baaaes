@@ -21,10 +21,12 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 1,
+      page: 7,
       mnemonic: generated.mnemonic,
       publ: generated.address,
-      priv: generated.wif
+      priv: generated.wif,
+      sampleUSDBalance: 100000,
+      sampleBTCBalance: 0
     };
   }
 
@@ -38,6 +40,13 @@ class Tutorial extends Component {
 
   pageReset = () => {
     this.setState({ page: 1 });
+  };
+
+  myCallback = dataFromSampleBuy => {
+    this.setState({
+      sampleUSDBalance: this.state.sampleUSDBalance - dataFromSampleBuy[0],
+      sampleBTCBalance: dataFromSampleBuy[1]
+    });
   };
 
   render() {
@@ -91,6 +100,7 @@ class Tutorial extends Component {
           <SampleBuy
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
+            sendData={this.myCallback}
             private={this.state.priv}
           />
         );
@@ -100,6 +110,8 @@ class Tutorial extends Component {
           <SampleSell
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
+            BTCbalance={this.state.sampleBTCBalance}
+            USDbalance={this.state.sampleUSDBalance}
             public={this.state.publ}
           />
         );
