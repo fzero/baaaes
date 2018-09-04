@@ -133,30 +133,33 @@ class Tutorial extends Component {
         break;
     }
     return (
-      <div className="container">
-        <div className="progressBar">
-          <DottedProgress
-            numSteps={9}
-            activeStep={this.state.page}
-            activeDotColor="#0A971F"
-            dotStyles={{
-              background: "#092956", // should be changed
-              border: "1px solid #000",
-              borderRadius: "12.5px",
-              height: "25px",
-              width: "25px"
-            }}
-            lineStyles={{
-              background: "#000",
-              height: "2px",
-              margin: "40px auto",
-              width: "70%"
-            }}
-            styles="border-bottom: 4px solid black"
-          />
+      <main>
+        <div className="container">
+          <div>{page}</div>
         </div>
-        <div>{page}</div>
-      </div>
+        <section className="footer">
+          <div className="progressBar">
+            <DottedProgress
+              numSteps={9}
+              activeStep={this.state.page}
+              activeDotColor="#0A971F"
+              dotStyles={{
+                background: "white", // should be changed
+                border: "1px solid #000",
+                borderRadius: "12.5px",
+                height: "25px",
+                width: "25px"
+              }}
+              lineStyles={{
+                background: "#000",
+                height: "2px",
+                margin: "auto auto",
+                width: "70%"
+              }}
+            />
+          </div>
+        </section>
+      </main>
     );
   }
 }
