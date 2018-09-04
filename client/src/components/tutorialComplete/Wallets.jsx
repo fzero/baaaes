@@ -10,17 +10,22 @@ class Wallets extends Component {
     super(props);
 
     this.state = {
-      publicKeys: {}
+      publicKeys: []
     };
   }
   getWallets = () => {
-    const walletStore = [];
-    Key.find(localStorage.getItem('userId'))
+    Key.find(localStorage.getItem('userid'))
       .then(result => {
-        walletStore.push(result);
+        console.log(result);
+        this.setState({
+          publicKeys: [...this.state.publicKeys, ...result.result]
+        });
       })
       .catch(e => alert(e));
   };
+  componentDidMount() {
+    this.getWallets();
+  }
   render() {
     return (
       <Row className="wallets">
@@ -40,7 +45,9 @@ class Wallets extends Component {
               </tr>
             </thead>
             <tbody>
-              <Wallet />
+              {this.state.publicKeys.map((address, index) => (
+                <Wallet publickey={address.publickey} index={index} />
+              ))}
             </tbody>
           </Table>
         </Col>

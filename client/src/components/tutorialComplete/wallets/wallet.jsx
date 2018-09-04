@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import BitBalance from '../../../helpers/balance.v2';
+import BitBalance from '../../../helpers/balance';
 
 class Wallet extends Component {
   constructor(props) {
@@ -16,7 +16,6 @@ class Wallet extends Component {
   }
   _getTransactions = () => {
     BitBalance(this.state.publickey).then(result => {
-      console.log(result);
       this.setState({
         balance: result.balance / 100000000,
         numOfTxs: result.txAppearances,
@@ -33,7 +32,7 @@ class Wallet extends Component {
   }
   render() {
     return (
-      <tr>
+      <tr key={this.props.index}>
         <td>{this.state.name}</td>
         <td>{this.state.description}</td>
         <td>{this.state.publickey}</td>
