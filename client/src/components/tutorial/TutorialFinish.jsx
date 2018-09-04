@@ -11,6 +11,9 @@ class TutorialCompletion extends Component {
     return (
       <section className="componentContainer">
         <div className="description">
+          <h3>
+            Add a description about blockchain when youre not cooked u idiot
+          </h3>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis

@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Resource from "../models/resource.js";
-const User = Resource("users");
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Resource from '../models/resource.js';
+const User = Resource('users');
 
 class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: "",
-      username: "",
-      password: "",
-      passwordConfirmation: ""
+      email: '',
+      username: '',
+      password: '',
+      passwordConfirmation: ''
     };
   }
 
@@ -18,9 +18,11 @@ class Register extends Component {
   handleSubmit = ev => {
     ev.preventDefault();
     console.log(this.state);
+    // log info input into register
 
     User.create(this.state)
-      .then(() => this.props.history.push("/tutorial"))
+      .then(result => localStorage.setItem('userid', result.data.id))
+      .then(() => this.props.history.push('/tutorial'))
       .catch(e => alert(e));
   };
 
@@ -57,7 +59,7 @@ class Register extends Component {
             <Link
               className="buttonBackwards"
               onClick={this.props.pageBackwards}
-              to={"/home"}
+              to={'/home'}
             >
               <i className="fas fa-arrow-left" />
               Previous Page
@@ -103,7 +105,7 @@ class Register extends Component {
                 Submit
               </button>
             </form>
-            <Link onClick={this.props.pageForwards} to={"/tutorial"}>
+            <Link onClick={this.props.pageForwards} to={'/tutorial'}>
               Link to tutorial
             </Link>
           </div>

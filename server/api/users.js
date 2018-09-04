@@ -1,6 +1,7 @@
 const express = require('express');
 const errors = require('../lib/errors');
 const router = express.Router();
+const { signToken, verifyToken } = require('../authapp');
 
 /////////
 // Support functions
@@ -61,10 +62,9 @@ module.exports = models => {
         return;
       }
       res.json({
-        data: {
-          username: result.username,
-          email: result.email
-        }
+        id: result.id,
+        username: result.username,
+        email: result.email
       });
     } catch (error) {
       res.status(400).json(errors.normalize(error));
@@ -75,7 +75,7 @@ module.exports = models => {
   // Inserts a new user from a JSON object
   // Returns the inserted user JSON object
   router.post('/', async (req, res) => {
-    console.log("line 77", req.body)
+    console.log('line 77', req.body);
     try {
       let result = await models.User.create(sanitizeUser(req.body));
       res.status(201).json({ data: result.get({ plain: true }) });
@@ -86,43 +86,43 @@ module.exports = models => {
 
   // PUT /users/:id
   // Updates a user from a JSON object
-  // Returns the updated user JSON object
-  router.put('/:id', async (req, res) => {
-    let user = await models.User.findById(req.params.id);
-    if (!user) {
-      res
-        .status(404)
-        .json(errors.normalize(`User id=${req.params.id} not found`));
-      return;
-    }
+  // // Returns the updated user JSON object
+  // router.put('/:id', async (req, res) => {
+  //   let user = await models.User.findById(req.params.id);
+  //   if (!user) {
+  //     res
+  //       .status(404)
+  //       .json(errors.normalize(`User id=${req.params.id} not found`));
+  //     return;
+  //   }
 
-    try {
-      let result = await user.update(sanitizeUser(req.body));
-      res.json({ data: result.get({ plain: true }) });
-    } catch (error) {
-      res.status(400).json(errors.normalize(error));
-    }
-  });
+  //   try {
+  //     let result = await user.update(sanitizeUser(req.body));
+  //     res.json({ data: result.get({ plain: true }) });
+  //   } catch (error) {
+  //     res.status(400).json(errors.normalize(error));
+  //   }
+  // });
 
-  // DELETE /users/:id
-  // Deletes a user by ID
-  // Returns the deleted user JSON object
-  router.delete('/:id', async (req, res) => {
-    let user = await models.User.findById(req.params.id);
-    if (!user) {
-      res
-        .status(404)
-        .json(errors.normalize(`User id=${req.params.id} not found`));
-      return;
-    }
+  // // DELETE /users/:id
+  // // Deletes a user by ID
+  // // Returns the deleted user JSON object
+  // router.delete('/:id', async (req, res) => {
+  //   let user = await models.User.findById(req.params.id);
+  //   if (!user) {
+  //     res
+  //       .status(404)
+  //       .json(errors.normalize(`User id=${req.params.id} not found`));
+  //     return;
+  //   }
 
-    try {
-      let result = await user.destroy();
-      res.json({ data: user });
-    } catch (error) {
-      res.status(400).json(errors.normalize(error));
-    }
-  });
+  //   try {
+  //     let result = await user.destroy();
+  //     res.json({ data: user });
+  //   } catch (error) {
+  //     res.status(400).json(errors.normalize(error));
+  //   }
+  // });
 
   return router;
 };

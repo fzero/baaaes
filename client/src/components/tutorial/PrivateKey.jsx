@@ -41,7 +41,7 @@ class PrivateKey extends Component {
 
         <div className="private_comp">
           <h3 className="private_comp-title">Private Key</h3>
-          <input className="private_comp-key" />
+          <p className="private_comp-key">{this.props.private}</p>
           <p className="private_comp-desc">
             Please copy this key down on paper and hide it in an appropriate and
             safe location.

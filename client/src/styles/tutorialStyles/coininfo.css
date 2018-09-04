@@ -35,7 +35,7 @@
 .coin_comp-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
-  padding-bottom: 20px;
+  padding-bottom: 60px;
   text-decoration: underline;
 }
 
@@ -45,21 +45,53 @@
 }
 
 .btc_desc {
-  padding-bottom: 50px;
+  border: 2px solid black;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
   width: 50%;
 }
 
 .eth_desc {
-  padding-bottom: 50px;
+  border: 2px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-bottom: 30px;
   width: 50%;
 }
 
 .doge_desc {
-  padding-bottom: 50px;
+  border: 2px solid black;
+  border-right: 1px solid black;
+  border-top: 1px solid black;
+  padding-bottom: 30px;
   width: 50%;
 }
 
 .ltc_desc {
-  padding-bottom: 50px;
+  border: 2px solid black;
+  border-left: 1px solid black;
+  border-top: 1px solid black;
+  padding-bottom: 30px;
   width: 50%;
+}
+
+.btc_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 1.8rem;
+  text-decoration: underline;
+}
+
+.btc_desc-sub {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+}
+
+.coin_price {
+  background-color: white;
+  border: 1px solid black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  margin: 0 auto;
+  width: 75%;
 }
