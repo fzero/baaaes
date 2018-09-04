@@ -47,11 +47,14 @@ class CreateMnemonic extends Component {
 
         <section className="mnemonic_component">
           <h3 className="mnemonic_comp-title">Mnemonic Phrase</h3>
-          <input className="mnemonic_comp-phrase" />
-          <p>{this.props.mnemonic}</p>
+          <p className="mnemonic_comp-phrase">{this.props.mnemonic}</p>
           <p className="mnemonic_comp-desc">
             Please write this phrase down on paper and deposit it in a safe and
             secure location
+          </p>
+          <p className="mnemonic_comp-desc">
+            When you create a real wallet, you will re-enter this phrase to
+            confirm that you've written it down and stored it properly.
           </p>
           <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
