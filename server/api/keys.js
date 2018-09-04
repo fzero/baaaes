@@ -52,8 +52,10 @@ module.exports = models => {
   // Returns a single users public keys JSON object
   router.get('/:id', async (req, res) => {
     try {
-      let result = await models.Key.findAll().where({
-        userId: request.params.id
+      let result = await models.Key.findAll({
+        where: {
+          userId: req.params.id
+        }
       });
       if (!result) {
         res
@@ -62,10 +64,7 @@ module.exports = models => {
         return;
       }
       res.json({
-        data: {
-          publicKey: result.publickey,
-          id: result.userId
-        }
+        result
       });
     } catch (error) {
       res.status(400).json(errors.normalize(error));
