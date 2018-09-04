@@ -1,0 +1,84 @@
+.register_container {
+  background-color: #868b91;
+  color: white;
+  font-size: 20px;
+  height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.register_desc {
+  background-color: #5f6469;
+  height: 75vh;
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.register_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 30px;
+  text-decoration: underline;
+}
+
+.register_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.register_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+}
+
+.register_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.register_comp-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register_comp-label {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  margin: 10px auto;
+  text-align: left;
+  width: 50%;
+}
+
+.register_comp-input {
+  color: black;
+  margin: 0 auto;
+  width: 50%;
+}
+
+.buttonSubmit {
+  background-color: #092956;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  padding: 5px;
+  margin: 20px auto;
+  width: 20%;
+}
+
+.register_footer {
+  background-color: #092956;
+  height: 15vh;
+}

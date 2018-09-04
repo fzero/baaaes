@@ -1,0 +1,91 @@
+.buy_desc {
+  background-color: #5f6469;
+  height: 75vh;
+  padding: 10px 50px;
+  position: relative;
+  width: 70%;
+}
+
+.buy_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.buy_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.buy_comp {
+  margin: 0 auto;
+  padding: 10px 30px;
+  position: relative;
+  width: 30%;
+}
+
+.line {
+  border: 0.5px solid #5f6469;
+  margin: 10px 0;
+}
+
+.buy_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.buy_comp-prices {
+  display: flex;
+  flex-direction: column;
+}
+
+.buy_comp-USD {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  margin: 5px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.buy_comp-BTC {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  margin: 5px 0;
+  text-align: left;
+  width: 100%;
+}
+
+.buy_comp-input {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  margin-left: 5px;
+  padding: 0 5px;
+  width: 35%;
+}
+
+.BTCprice {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  margin-left: 5px;
+  padding: 0 5px;
+}
+
+.label {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+}
+
+.privateKey {
+  border: 1px solid black;
+  color: black;
+}

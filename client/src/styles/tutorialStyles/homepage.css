@@ -1,0 +1,54 @@
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.contents {
+  background-color: #5f6469;
+  height: 75vh;
+  width: 35%;
+}
+
+.contents_title {
+  font-family: "Adamina", serif;
+  text-decoration: underline;
+}
+
+.contents_list {
+  padding: 0;
+  list-style: none;
+}
+
+li {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding: 10.5px 0;
+}
+
+.chapter {
+  font-family: "Adamina", serif;
+  font-size: 2rem;
+}
+
+.noDescription {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 65%;
+}
+
+.title {
+  font-family: "Adamina", serif;
+  font-size: 4rem;
+}
+
+.desc_para {
+  font-family: "Barlow", sans-serif;
+  margin: 40px 0 60px 0;
+  text-align: left;
+}
+
+.fa-pen {
+  padding-right: 10px;
+}
