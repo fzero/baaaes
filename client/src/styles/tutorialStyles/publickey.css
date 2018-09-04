@@ -41,7 +41,12 @@
 }
 
 .public_comp-key {
+  border: 2px solid black;
+  background-color: white;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   margin-bottom: 30px;
+  word-wrap: break-word;
 }
 
 .public_comp-desc {

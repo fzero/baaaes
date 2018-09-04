@@ -3,8 +3,8 @@ import React, { Component } from "react";
 class BlockchainExplorer extends Component {
   render() {
     return (
-      <main className="componentContainer">
-        <section className="description">
+      <section className="componentContainer">
+        <div className="description">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
             error dolor consequuntur, natus eum itaque harum fugit perspiciatis
@@ -14,9 +14,9 @@ class BlockchainExplorer extends Component {
             harum fugit perspiciatis nobis id aperiam sed architecto et esse
             perferendis nisi dolorem voluptas repellat.
           </p>
-        </section>
+        </div>
 
-        <section className="component">
+        <div className="component">
           <h3>Blockchain Transactions</h3>
           <div>
             <h5>Bought</h5>
@@ -48,8 +48,8 @@ class BlockchainExplorer extends Component {
             Next
             <i className="fas fa-arrow-right" />
           </button>
-        </section>
-      </main>
+        </div>
+      </section>
     );
   }
 }

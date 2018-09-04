@@ -21,7 +21,7 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 1,
+      page: 1, //---------------------Change this back later
       mnemonic: generated.mnemonic,
       publ: generated.address,
       priv: generated.wif
@@ -65,7 +65,7 @@ class Tutorial extends Component {
           <PrivateKey
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
-            mnemonic={this.state.priv}
+            private={this.state.priv}
           />
         );
         break;
@@ -74,7 +74,7 @@ class Tutorial extends Component {
           <PublicKey
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
-            mnemonic={this.state.publ}
+            public={this.state.publ}
           />
         );
         break;
@@ -91,6 +91,7 @@ class Tutorial extends Component {
           <SampleBuy
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
+            private={this.state.priv}
           />
         );
         break;
@@ -99,6 +100,7 @@ class Tutorial extends Component {
           <SampleSell
             pageForwards={this.pageForwards}
             pageBackwards={this.pageBackwards}
+            public={this.state.publ}
           />
         );
         break;

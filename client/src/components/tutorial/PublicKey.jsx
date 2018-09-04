@@ -33,7 +33,7 @@ class PublicKey extends Component {
 
         <section className="public_comp">
           <h3 className="public_comp-title">Public Key</h3>
-          <input className="public_comp-key" />
+          <p className="public_comp-key">{this.props.public}</p>
           <p className="public_comp-desc">
             Please save a copy of this key, preferably on your computer as well
             as a hard copy.

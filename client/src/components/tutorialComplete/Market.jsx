@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
-import { Table } from 'react-bootstrap';
-import prices from '../../helpers/market.js';
+import React, { Component } from "react";
+import { Table } from "react-bootstrap";
+import prices from "../../helpers/market.js";
 
 class Market extends Component {
   constructor(props) {
@@ -9,38 +9,38 @@ class Market extends Component {
     console.log(prices());
     this.state = {
       BTC: {
-        Name: 'Bitcoin',
+        Name: "Bitcoin",
         Price: 7000,
-        Symbol: 'BTC',
+        Symbol: "BTC",
         Supply: 21000000,
-        Change: 'img_url',
+        Change: "img_url",
         MarketCap: 100000000,
         Volume: 10000000
       },
       LTC: {
-        Name: 'Litecoin',
+        Name: "Litecoin",
         Price: 7000,
-        Symbol: 'LTC',
+        Symbol: "LTC",
         Supply: 21000000,
-        Change: 'img_url',
+        Change: "img_url",
         MarketCap: 100000000,
         Volume: 10000000
       },
       ETH: {
-        Name: 'Bitcoin',
+        Name: "Ethereum",
         Price: 7000,
-        Symbol: 'ETH',
+        Symbol: "ETH",
         Supply: 21000000,
-        Change: 'img_url',
+        Change: "img_url",
         MarketCap: 100000000,
         Volume: 10000000
       },
       DOGE: {
-        Name: 'DogeCoin',
+        Name: "DogeCoin",
         Price: 7000,
-        Symbol: 'DOGE',
+        Symbol: "DOGE",
         Supply: 21000000,
-        Change: 'img_url',
+        Change: "img_url",
         MarketCap: 100000000,
         Volume: 10000000
       }
@@ -81,7 +81,6 @@ class Market extends Component {
         }
       })
     );
-    // .catch(error => alert(error));
   };
   componentDidMount() {
     this._setStats();

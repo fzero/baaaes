@@ -58,10 +58,6 @@ class Homepage extends Component {
             create a real crypto-wallet and begin your journey into the world of
             cryptocurrency.
           </p>
-          <button className="buttonBackwards" to={"/login"}>
-            <i className="fas fa-pen" />
-            Existing User?
-          </button>
           <button className="buttonForwards" onClick={this.props.pageForwards}>
             Get Started!
             <i className="fas fa-arrow-right" />

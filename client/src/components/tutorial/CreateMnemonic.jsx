@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
 class CreateMnemonic extends Component {
   constructor(props) {
@@ -47,7 +47,7 @@ class CreateMnemonic extends Component {
 
         <section className="mnemonic_component">
           <h3 className="mnemonic_comp-title">Mnemonic Phrase</h3>
-          {/* <input className="mnemonic_comp-phrase" /> */}
+          <input className="mnemonic_comp-phrase" />
           <p>{this.props.mnemonic}</p>
           <p className="mnemonic_comp-desc">
             Please write this phrase down on paper and deposit it in a safe and
