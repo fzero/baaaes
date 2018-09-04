@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Table, Row, Col, PageHeader } from 'react-bootstrap';
 import Wallet from './wallets/wallet';
+import Resource from '../../models/resource';
+const Key = Resource('keys');
 
 class Wallets extends Component {
   constructor(props) {
@@ -11,7 +13,14 @@ class Wallets extends Component {
       publicKeys: {}
     };
   }
-
+  getWallets = () => {
+    const walletStore = [];
+    Key.find(localStorage.getItem('userId'))
+      .then(result => {
+        walletStore.push(result);
+      })
+      .catch(e => alert(e));
+  };
   render() {
     return (
       <Row className="wallets">

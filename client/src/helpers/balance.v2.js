@@ -2,8 +2,8 @@ const axios = require('axios');
 
 // This file will handle all market information
 
-const API_HOST = 'https://blockchain.info';
-const API_NAMESPACE = '/rawaddr';
+const API_HOST = 'https://blockexplorer.com';
+const API_NAMESPACE = '/api/addr';
 const BASEURL = `${API_HOST}${API_NAMESPACE}`;
 
 // Axios instance - Custom Headers go here

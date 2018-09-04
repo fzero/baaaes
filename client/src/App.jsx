@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="app">
         <header className="app-header">
-          {/*//Replace with nav abar component*/}
+          {/*//Replace with nav abar component - including logout button to remove userid from localstorage*/}
           <h1 className="app-title">Wallet Cryptorial</h1>
         </header>
         <Route path="/" exact component={Landing} />
