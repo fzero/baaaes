@@ -15,22 +15,24 @@ class Wallet extends Component {
     };
   }
   _getTransactions = () => {
-    BitBalance(this.state.publickey).then(result =>
+    BitBalance(this.state.publickey).then(result => {
       this.setState({
-        balance: result.final_balance / 100000000,
-        numOfTxs: result.n_tx,
-        txs: result
-      })
-    );
+        balance: result.balance / 100000000,
+        numOfTxs: result.txAppearances,
+        txs: result.transactions
+      });
+    });
   };
 
   componentDidMount() {
-    // set state to reflect publickey
+    if (this.props.publickey) {
+      this.setState({ publickey: this.props.publickey });
+    }
     this._getTransactions();
   }
   render() {
     return (
-      <tr>
+      <tr key={this.props.index}>
         <td>{this.state.name}</td>
         <td>{this.state.description}</td>
         <td>{this.state.publickey}</td>
