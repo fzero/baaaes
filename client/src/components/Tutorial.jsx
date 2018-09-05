@@ -21,7 +21,7 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 9,
+      page: 1,
       mnemonic: generated.mnemonic,
       publ: generated.address,
       priv: generated.wif,
@@ -138,7 +138,7 @@ class Tutorial extends Component {
     }
     return (
       <main>
-        <div className="container">
+        <div className="tutorial_container">
           <div>{page}</div>
         </div>
         <section className="footer">

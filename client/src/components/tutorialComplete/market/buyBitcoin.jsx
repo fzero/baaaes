@@ -61,7 +61,7 @@ class BuyBitcoinModal extends Component {
   render() {
     return (
       <div>
-        <Button onClick={this.handleShow}>Buy Button</Button>
+        <Button onClick={this.handleShow}>Buy Bitcoin</Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>

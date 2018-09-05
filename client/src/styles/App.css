@@ -1,8 +1,13 @@
-/* .app {
-  background-color: #FFF;
+.navbar {
+  height: 74px;
+  margin: 0;
+}
+
+/*.app {
+  background-color: #fff;
   text-align: center;
 }
-/* 
+
 .app-header {
   align-items: center;
   background-color: #092956;
@@ -10,11 +15,4 @@
   height: 12.5vh;
   justify-content: center;
   margin: 0 auto;
-  width: 80%;
-}
-
-.app-title {
-  color: #fff;
-  font-size: 4rem;
-  margin: 10px;
-} */
+}*/

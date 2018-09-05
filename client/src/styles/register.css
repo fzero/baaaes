@@ -1,10 +1,10 @@
 .register_container {
-  background-color: #868b91;
-  color: white;
+  background-color: white;
+  color: black;
   font-size: 20px;
   height: 100vh;
   margin: 0 auto;
-  padding: 0;
+  padding-top: 50px;
   width: 80%;
 }
 
@@ -15,7 +15,7 @@
 }
 
 .register_desc {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
   padding: 10px 50px;
   position: relative;
@@ -31,7 +31,7 @@
 
 .register_desc-para {
   font-family: "Barlow", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   text-align: left;
 }
 
@@ -46,6 +46,7 @@
   font-family: "Adamina", serif;
   font-size: 3rem;
   padding-bottom: 20px;
+  text-align: center;
   text-decoration: underline;
 }
 

@@ -22,6 +22,13 @@ class PublicKey extends Component {
             shared openly without any concern that someone will use it to access
             your wallet.
           </p>
+          <p className="public_desc-para">
+            This key is used as the address where coins would be sent to. If you
+            were in the process of selling coins to someone else, you would
+            input their public address. If someone was sending you coins, they
+            would need you public address, but be very careful not to send them
+            your private address, or you will most likely lose all your assets.
+          </p>
           <button
             className="buttonBackwards"
             onClick={this.props.pageBackwards}
@@ -37,6 +44,10 @@ class PublicKey extends Component {
           <p className="public_comp-desc">
             Please save a copy of this key, preferably on your computer as well
             as a hard copy.
+          </p>
+          <div className="line" />
+          <p className="public_comp-desc">
+            This key is used as the address where coins will be
           </p>
           <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next

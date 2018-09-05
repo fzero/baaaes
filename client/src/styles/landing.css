@@ -1,13 +1,33 @@
 .landing_cont {
   display: flex;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .landing_reg {
   margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  width: 50%;
+}
+
+.landing_reg-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+}
+
+.landing_reg-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  text-align: left;
 }
 
 .landing_log {
   margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  width: 50%;
 }
 
 .button {
@@ -15,6 +35,34 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   margin: 50px;
   padding: 10px;
+
+}
+
+.landing_market-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.landing_market-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  margin: 0 auto;
+  width: 80%;
+}
+
+.landing_market-line {
+  border: 0.5px solid #5f6469;
+  margin: 20px auto 0 auto;
+  width: 80%;
+}
+
+.landing_market-table {
+  margin: 40px auto 0 auto;
+  width: 80%;
 }

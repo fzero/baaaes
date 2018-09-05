@@ -45,6 +45,11 @@ class PrivateKey extends Component {
             Please copy this key down on paper and hide it in an appropriate and
             safe location.
           </p>
+          <div className="line" />
+          <p className="private_comp-desc">
+            Everytime you purchase any CryptoCurrency, you will be required to
+            re-enter this key.
+          </p>
           <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
             <i className="fas fa-arrow-right" />

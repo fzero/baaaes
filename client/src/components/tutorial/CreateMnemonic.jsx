@@ -52,9 +52,10 @@ class CreateMnemonic extends Component {
             Please write this phrase down on paper and deposit it in a safe and
             secure location
           </p>
+          <div className="line" />
           <p className="mnemonic_comp-desc">
-            When you create a real wallet, you will re-enter this phrase to
-            confirm that you've written it down and stored it properly.
+            When you create a real wallet, you will have to re-enter this phrase
+            to confirm that you've written it down and stored it properly.
           </p>
           <button className="buttonForwards" onClick={this.props.pageForwards}>
             Next
