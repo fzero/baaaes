@@ -24,6 +24,3 @@ module.exports = function(address) {
       .catch(errors => reject(errors));
   });
 };
-server
-  .get('/19SokJG7fgk8iTjemJ2obfMj14FM16nqzj')
-  .then(result => console.log(result.data));

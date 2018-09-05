@@ -6,6 +6,10 @@ import {
   ControlLabel,
   Button
 } from 'react-bootstrap';
+// import isValid from '../../../helpers/isValid';
+import Buy from '../../../helpers/buy';
+import Resource from '../../../models/resource';
+const Key = Resource('keys');
 
 class BuyBitcoinModal extends Component {
   constructor(props) {
@@ -14,10 +18,20 @@ class BuyBitcoinModal extends Component {
     this.state = {
       show: false,
       dollars: 0,
-      bitcoin: 0
+      receipt: '',
+      publicKeys: []
     };
   }
-
+  // GET PUBLIC ADRESSES FROM DB
+  getWallets = () => {
+    Key.find(localStorage.getItem('userid'))
+      .then(result => {
+        this.setState({
+          publicKeys: result.result
+        });
+      })
+      .catch(e => alert(e));
+  };
   // MODAL FUNCTIONS
   handleShow = () => {
     this.setState({ show: true });
@@ -27,8 +41,11 @@ class BuyBitcoinModal extends Component {
   };
   // END OF MODAL FUNCTIONS
 
-  handleChange(e) {
+  handleBitChange(e) {
     this.setState({ bitcoin: e.target.value });
+  }
+  handleDolChange(e) {
+    this.setState({ dollars: e.target.value });
   }
 
   getValidationState = () => {
@@ -39,7 +56,7 @@ class BuyBitcoinModal extends Component {
     return null;
   };
   componentDidMount() {
-    this.setState({ show: this.props.show });
+    this.getWallets();
   }
   render() {
     return (
@@ -47,24 +64,38 @@ class BuyBitcoinModal extends Component {
         <Button onClick={this.handleShow}>Buy Button</Button>
 
         <Modal show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header>Buy Bitcoin from Coinbase</Modal.Header>
+          <Modal.Header closeButton>
+            <Modal.Title>Buy Bitcoin from Coinbase</Modal.Title>
+          </Modal.Header>
           <Modal.Body>
             <form>
-              <FormGroup
-                controlId="buyForm"
-                validationState={this.getValidationState}
-              >
-                <ControlLabel>Amount in Bitcoin</ControlLabel>
-                <FormControl
-                  type="text"
-                  id="amount-bitcoin"
-                  value={this.state.bitcoin}
-                  onChange={this.handleChange}
-                />
+              <FormGroup>
+                <ControlLabel>Amount in USD</ControlLabel>
+                <FormControl type="text" />
+              </FormGroup>
+              <FormGroup>
+                <ControlLabel>Your Public Key</ControlLabel>
+                <FormControl componentClass="select" placeholer="select">
+                  <option value="select">Select a Public Key</option>
+                  {this.state.publicKeys.map((address, index) => (
+                    <option value={address.publickey}>
+                      {address.publickey}
+                    </option>
+                  ))}
+                </FormControl>
               </FormGroup>
             </form>
           </Modal.Body>
           <Modal.Footer>
+            <Button
+              type="submit"
+              onClick={Buy('127jKPU1kuYpnLyhzPjNPmPP9kyMeeEWyA', 10).then(
+                result => console.log(result)
+              )}
+            >
+              {/*hard coded*/}
+              Buy
+            </Button>
             <Button onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
