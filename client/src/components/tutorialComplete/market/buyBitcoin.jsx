@@ -87,15 +87,19 @@ class BuyBitcoinModal extends Component {
             </form>
           </Modal.Body>
           <Modal.Footer>
-            <Button
-              type="submit"
-              onClick={Buy('127jKPU1kuYpnLyhzPjNPmPP9kyMeeEWyA', 10).then(
-                result => console.log(result)
-              )}
-            >
-              {/*hard coded*/}
-              Buy
+            <Button type="submit">
+              <a
+                class="coinbase-widget"
+                id="coinbase_widget"
+                data-address="{{ address }}"
+                data-amount="{{ amount }}"
+                data-code="{{ code }}"
+                href=""
+              >
+                Buy bitcoin using Coinbase
+              </a>
             </Button>
+
             <Button onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
