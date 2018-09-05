@@ -1,5 +1,5 @@
 .tutorial_comp {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
   margin: 0 auto;
   padding: 10px 50px;
@@ -11,13 +11,16 @@
   font-family: "Adamina", serif;
   font-size: 3rem;
   padding-bottom: 20px;
+  text-align: center;
   text-decoration: underline;
 }
 
 .tutorial_comp-para {
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
+  margin: 0 auto;
   text-align: left;
+  width: 80%;
 }
 
 .fa-redo-alt {

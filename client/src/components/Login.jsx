@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 // import Resource from '../models/resource.js';
 // const User = Resource('users');
 

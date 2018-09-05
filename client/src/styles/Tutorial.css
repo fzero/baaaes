@@ -1,12 +1,12 @@
-/* .container {
-  background-color: #868b91;
-  color: white;
+.tutorial_container {
+  background-color: white;
+  color: black;
   font-size: 20px;
-  height: 75vh;
+  height: 78vh;
   margin: 0 auto;
   padding: 0;
   width: 80%;
-} */
+}
 
 .noDescription {
   margin: 0 auto;
@@ -20,7 +20,7 @@
 }
 
 .description {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
   overflow: scroll;
   padding: 10px 50px;
@@ -36,9 +36,9 @@
 
 .footer {
   background-color: #092956;
-  height: 12.5vh;
+  height: 13vh;
   margin: 0 auto;
-  width: 80%;
+  width: 100%;
 }
 
 .progressBar {
@@ -51,6 +51,8 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   padding: 10px;
   position: absolute;
   left: 50px;
@@ -71,6 +73,8 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   margin: 50px;
   padding: 10px;
   position: absolute;

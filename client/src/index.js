@@ -26,6 +26,8 @@ import "./styles/tutorialStyles/samplesell.css";
 import "./styles/tutorialStyles/blockchainexplorer.css";
 import "./styles/tutorialStyles/tutorialcomplete.css";
 
+import "./styles/otherStyles/market.css";
+
 // ReactDOM Render App
 ReactDOM.render(
   <BrowserRouter>

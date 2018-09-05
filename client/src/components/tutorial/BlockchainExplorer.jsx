@@ -37,9 +37,10 @@ class BlockchainExplorer extends Component {
         </div>
 
         <div className="blockchain_comp">
-          <h3>Blockchain Transactions</h3>
-          <div>
-            <h5>Bought</h5>
+          <h3 className="blockchain_comp-title">Blockchain Transactions</h3>
+          <div className="blockchain_trans">
+            <h5 className="blockchain_trans-title">Bought</h5>
+            <div className="line" />
             <div>
               <p>Cost:</p>
               <p>Spent:</p>
@@ -48,8 +49,9 @@ class BlockchainExplorer extends Component {
             </div>
           </div>
 
-          <div>
-            <h5>Sold</h5>
+          <div className="blockchain_trans">
+            <h5 className="blockchain_trans-title">Sold</h5>
+            <div className="line" />
             <div>
               <p>Cost:</p>
               <p>Spent:</p>

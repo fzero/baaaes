@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import prices from '../../helpers/market.js';
+import React, { Component } from "react";
+import prices from "../../helpers/market.js";
 
 class SampleSell extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.public);
 
     this.state = {
       testBalance: this.props.USDbalance,
@@ -12,7 +11,7 @@ class SampleSell extends Component {
       totalCost: 0,
       totalBTC: 0,
       BTC: {
-        Name: 'Bitcoin',
+        Name: "Bitcoin",
         Price: 0
       }
     };
@@ -39,14 +38,14 @@ class SampleSell extends Component {
     ev.preventDefault();
     console.log(ev.target.public.value);
     if (
-      ev.target.public.value === this.props.public
+      ev.target.public.value === this.props.public &&
+      this.state.totalBTC < this.state.testBTCBalance
       // &&
       // this.state.testBTCBalance < this.state.testBTCBalance
-
     ) {
       this.props.pageForwards();
     } else {
-      window.alert('Transaction is not valid');
+      window.alert("Transaction is not valid");
     }
   };
 
@@ -103,9 +102,6 @@ class SampleSell extends Component {
                 </span>
               </div>
             </div>
-
-            <div className="line" />
-
             <div className="buy_comp-BTC">
               Buy 1 BTC for
               <span className="BTCprice">${this.state.BTC.Price}</span>
@@ -120,9 +116,6 @@ class SampleSell extends Component {
                 BTC
               </span>
             </div>
-
-            <div className="line" />
-
             <div className="buy_comp-BTC">
               Amount in USD:
               <input
