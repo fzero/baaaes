@@ -14,8 +14,7 @@ const sanitizeUser = body => {
     // id: window.localStorage.userid,
     username: body.username,
     email: body.email,
-    password: body.password,
-    tutorialcomplete: body.tutorialcomplete
+    password: body.password
   };
 };
 
@@ -91,7 +90,11 @@ module.exports = models => {
   // Updates a user from a JSON object
   // Returns the updated user JSON object
   router.put("/:id", async (req, res) => {
-    let user = await models.User.findById(req.params.id);
+    let user = await models.Key.findAll({
+      where: {
+        userId: req.params.id
+      }
+    });
     if (!user) {
       res
         .status(404)
