@@ -51,6 +51,8 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   padding: 10px;
   position: absolute;
   left: 50px;
@@ -71,6 +73,8 @@
   border: none;
   border-radius: 5px;
   color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
   margin: 50px;
   padding: 10px;
   position: absolute;

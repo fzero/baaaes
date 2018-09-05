@@ -7,7 +7,6 @@ class Market extends Component {
   constructor(props) {
     super(props);
 
-    console.log(prices());
     this.state = {
       BTC: {
         Name: "Bitcoin",
