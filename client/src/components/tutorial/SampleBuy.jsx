@@ -7,7 +7,6 @@ class SampleBuy extends Component {
     console.log(this.props.private);
 
     this.state = {
-      //send testbalance and testbtcbalance to samplesell
       testBalance: 100000,
       testBTCBalance: 0,
       totalCost: 0,
@@ -141,7 +140,15 @@ class SampleBuy extends Component {
 
           <form onSubmit={this.handleTransaction}>
             <div>
-              <label className="label">Please Enter your Private Key:</label>
+              <p className="buy_label">
+                In the event you did not write your private key down, here it
+                is:
+              </p>
+              <div className="reminderPrivate">{this.props.private}</div>
+              <div className="line" />
+              <div className="buy_label">
+                Please Enter your Private Key to authorize this transaction:
+              </div>
               <input className="privateKey" name="private" type="text" />
             </div>
             <div className="line" />
@@ -159,7 +166,5 @@ class SampleBuy extends Component {
     );
   }
 }
-
-// onClick={this.props.pageForwards}
 
 export default SampleBuy;

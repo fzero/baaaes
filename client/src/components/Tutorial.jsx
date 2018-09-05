@@ -21,7 +21,7 @@ class Tutorial extends Component {
     super(props);
 
     this.state = {
-      page: 7,
+      page: 9,
       mnemonic: generated.mnemonic,
       publ: generated.address,
       priv: generated.wif,
@@ -128,7 +128,12 @@ class Tutorial extends Component {
         page = <TutorialFinish pageReset={this.pageReset} />;
         break;
       default:
-        page = <TutorialStart pageReset={this.pageReset} />;
+        page = (
+          <TutorialStart
+            pageForwards={this.pageForwards}
+            pageBackwards={this.pageBackwards}
+          />
+        );
         break;
     }
     return (

@@ -1,10 +1,21 @@
 import React, { Component } from "react";
+import Resource from "../../models/resource.js";
+const User = Resource("users");
 
 class TutorialCompletion extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      tutorialcomplete: true
+    };
+  }
   // Send info to User table to update tutorialComplete---------
   handleCompletion = ev => {
     ev.preventDefault();
-    // User.update()
+    console.log(localStorage.userid);
+    User.update(localStorage.userid, this.state)
+      .then(() => this.props.history.push("/"))
+      .catch(e => alert(e));
   };
 
   render() {
