@@ -7,7 +7,6 @@ import {
   Button
 } from 'react-bootstrap';
 // import isValid from '../../../helpers/isValid';
-import Buy from '../../../helpers/buy';
 import Resource from '../../../models/resource';
 const Key = Resource('keys');
 

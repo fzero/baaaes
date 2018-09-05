@@ -8,30 +8,28 @@ class Wallet extends Component {
     this.state = {
       name: 'Bitcoin',
       description: 'My Wallet',
-      publickey: '3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF', //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
-      recieved: 0,
+      publickey: this.props.publickey, //3KBKa6uJfFVAJnQ61B4EQDdE6Jscx326yF for testing
+      received: 0,
       spent: 0,
       numOfTxs: 0,
-      balance: '',
+      balance: 0,
       txs: []
     };
   }
   _getTransactions = () => {
-    BitBalance(this.state.publickey).then(result => {
+    BitBalance(this.props.publickey).then(result => {
+      console.log(result);
       this.setState({
-        balance: result.balance / 100000000,
-        numOfTxs: result.txAppearances,
+        balance: result.balance,
+        numOfTxs: result.txApperances,
         txs: result.transactions,
         received: result.totalReceived,
-        spent: result.spent
+        spent: result.totalSent
       });
     });
   };
 
   componentDidMount() {
-    if (this.props.publickey) {
-      this.setState({ publickey: this.props.publickey });
-    }
     this._getTransactions();
   }
   render() {
@@ -40,7 +38,7 @@ class Wallet extends Component {
         <td>{this.state.name}</td>
         <td>{this.state.description}</td>
         <td>{this.state.publickey}</td>
-        <td>{this.state.recieved}</td>
+        <td>{this.state.received}</td>
         <td>{this.state.spent}</td>
         <td>{this.state.numOfTxs}</td>
         <td>{this.state.balance}</td>
