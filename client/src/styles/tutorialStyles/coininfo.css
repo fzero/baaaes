@@ -1,0 +1,79 @@
+.coin_desc {
+  background-color: white;
+  height: 75vh;
+  padding: 30px 50px;
+  position: relative;
+  width: 70%;
+}
+
+.coin_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.coin_desc-sub {
+  font-family: "Adamina", serif;
+  font-size: 2.5rem;
+  text-decoration: underline;
+}
+
+.coin_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.coin_comp {
+  margin: 0 auto;
+  padding: 30px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.coin_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.coin_comp-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.btc_desc {
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+.btc_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.btc_cont {
+  display: flex;
+}
+
+.btc_desc-sub {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+}
+
+.coin_price {
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  height: 25px;
+  margin: 0 auto;
+  overflow: scroll;
+  text-align: center;
+  width: 50%;
+}
