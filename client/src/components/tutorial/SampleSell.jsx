@@ -7,7 +7,6 @@ class SampleSell extends Component {
     console.log(this.props.public);
 
     this.state = {
-      //recieve testbalance and testbtcbalance from samplebuy
       testBalance: this.props.USDbalance,
       testBTCBalance: this.props.BTCbalance,
       totalCost: 0,
@@ -29,11 +28,11 @@ class SampleSell extends Component {
     );
   };
 
-  handleBTC = ev => {
+  handleUSD = ev => {
     ev.preventDefault();
-    const amountOfBTC = ev.target.value;
-    const totalCost = amountOfBTC * this.state.BTC.Price;
-    this.setState({ totalCost: totalCost, totalBTC: amountOfBTC });
+    const amountOfUSD = ev.target.value;
+    const totalBTC = amountOfUSD / this.state.BTC.Price;
+    this.setState({ totalCost: amountOfUSD, totalBTC: totalBTC });
   };
 
   handleTransaction = ev => {
@@ -43,6 +42,7 @@ class SampleSell extends Component {
       ev.target.public.value === this.props.public
       // &&
       // this.state.testBTCBalance < this.state.testBTCBalance
+
     ) {
       this.props.pageForwards();
     } else {
@@ -115,7 +115,10 @@ class SampleSell extends Component {
 
             <div className="buy_comp-BTC">
               Amount in BTC:
-              <span className="buy_comp-input">${this.state.totalBTC}</span>
+              <span className="buy_comp-input">
+                {this.state.totalBTC}
+                BTC
+              </span>
             </div>
 
             <div className="line" />
@@ -124,7 +127,7 @@ class SampleSell extends Component {
               Amount in USD:
               <input
                 className="buy_comp-input"
-                onChange={this.handleBTC}
+                onChange={this.handleUSD}
                 type="number"
               />
             </div>
@@ -134,7 +137,12 @@ class SampleSell extends Component {
 
           <form onSubmit={this.handleTransaction}>
             <div>
-              <label className="label">Please Enter your Public Key:</label>
+              <p className="buy_label">
+                In the event you did not write your public key down, here it is:
+              </p>
+              <div className="reminderPrivate">{this.props.public}</div>
+              <div className="line" />
+              <div className="buy_label">Please Enter your Public Key:</div>
               <input className="privateKey" name="public" type="text" />
             </div>
             <div className="line" />
