@@ -1,6 +1,7 @@
-import React, { Component } from "react";
-import { Table } from "react-bootstrap";
-import prices from "../../helpers/market.js";
+import React, { Component } from 'react';
+import { Table, Button } from 'react-bootstrap';
+import prices from '../../helpers/market.js';
+import BuyBitcoin from './market/buyBitcoin';
 
 class Market extends Component {
   constructor(props) {
@@ -9,38 +10,38 @@ class Market extends Component {
     console.log(prices());
     this.state = {
       BTC: {
-        Name: "Bitcoin",
+        Name: 'Bitcoin',
         Price: 7000,
-        Symbol: "BTC",
+        Symbol: 'BTC',
         Supply: 21000000,
-        Change: "img_url",
+        Change: 'img_url',
         MarketCap: 100000000,
         Volume: 10000000
       },
       LTC: {
-        Name: "Litecoin",
+        Name: 'Litecoin',
         Price: 7000,
-        Symbol: "LTC",
+        Symbol: 'LTC',
         Supply: 21000000,
-        Change: "img_url",
+        Change: 'img_url',
         MarketCap: 100000000,
         Volume: 10000000
       },
       ETH: {
-        Name: "Ethereum",
+        Name: 'Ethereum',
         Price: 7000,
-        Symbol: "ETH",
+        Symbol: 'ETH',
         Supply: 21000000,
-        Change: "img_url",
+        Change: 'img_url',
         MarketCap: 100000000,
         Volume: 10000000
       },
       DOGE: {
-        Name: "DogeCoin",
+        Name: 'DogeCoin',
         Price: 7000,
-        Symbol: "DOGE",
+        Symbol: 'DOGE',
         Supply: 21000000,
-        Change: "img_url",
+        Change: 'img_url',
         MarketCap: 100000000,
         Volume: 10000000
       }
@@ -110,7 +111,7 @@ class Market extends Component {
             <td>{this.state.BTC.Change}</td>
             <td>{this.state.BTC.Volume}</td>
             <td>
-              <button>Buy Button</button>
+              <BuyBitcoin />
             </td>
           </tr>
           <tr>
@@ -122,7 +123,7 @@ class Market extends Component {
             <td>{this.state.LTC.Change}</td>
             <td>{this.state.LTC.Volume}</td>
             <td>
-              <button>Buy Button</button>
+              <Button disabled>Buy Button</Button>
             </td>
           </tr>
           <tr>
@@ -134,7 +135,7 @@ class Market extends Component {
             <td>{this.state.ETH.Change}</td>
             <td>{this.state.ETH.Volume}</td>
             <td>
-              <button>Buy Button</button>
+              <Button disabled>Buy Button</Button>
             </td>
           </tr>
           <tr>
@@ -146,7 +147,7 @@ class Market extends Component {
             <td>{this.state.DOGE.Change}</td>
             <td>{this.state.DOGE.Volume}</td>
             <td>
-              <button>Buy Button</button>
+              <Button disabled>Buy Button</Button>
             </td>
           </tr>
         </tbody>

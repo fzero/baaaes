@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import prices from "../../helpers/market.js";
+import React, { Component } from 'react';
+import prices from '../../helpers/market.js';
 
 class SampleSell extends Component {
   constructor(props) {
@@ -12,7 +12,7 @@ class SampleSell extends Component {
       totalCost: 0,
       totalBTC: 0,
       BTC: {
-        Name: "Bitcoin",
+        Name: 'Bitcoin',
         Price: 0
       }
     };
@@ -39,12 +39,14 @@ class SampleSell extends Component {
     ev.preventDefault();
     console.log(ev.target.public.value);
     if (
-      ev.target.public.value === this.props.public &&
-      this.state.totalBTC <= this.state.testBTCBalance
+      ev.target.public.value === this.props.public
+      // &&
+      // this.state.testBTCBalance < this.state.testBTCBalance
+
     ) {
       this.props.pageForwards();
     } else {
-      window.alert("Transaction is not valid");
+      window.alert('Transaction is not valid');
     }
   };
 
