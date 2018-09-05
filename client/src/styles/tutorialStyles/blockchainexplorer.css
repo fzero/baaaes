@@ -1,0 +1,43 @@
+.blockchain_desc {
+  background-color: white;
+  height: 75vh;
+  padding: 10px 50px;
+  position: relative;
+  width: 65%;
+}
+
+.blockchain_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.blockchain_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  text-align: left;
+}
+
+.blockchain_comp {
+  margin: 0 auto;
+  padding: 10px 50px;
+  position: relative;
+  width: 35%;
+}
+
+.blockchain_trans {
+  padding-bottom: 20px;
+}
+
+.blockchain_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.blockchain_trans-title {
+  font-family: "Adamina", serif;
+  font-size: 2rem;
+}

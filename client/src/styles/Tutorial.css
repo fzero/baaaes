@@ -1,0 +1,92 @@
+.tutorial_container {
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  height: 78vh;
+  margin: 0 auto;
+  padding: 0;
+  width: 80%;
+}
+
+.noDescription {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.description {
+  background-color: white;
+  height: 75vh;
+  overflow: scroll;
+  padding: 10px 50px;
+  width: 50%;
+}
+
+.component {
+  height: 75vh;
+  margin: 0 auto;
+  padding: 10px 50px;
+  width: 50%;
+}
+
+.footer {
+  background-color: #092956;
+  height: 13vh;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.progressBar {
+  position: relative;
+  top: 50%;
+}
+
+.buttonBackwards {
+  background-color: #092956;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding: 10px;
+  position: absolute;
+  left: 50px;
+  bottom: 50px;
+}
+
+.buttonBackwards:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.fa-arrow-left {
+  padding-right: 10px;
+}
+
+.buttonForwards {
+  background-color: #092956;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  margin: 50px;
+  padding: 10px;
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+}
+
+.buttonForwards:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.fa-arrow-right {
+  padding-left: 10px;
+}

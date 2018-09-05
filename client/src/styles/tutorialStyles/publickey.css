@@ -1,0 +1,65 @@
+.componentContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.public_description {
+  background-color: white;
+  height: 75vh;
+  padding: 30px 50px;
+  position: relative;
+  width: 70%;
+}
+
+.public_desc-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-decoration: underline;
+}
+
+.public_desc-para {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding-bottom: 20px;
+  text-align: left;
+}
+
+.public_comp {
+  margin: 0 auto;
+  padding: 30px 50px;
+  position: relative;
+  width: 30%;
+}
+
+.public_comp-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
+  padding-bottom: 20px;
+  text-align: center;
+  text-decoration: underline;
+}
+
+.public_comp-key {
+  border: 1px solid black;
+  background-color: white;
+  color: black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+.public_comp-desc {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.8rem;
+  padding: 10px 0;
+  text-align: center;
+}
+
+.publicKey {
+  border: 1px solid black;
+  color: black;
+}
