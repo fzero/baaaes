@@ -4,7 +4,6 @@ import prices from "../../helpers/market.js";
 class SampleBuy extends Component {
   constructor(props) {
     super(props);
-    console.log(this.props.private);
 
     this.state = {
       testBalance: 100000,
@@ -40,7 +39,6 @@ class SampleBuy extends Component {
 
   handleTransaction = ev => {
     ev.preventDefault();
-    console.log(ev.target.private.value);
     if (
       ev.target.private.value === this.props.private &&
       this.state.totalCost < this.state.testBalance
@@ -109,9 +107,6 @@ class SampleBuy extends Component {
                 <span className="BTCprice">0 BTC</span>
               </div>
             </div>
-
-            <div className="line" />
-
             <div className="buy_comp-BTC">
               Buy 1 BTC for
               <span className="BTCprice">${this.state.BTC.Price}</span>
@@ -123,9 +118,6 @@ class SampleBuy extends Component {
               Amount in USD:
               <span className="buy_comp-input">${this.state.totalCost}</span>
             </div>
-
-            <div className="line" />
-
             <div className="buy_comp-BTC">
               Amount in BTC:
               <input
@@ -151,7 +143,7 @@ class SampleBuy extends Component {
               </div>
               <input className="privateKey" name="private" type="text" />
             </div>
-            <div className="line" />
+            {/*<div className="line" />*/}
             <div className="buy_comp-BTC center">
               Please ensure that the Amount in USD is less than your Test
               Balance.

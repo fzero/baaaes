@@ -1,9 +1,9 @@
 .buy_desc {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
   padding: 10px 50px;
   position: relative;
-  width: 70%;
+  width: 65%;
 }
 
 .buy_desc-title {
@@ -21,9 +21,9 @@
 
 .buy_comp {
   margin: 0 auto;
-  padding: 10px 30px;
+  padding: 10px 20px;
   position: relative;
-  width: 30%;
+  width: 35%;
 }
 
 .line {
@@ -35,6 +35,7 @@
   font-family: "Adamina", serif;
   font-size: 3rem;
   padding-bottom: 20px;
+  text-align: center;
   text-decoration: underline;
 }
 
@@ -87,6 +88,7 @@
 .buy_label {
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
+  text-align: center;
   word-wrap: break-word;
 }
 
@@ -96,10 +98,14 @@
   color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
+  text-align: center;
   word-wrap: break-word;
 }
 
 .privateKey {
   border: 1px solid black;
   color: black;
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+  width: 100%;
 }

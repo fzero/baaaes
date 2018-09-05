@@ -1,13 +1,26 @@
 .landing_cont {
   display: flex;
+  margin: 0 auto;
+  width: 80%;
 }
 
 .landing_reg {
   margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  width: 50%;
+}
+
+.landing_reg-title {
+  font-family: "Adamina", serif;
+  font-size: 3rem;
 }
 
 .landing_log {
   margin: 0 auto;
+  padding: 50px;
+  text-align: center;
+  width: 50%;
 }
 
 .button {

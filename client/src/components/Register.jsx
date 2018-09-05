@@ -46,12 +46,13 @@ class Register extends Component {
           <div className="register_desc">
             <h3 className="register_desc-title">Registering a Wallet</h3>
             <p className="register_desc-para">
-              Before the actual creation of your test cryptocurrency wallet, you
-              will need to register an account. Your account will allow access
-              to your real and fake wallets using your email, username,
-              password. For further security to your wallets, a mnemonic phrase
-              will be generated, and from that a private key and public key will
-              derived, all of which shall be defined later in the Cryptorial.
+              Before you can begin the Cryptorial and the actual creation of
+              your test cryptocurrency wallet, you will need to register an
+              account. Your account will allow access to your real and fake
+              wallets using your email, username, password. For further security
+              to your wallets, a mnemonic phrase will be generated, and from
+              that a private key and public key will derived, all of which shall
+              be discussed later in the Cryptorial.
             </p>
             <Link
               className="buttonBackwards"

@@ -5,7 +5,7 @@
 }
 
 .contents {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
   width: 35%;
 }
@@ -22,7 +22,7 @@
 
 li {
   font-family: "Barlow", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2rem;
   padding: 10.5px 0;
 }
 

@@ -1,9 +1,9 @@
 .coin_desc {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
-  padding: 10px 50px;
+  padding: 30px 50px;
   position: relative;
-  width: 50%;
+  width: 70%;
 }
 
 .coin_desc-title {
@@ -27,59 +27,37 @@
 
 .coin_comp {
   margin: 0 auto;
-  padding: 10px 50px;
+  padding: 30px 50px;
   position: relative;
-  width: 50%;
+  width: 30%;
 }
 
 .coin_comp-title {
   font-family: "Adamina", serif;
   font-size: 3rem;
-  padding-bottom: 60px;
+  text-align: center;
   text-decoration: underline;
 }
 
 .coin_comp-desc {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
 }
 
 .btc_desc {
-  border: 2px solid black;
-  border-right: 1px solid black;
-  border-bottom: 1px solid black;
-  padding-bottom: 30px;
-  width: 50%;
-}
-
-.eth_desc {
-  border: 2px solid black;
-  border-left: 1px solid black;
-  border-bottom: 1px solid black;
-  padding-bottom: 30px;
-  width: 50%;
-}
-
-.doge_desc {
-  border: 2px solid black;
-  border-right: 1px solid black;
-  border-top: 1px solid black;
-  padding-bottom: 30px;
-  width: 50%;
-}
-
-.ltc_desc {
-  border: 2px solid black;
-  border-left: 1px solid black;
-  border-top: 1px solid black;
-  padding-bottom: 30px;
-  width: 50%;
+  padding-bottom: 10px;
+  width: 100%;
 }
 
 .btc_desc-title {
   font-family: "Adamina", serif;
   font-size: 1.8rem;
+  text-align: center;
   text-decoration: underline;
+}
+
+.btc_cont {
+  display: flex;
 }
 
 .btc_desc-sub {
@@ -93,6 +71,9 @@
   color: black;
   font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
+  height: 25px;
   margin: 0 auto;
-  width: 75%;
+  overflow: scroll;
+  text-align: center;
+  width: 50%;
 }

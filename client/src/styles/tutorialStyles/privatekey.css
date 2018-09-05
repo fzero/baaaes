@@ -5,9 +5,9 @@
 }
 
 .private_description {
-  background-color: #5f6469;
+  background-color: white;
   height: 75vh;
-  padding: 10px 50px;
+  padding: 30px 50px;
   position: relative;
   width: 70%;
 }
@@ -22,6 +22,7 @@
 .private_desc-para {
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
+  padding-bottom: 10px;
   text-align: left;
 }
 
@@ -31,7 +32,7 @@
 
 .private_comp {
   margin: 0 auto;
-  padding: 10px 50px;
+  padding: 30px 50px;
   position: relative;
   width: 30%;
 }
@@ -40,6 +41,7 @@
   font-family: "Adamina", serif;
   font-size: 3rem;
   padding-bottom: 20px;
+  text-align: center;
   text-decoration: underline;
 }
 
@@ -56,6 +58,6 @@
 .private_comp-desc {
   font-family: "Barlow", sans-serif;
   font-size: 1.8rem;
-  padding-bottom: 50px;
+  padding: 10px 0;
   text-align: center;
 }
