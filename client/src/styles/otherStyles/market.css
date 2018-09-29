@@ -1,0 +1,15 @@
+.market_title {
+  margin: 50px auto;
+  width: 80%;
+}
+
+.market_line {
+  border: 0.5px solid #5f6469;
+  margin: 40px auto 0 auto;
+  width: 80%;
+}
+
+.market_table {
+  margin: 50px auto;
+  width: 80%;
+}
